@@ -1,0 +1,583 @@
+{
+  "About": {
+    "more": "mais...",
+    "title": "Sobre o Programa Conexão DNIT"
+  },
+  "Action": {
+    "ratingTitle": "Avalie a ação",
+    "details": {
+      "downloads": "Arquivos para Download"
+    }
+  },
+  "Activities": {
+    "advancedSearch": "Busca Avançada",
+    "details": {
+      "attachmentsTitleStudent": "Aluno",
+      "attachmentsTitleTeacher": "Professor",
+      "datasheet": "Ficha técnica",
+      "discipline": "Disciplina",
+      "downloads": "Arquivos para Download",
+      "evaluateActivityBtnText": "Avaliar Atividade",
+      "knowledgeObject": "Objeto de Conhecimento",
+      "noAttachment": "Nenhum anexo encontrado",
+      "resources": "Recursos",
+      "teachingArticulation": "Articulação Didática",
+      "time": "Tempo Estimado",
+      "trafficContent": "Conteúdo de Trânsito",
+      "initiative": "Iniciativa",
+      "searchResult": "Resultado da Busca"
+    },
+    "Surveys": {
+      "fieldRequired": "Campo obrigatório.",
+      "justifyRequired": "Justificativa obrigatória.",
+      "choiceRequired": "Selecione ao menos uma opção.",
+      "saveSurveyTitle": "Confirme",
+      "saveSurveyMsg": "Ao salvar a avaliação não será mais permitida a modificação. Deseja salvar?",
+      "save": "Avaliar",
+      "cancel": "Cancelar",
+      "userName": "Nome",
+      "userRegion": "Região",
+      "city": "Cidade",
+      "state": "Estado",
+      "yes": "Sim",
+      "no": "Não",
+      "errorInSurveyLoad": "Erro ao carregar avaliação dessa atividade!",
+      "saveSuccess": "Avaliação da atividade salva com sucesso.",
+      "saveError": "Erro ao salvar a avaliação da atividade."
+    },
+    "emptyResults": "Nenhuma atividade foi encontrada!",
+    "keyword": "Palavras-chave",
+    "submit": "Buscar",
+    "tabOneTitle": "1º ao 5º ano",
+    "tabTwoTitle": "6º ao 9º ano",
+    "title": "Atividades",
+    "searchtitle": "Busca de Atividades",
+    "aboutArea": "<p>Nesta área, você pode encontrar um o conjunto de atividades pedagógicas de Educação para o Trânsito a serem utilizadas de modo transversal, nas disciplinas do Ensino Fundamental.<br/>Na área abaixo, selecione, pelo menos, um ano e uma disciplina para fazer busca de atividades de Educação para o Trânsito no Ensino Fundamental.</p>",
+    "year": "ano"
+  },
+  "Attachments": {
+    "title": "Documentos"
+  },
+  "GeneralSearch": {
+    "actions": "Ações",
+    "searchResults": "Resultados da busca",
+    "advancedSearch": "Busca Avançada",
+    "title": "Busca Geral",
+    "allCheck": "Todas as Categorias",
+    "anytime": "Qualquer período",
+    "category": "Categoria(s)",
+    "categoryLabel": "Escolha a(s) categoria(s) de conteúdo para a busca",
+    "intervalLabel": "Escolha o período da busca",
+    "interval": "Período",
+    "courses": "Cursos",
+    "aboutArea": "<p>Nesta área, você pode encontrar conteúdos diversos publicados no Portal Conexão DNIT, utilizando filtros por palavras(s)-chave ou utilizando a busca avançada para refinar os resultados da sua busca.</p>",
+    "error": {
+      "keyword": "Palavra-chave obrigatória",
+      "noRangeDate": "As datas devem estar preenchidas",
+      "noResultsFound": "Nenhum resultado encontrado"
+    },
+    "keyword": "Busca",
+    "last12Months": "Últimos 12 meses",
+    "last30Days": "Últimos 30 dias",
+    "last7Days": "Últimos 7 dias",
+    "period": "Período",
+    "placeholders": {
+      "date": "Escolha uma data",
+      "finalDate": "Data final",
+      "initialDate": "Data inicial",
+      "search": "Buscar por palavra-chave"
+    },
+    "projectActions": "Ações de Projetos",
+    "projects": "Projetos e Campanhas",
+    "submit": "Buscar"
+  },
+  "Home": {
+    "highlights": {
+      "knownMore": "Saiba Mais",
+      "title": "Destaques"
+    },
+    "searchActivities": {
+      "knownMore": "Saiba Mais",
+      "placeholder": "Escolha uma disciplina",
+      "subTitle": "Busque aqui atividades de educação para o trânsito no ensino fundamental",
+      "title": "Faça parte da nossa rede de educação para a vida"
+    },
+    "searchYear": {
+      "placeholder": "Ano",
+      "title": "Aqui você pode localizar as atividades para educação no trânsito"
+    },
+    "endPage": {
+      "title": "Quer Saber Mais?"
+    },
+    "selectYear": "{{year}}º Ano",
+    "titleIntroduction": "Venha conectar-se a nossa rede de educação para a vida"
+  },
+  "Courses": {
+    "rating": "Classifique",
+    "join": "Entre no curso",
+    "details": {
+      "downloads": "Arquivos para Download"
+    }
+  },
+  "Initiatives": {
+    "shareInitiative": "Nova Iniciativa",
+    "details": {
+      "attachment": "Anexos",
+      "backToMyInitiatives": "Voltar para minhas iniciativas",
+      "title": "Título",
+      "description": "Descrição",
+      "noAttachments": "Não há anexos",
+      "spotlight": "Visualização de iniciativa"
+    },
+    "emptyListMessage": "Nenhuma iniciativa enviada até o momento",
+    "error": {
+      "getSavedInitiatives": "Erro ao buscar iniciativas",
+      "submitInitiative": "Erro ao salvar iniciativa"
+    },
+    "initiativesToEvaluate": "Iniciativas para avaliar",
+    "list": {
+      "date": "Data",
+      "status": "Situação",
+      "title": "Título"
+    },
+    "savedInitiatives": "Iniciativas",
+    "share": {
+      "fileSendTitle": "Envio de Arquivos",
+      "fileTypes": "Tipos de arquivos que podem ser enviados",
+      "maxSizeInfo": "Tamanho máximo de arquivos: {{max}}.",
+      "descriptionMaxChar": "Até 5000 caracteres",
+      "titleMaxChar": "Até 255 caracteres",
+      "attachment": "Anexos",
+      "backbtn": "Voltar",
+      "backToMyInitiatives": "Voltar para minhas iniciativas",
+      "chooseFile": "Clique aqui para adicionar um arquivo(s) ou arraste e solte",
+      "description": "Descrição",
+      "error": {
+        "required": {
+          "description": "Descrição para a iniciativa é obrigatória",
+          "title": "Título é obrigatório",
+          "submitInitiativeError": "Problema ao enviar a iniciativa"
+        }
+      },
+      "success": {
+        "submitInitiativeSuccess": "Iniciativa enviada com sucesso"
+      },
+      "maxSize": "O tamanho mámixo para um arquivo deve ser de {{max}}. Este arquivo não será enviado.",
+      "pageTitle": "Enviar iniciativa",
+      "placeholders": {
+        "description": "Digite a descrição da iniciativa",
+        "title": "Digite um titulo para a sua iniciativa"
+      },
+      "removeAttachment": "Remover anexo",
+      "submit": "Enviar",
+      "title": "Título",
+      "warning": {
+        "submitInitiativeWarningAttachments": "Iniciativa foi criada, porém nem todos os anexos foram salvos. Tente editar a iniciativa e adicione os anexos novamente"
+      }
+    },
+    "title": "Iniciativas",
+    "tableList": {
+      "headers": {
+        "title": "Título",
+        "date": "Data",
+        "status": "Situação"
+      },
+      "titleTable": "Minhas Iniciativas"
+    },
+    "aboutArea": "<p>Compartilhe suas experiências e suas iniciativas de Educação para o Trânsito.<br/>Elas serão analisadas e poderão ser incorporadas ao banco de atividades do Programa Conexão DNIT, sendo sua autoria reconhecida, respeitada e valorizada.</p>"
+  },
+  "ListCourses": {
+    "emptyMessage": "Não há nenhum curso registrado"
+  },
+  "ListProjects": {
+    "emptyMessage": "Não há nenhum projeto registrado"
+  },
+  "Login": {
+    "emailForgotPassword": "Verifique seu email para redefinir sua senha",
+    "error": {
+      "email": "E-mail inválido",
+      "incorrectUserPwd": "Usuário e/ou senha incorretos",
+      "inactive": "Usuário inativo ou não autorizado.",
+      "password": {
+        "length": "Senha deve ter no mínimo 6 caracteres, podendo ser letras, números e/ou caracteres especiais"
+      },
+      "required": {
+        "email": "E-mail é obrigatório",
+        "password": "Senha é obrigatória"
+      },
+      "emailNotRegistered": "Este e-mail não está cadastrado em nosso sistema.",
+      "sendConfirmationEmail": "Não foi possível enviar o e-mail de confirmação"
+    },
+    "label": {
+      "backToLogin": "Voltar para login",
+      "email": "E-mail",
+      "forgotPassword": "Esqueci minha senha",
+      "password": "Senha",
+      "submit": "Entrar",
+      "submitForgotPassword": "Recuperar senha",
+      "didntReceiveConfirmationEmail": "Não recebi o e-mail de confirmação",
+      "submitConfirmationEmail": "Enviar"
+    },
+    "placeholder": {
+      "email": "Digite seu e-mail",
+      "password": "Digite sua senha"
+    },
+    "title": "Login",
+    "titleForgotPassword": "Recupere sua senha",
+    "titleSendConfirmationEmail": "Envie o e-mail de confirmação",
+    "userLogged": "Logado com sucesso",
+    "sendConfirmationEmailSuccess": "O e-mail de confirmação foi enviado com sucesso",
+    "enterGovBr": "Entrar com ",
+    "or": "ou"
+  },
+  "Messages": {
+    "buttonNewMessage": "Nova mensagem",
+    "tableList": {
+      "headers": {
+        "type": "Tipo",
+        "origin": "Origem",
+        "subject": "Assunto",
+        "date": "Data",
+        "status": "Situação"
+      },
+      "titleTable": "Minhas mensagens"
+    },
+    "confirmDelete": "Você tem certeza que deseja remover esta mensagem?",
+    "pageDescription": "Dúvidas, elogios, críticas e sugestões? Entre em contato com o Programa Conexão DNIT.",
+    "compose": {
+      "chooseFile": "Clique aqui para adicionar um arquivo(s) ou arraste e solte",
+      "searchUser": "Buscar usuários",
+      "maxSize": "O tamanho mámixo para um arquivo deve ser de {{max}}.",
+      "error": {
+        "composeMessage": "Erro ao enviar mensagem",
+        "getMessageType": "Erro ao carregar os tipos de mensagem, tente novamente mais tarde",
+        "getRecipients": "Erro ao buscar a lista de destinatários",
+        "getSuperintendences": "Erro ao buscar a lista de superintendências regionais",
+        "getProfiles": "Erro ao buscar a lista de perfis",
+        "getLocalUnits": "Erro ao buscar a lista de unidades locais",
+        "getInstitutions": "Erro ao buscar a lista de escolas"
+      },
+      "labels": {
+        "messagesTypes": "Tipo*",
+        "recipients": "Para",
+        "superintendences": "Superintendência Regional",
+        "profiles": "Perfil",
+        "localUnits": "Unidade Local",
+        "institutions": "Escola"
+      },
+      "required": {
+        "message": "É necessário escrever uma mensagem",
+        "recipients": "É necessário selecionar ao menos um destinatário",
+        "subject": "É necessário colocar um assunto",
+        "type": "É necessário selecionar um tipo"
+      },
+      "subject": "Assunto*",
+      "submit": "Enviar",
+      "success": "Mensagem enviada",
+      "textarea": "Digite sua mensagem*",
+      "title": "Nova mensagem",
+      "addAttachment": "Anexos",
+      "description": "Descrição*",
+      "backbtn": "Voltar",
+      "fileTypes": "Tipos de arquivos que podem ser enviados",
+      "FromFilterTite": "Filtre os destinatários"
+    },
+    "details": {
+      "error": {
+        "gettingMessageById": "Erro ao buscar pela mensagem",
+        "loading": "Mensagem não encontrada",
+        "reply": "Erro ao enviar a mensagem"
+      },
+      "fileTypes": "Tipos de arquivos que podem ser enviados",
+      "fileSendTitle": "Envio de Arquivos",
+      "maxSizeInfo": "Tamanho máximo de arquivos: {{max}}.",
+      "noAttachments": "Não há anexos",
+      "attachment": "Anexos",
+      "from": "Para",
+      "recipient": "De",
+      "date": "Data",
+      "reply": "Responder",
+      "replyTitle": "Responder a mensagem",
+      "cancel": "Cancelar",
+      "replySubmit": "Enviar",
+      "required": {
+        "message": "É necessário escrever uma mensagem de resposta"
+      },
+      "subject": "Assunto",
+      "success": {
+        "reply": "Resposta enviada com sucesso"
+      },
+      "title": "Visualização da mensagem",
+      "type": "Tipo"
+    },
+    "goBack": "Voltar",
+    "inbox": {
+      "date": "Data",
+      "error": {
+        "emptyList": "Nenhuma mensagem recebida"
+      },
+      "from": "Origem",
+      "subject": "Assunto",
+      "title": "Entrada",
+      "type": "Tipo",
+      "status": "Situação"
+    },
+    "sent": {
+      "date": "Data",
+      "error": {
+        "emptyList": "Nenhuma mensagem enviada"
+      },
+      "recipient": "Destino",
+      "subject": "Assunto",
+      "title": "Saída",
+      "type": "Tipo",
+      "status": "Situação",
+      "from": "Para"
+    },
+    "title": "Mensagens"
+  },
+  "Participate": {
+    "title": "Como Participar"
+  },
+  "ParticipatingSchools": {
+    "title": "Escolas Participantes",
+    "selectPlaceholder": "Selecione o Estado",
+    "emptyList": "Estado ainda não possui escolas participantes!",
+    "tableLabels": {
+      "name": "Nome",
+      "city": "Cidade",
+      "state": "Estado"
+    },
+    "aboutArea": "<p>Podem aderir ao Programa Nacional de Educação para o Trânsito do DNIT e participar do Conexão DNIT as escolas de Ensino Fundamental dos anos iniciais (1º ao 5º ano) e dos anos finais (6º ao 9º ano).</p>"
+  },
+  "Profile": {
+    "avatar": {
+      "error": "Ocorreu um erro ao atualizar seu avatar, tente novamente ou contate o administrador",
+      "success": "Avatar atualizado"
+    },
+    "error": {
+      "cpf": "CPF inválido!",
+      "email": "E-mail inválido",
+      "DuplicateUserName": "E-mail já cadastrado",
+      "ConflictedCPF": "CPF já cadastrado",
+      "password": {
+        "confirmPassword": "As senhas precisam ser iguais",
+        "length": "Senha deve ter no mínimo 6 caracteres, podendo ser letras, números e/ou caracteres especiais"
+      },
+      "noRoleAssignedForMessageType": "Ocorreu um erro ao enviar a mensagem, tente novamente ou contate o administrador",
+      "recaptcha": "Por favor, confirme que você não é um robo",
+      "required": {
+        "avatarTooLarge": "O arquivo excede o tamanho máximo",
+        "birthDate": "Data de nascimento obrigatória",
+        "cellphone": "Celular é obrigatório",
+        "city": "Município é obrigatório",
+        "confirmPassword": "Confirmar senha obrigatório",
+        "cpf": "CPF é obrigatório",
+        "educationalInstitution": "Instituição de ensino é obrigatória",
+        "email": "E-mail é obrigatório",
+        "name": "Nome é obrigatório",
+        "password": "Senha é obrigatória",
+        "schoolBonds": "Vínculo escolar é obrigatório",
+        "state": "Estado é obrigatório",
+        "wrongFormat": "Telefone inválido",
+        "cellphoneWrongFormat": "Celular inválido"
+      }
+    },
+    "label": {
+      "avatar": "Foto do perfil",
+      "avatarMaxSize": "O tamanho máximo permitido para o arquivo é {max}",
+      "cellphone": "Celular",
+      "chooseAvatar": "Selecione Arquivo",
+      "city": "Município",
+      "confirmPassword": "Confirmar senha",
+      "cpf": "CPF",
+      "email": "E-mail",
+      "institution": "Instituição de ensino",
+      "name": "Nome",
+      "password": "Senha",
+      "phone": "Telefone",
+      "schoolBonds": "Vínculo escolar",
+      "state": "Estado"
+    },
+    "placeholder": {
+      "cellphone": "(00) 00000-0000",
+      "city": "Selecione o município",
+      "email": "meu.nome@email.com",
+      "institution": "Selecione a instituição de ensino",
+      "name": "Digite seu nome aqui",
+      "phone": "(00) 0000-0000",
+      "schoolBonds": "Selecione o vínculo escolar",
+      "state": "Selecione Estado"
+    },
+    "schoolBonds": {
+      "other": "Outros",
+      "schoolManager": "Gestor escolar",
+      "student": "Estudante",
+      "studentParent": "Pais de estudante",
+      "teacher": "Professor"
+    },
+    "submit": "Salvar",
+    "successfullyCreated": "Perfil criado com sucesso!",
+    "successfullyEdited": "Perfil editado com sucesso!",
+    "title": "Editar Perfil",
+    "unchanged": "Não houve alterações nos dados",
+    "goBack": "Voltar"
+  },
+  "Register": {
+    "error": {
+      "cpf": "CPF inválido!",
+      "email": "E-mail inválido",
+      "DuplicateUserName": "E-mail já cadastrado",
+      "ConflictedCPF": "CPF já cadastrado",
+      "password": {
+        "confirmPassword": "As senhas precisam ser iguais",
+        "length": "Senha deve ter no mínimo 6 caracteres, podendo ser letras, números e/ou caracteres especiais"
+      },
+      "noRoleAssignedForMessageType": "Ocorreu um erro ao enviar a mensagem, tente novamente ou contate o administrador",
+      "recaptcha": "Por favor, confirme que você não é um robo",
+      "required": {
+        "avatarTooLarge": "O arquivo excede o tamanho máximo",
+        "birthDate": "Data de nascimento obrigatória",
+        "cellphone": "Celular é obrigatório",
+        "city": "Município é obrigatório",
+        "confirmPassword": "Confirmar senha obrigatório",
+        "cpf": "CPF é obrigatório",
+        "educationalInstitution": "Instituição de ensino é obrigatória",
+        "email": "E-mail é obrigatório",
+        "name": "Nome é obrigatório",
+        "password": "Senha é obrigatória",
+        "schoolBonds": "Vínculo escolar é obrigatório",
+        "state": "Estado é obrigatório",
+        "wrongFormat": "Telefone inválido",
+        "cellphoneWrongFormat": "Celular inválido",
+        "termsOrPolicy": "Aceites de termos de uso e políticas de privacidades são obrigatórios"
+      }
+    },
+    "label": {
+      "name": "Nome",
+      "cpf": "CPF",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "schoolBonds": "Vínculo escolar*",
+      "birthDate": "Data de Nascimento*",
+      "cellphone": "Celular*",
+      "state": "UF",
+      "city": "Município",
+      "institution": "Instituição de ensino"
+    },
+    "placeholder": {
+      "cellphone": "(00) 00000-0000",
+      "city": "Selecione o município",
+      "email": "meu.nome@email.com",
+      "institution": "Selecione a instituição de ensino",
+      "name": "Digite seu nome aqui",
+      "phone": "(00) 0000-0000",
+      "schoolBonds": "Selecione o vínculo escolar",
+      "state": "Selecione Estado"
+    },
+    "schoolBonds": {
+      "other": "Outros",
+      "schoolManager": "Gestor escolar",
+      "student": "Estudante",
+      "studentParent": "Pais de estudante",
+      "teacher": "Professor"
+    },
+    "locale": "Localização",
+    "completArea": "<p>Para finalizar seu cadastro preencha algumas informações adicionais, com o objetivo de melhorar sua experiência nos ambientes do Programa Conexão DNIT</p>",
+    "submit": "Salvar",
+    "successfullyCreated": "Perfil salvo com sucesso!",
+    "title": "Cadastro do usuário",
+    "govbrSpotlight": "Informações Gov.br",
+    "complementsSpotlight": "Informações Complementares",
+    "termsOfUseLink": "Termos de Uso Conexão DNIT",
+    "termsOfUse": "Você precisa aceitar o ",
+    "privacyPolicyLink": "Política de Privacidade",
+    "privacyPolicy": "Você precisa aceitar a ",
+    "accept": "Aceitar",
+    "cancel": "Cancelar",
+    "goBack": "Voltar"
+  },
+  "Project": {
+    "details": {
+      "downloads": "Arquivos para Download"
+    },
+    "action": {
+      "emptyMessage": "Não há nenhuma ação registrada",
+      "title": "Ações de Projeto ou Campanha"
+    },
+    "title": "Projetos e Campanhas"
+  },
+  "Report": {
+    "title": "Relatórios"
+  },
+  "SignUp": {
+    "cpfExists": "CPF já está cadastrado",
+    "emailExists": "E-mail já está cadastrado",
+    "error": {
+      "cpf": "CPF inválido!",
+      "email": "E-mail inválido",
+      "password": {
+        "confirmPassword": "As senhas precisam ser iguais",
+        "length": "Senha deve ter no mínimo 6 caracteres, podendo ser letras, números e/ou caracteres especiais"
+      },
+      "recaptcha": "Por favor, confirme que você não é um robo",
+      "invalidBirthDate": "Cadastro não permitido para menores de 12 anos.",
+      "required": {
+        "avatarTooLarge": "O arquivo excede o tamanho máximo",
+        "cellphone": "Celular é obrigatório",
+        "cellphoneWrongFormat": "Celular inválido",
+        "city": "Município é obrigatório",
+        "confirmPassword": "Confirmar senha obrigatório",
+        "cpf": "CPF é obrigatório",
+        "educationalInstitution": "Instituição de ensino é obrigatória",
+        "email": "E-mail é obrigatório",
+        "name": "Nome é obrigatório",
+        "password": "Senha é obrigatória",
+        "schoolBonds": "Vínculo escolar é obrigatório",
+        "state": "Estado é obrigatório",
+        "termsOfUse": "Você precisa aceitar os Termos de Uso e a Política de Privacidade.",
+        "wrongFormat": "Telefone inválido",
+        "birthDate": "Data de nascimento é obrigatória"
+      }
+    },
+    "label": {
+      "avatar": "Foto do perfil",
+      "avatarMaxSize": "O tamanho máximo permitido para o arquivo é {max}",
+      "cellphone": "Celular",
+      "chooseAvatar": "Selecione Arquivo",
+      "city": "Município",
+      "confirmPassword": "Confirmar senha",
+      "cpf": "CPF",
+      "email": "E-mail",
+      "institution": "Instituição de ensino",
+      "name": "Nome",
+      "password": "Senha",
+      "phone": "Telefone",
+      "schoolBonds": "Vínculo escolar",
+      "state": "Estado",
+      "birthDate": "Data de nascimento"
+    },
+    "placeholder": {
+      "cellphone": "(00) 00000-0000",
+      "city": "Selecione o município",
+      "email": "meu.nome@email.com",
+      "institution": "Selecione a instituição de ensino",
+      "name": "Digite seu nome aqui",
+      "phone": "(00) 0000-0000",
+      "schoolBonds": "Selecione o vínculo escolar",
+      "state": "Selecione Estado",
+      "birthDate": "Preencha a data de nascimento"
+    },
+    "submit": "Salvar",
+    "successfullyCreated": "Cadastro efetuado com sucesso. Verifique seu e-mail para confirmá-lo.",
+    "title": "Formulário de Cadastro"
+  },
+  "Team": {
+    "title": "Equipe"
+  },
+  "e": {
+    "error": {
+      "ConflictedCPF": "CPF já cadastrado"
+    }
+  }
+}

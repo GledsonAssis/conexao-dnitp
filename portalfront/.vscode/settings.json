@@ -1,0 +1,11 @@
+{
+  // "i18n-ally.regex.key": "[^:]*$[\\w\\d\\. \\-\\[\\]]*?",
+  "i18n-ally.localesPaths": [
+    "src/static/locales",
+    "src/store/ducks/messages",
+    "src/components/shared/PrivacyPolicy/locales",
+    "src/components/shared/TermsOfUse/locales"
+  ],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sourceLanguage": "pt-BR",
+}

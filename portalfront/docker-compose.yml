@@ -1,0 +1,9 @@
+version: "3.3"
+
+services:
+  nextjs:
+    build: .
+    container_name: conexao-dnit-frontend
+    restart: always
+    ports:
+      - 7004:3001

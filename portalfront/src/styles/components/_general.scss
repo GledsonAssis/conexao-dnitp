@@ -1,0 +1,268 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: var(--font-line-height-medium);
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+
+}
+
+body.scrim-on {
+  overflow: hidden !important;
+
+  >div {
+    padding-right: 17px;
+  }
+}
+
+main {
+  display: block;
+}
+
+body {
+  --font-size: var(--font-size-scale-base);
+  --text-color: var(--color-secondary-08);
+  --link-color: var(--color-primary-default);
+  --bg-color: var(--color-secondary-01);
+  --font-weight: var(--font-weight-regular);
+  --line-height: var(--font-line-height-medium);
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.comment-box__animation {
+  height: auto;
+  max-height: 300px;
+  opacity: 1;
+  transition: all 600ms ease-in-out;
+  visibility: visible;
+}
+
+.comment-box__animation--hidden {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.comment-box__button {
+  color: #606060;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.comment-box__reply-button {
+  color: $dark-color;
+  margin: -20px 0 15px 65px;
+}
+
+.comment-box__text-box {
+  height: 100%;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.comment-box__text-box__actions {
+  font-size: 0.9em;
+  margin-top: 5px;
+  text-align: right;
+
+  button {
+    background: #0071bb;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 25px;
+    text-transform: uppercase;
+
+    &:hover {
+      background: red;
+    }
+  }
+}
+
+.comment-box__text-box__textarea {
+  border-radius: 5px;
+  font-family: $main-font;
+  font-size: 0.9em;
+  min-height: 80px;
+  resize: none;
+  width: 100%;
+}
+
+.text-copyright {
+  background-color: #04132a;
+  color: #ccc;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+  padding: 16px;
+}
+
+.min-w-100 {
+  min-width: 100%;
+}
+
+.divider-top {
+  border-top: 1px solid #bdbdbd;
+}
+
+.divider-bottom {
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.page-404 {
+  text-align: center;
+
+  img {
+    max-width: 75%;
+  }
+}
+
+.img__page-actions {
+  background-image: url("../../assets/icons/icon_action.svg");
+}
+
+.img__page-activities {
+  background-image: url("../../assets/icons/icon_activite.svg");
+}
+
+.img__page-courses {
+  background-image: url("../../assets/icons/icon_course.svg");
+}
+
+.img__page-projects {
+  background-image: url("../../assets/icons/icon_projects.svg");
+}
+
+.img__page-project-actions {
+  background-image: url("../../assets/icons/icon_projects.svg");
+}
+
+.img__page-external-link {
+  background-image: url("../../assets/icons/icon_link_home.svg");
+}
+
+.img__page-initiatives {
+  background-image: url("../../assets/icons/icon_iniciative.svg");
+}
+
+.img__page-messages {
+  background-image: url("../../assets/icons/icon_message.svg");
+}
+
+.img__page-search {
+  background-image: url("../../assets/icons/icon_search.svg");
+}
+
+.img__page-profile {
+  background-image: url("../../assets/icons/icon_new_user.svg");
+}
+
+.img__page-participate {
+  background-image: url("../../assets/icons/icon_participate.svg");
+}
+
+.img__page-team {
+  background-image: url("../../assets/icons/icon_team.svg");
+}
+
+.img__page-about {
+  background-image: url("../../assets/icons/icon_about.svg");
+  // Maybe this attribute should be applied to all icons, since not all of them
+  // are going to be squares.
+  background-position-x: center; 
+}
+
+.img__page>div {
+  background-position-y: center;
+  min-height: 100%;
+  background-size: contain;
+  // background-position: center;
+  width: 100%;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  .img__page>div {
+    min-height: 100px;
+  }
+}
+
+.text-​uppercase {
+  text-transform: uppercase !important;
+}
+
+.cnx-logo {
+  position: absolute;
+  left: 0;
+  text-align: right;
+  z-index: -1;
+
+  img {
+    margin-top: 10px;
+    height: 50px;
+  }
+}
+
+.bar-activites {
+  position: absolute;
+  top: 25px;
+  bottom: var(--spacing-scale-2x);
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -1;
+  width: 2px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.render-replys-list:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.input-no-apparence {
+  -webkit-appearance: none;
+  outline: none;
+  background: transparent;
+  border: none;
+}
+
+.title-skills {
+  font-size: 24px
+}

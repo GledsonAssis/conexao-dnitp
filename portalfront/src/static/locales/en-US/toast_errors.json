@@ -1,0 +1,13 @@
+{
+  "Generic": {
+    "404": "Not found!",
+    "500": "Failed to communicate with server!"
+  },
+  "Auth": {
+    "invalid_grant": "Your session has expired and you have been logged out!",
+    "undefined": "Failed to communicate with server!"
+  },
+  "Highlights": {
+    "invalid_grant": "Failed to communicate with server!"
+  }
+}

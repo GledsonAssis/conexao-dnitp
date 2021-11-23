@@ -1,0 +1,19 @@
+[{
+    "label": "general:SortFilter.byDate",
+    "value": "dateTime",
+    "field": "date",
+    "order": "asc"
+  },
+  {
+    "label": "general:SortFilter.byRepliesNumber",
+    "value": "replies",
+    "field": "length",
+    "order": "asc"
+  },
+  {
+    "label": "general:SortFilter.byName",
+    "value": "author.name",
+    "field": "title",
+    "order": "asc"
+  }
+]

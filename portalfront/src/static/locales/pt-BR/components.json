@@ -1,0 +1,80 @@
+{
+  "Footer": {
+    "Actions": "Ações de Ativação",
+    "Activities": "Atividades",
+    "Courses": "Cursos",
+    "MessageCompose": "Fale Conosco",
+    "Projects": "Projetos e Campanhas",
+    "ShareInitiative": "Envie uma Iniciativa",
+    "about": {
+      "about": "Sobre – Conexão DNIT",
+      "title": "Sobre"
+    },
+    "communication": {
+      "title": "Comunique-se e colabore"
+    },
+    "copyright": "Desenvolvido por LabTrans/UFSC. Todo o conteúdo deste site está publicado sob licença Creative Commons Atribuição -Sem Derivações 3.0 Não Adaptada.",
+    "explore": {
+      "title": "Explore"
+    },
+    "imgLogoAlt": "Logo Acesso a Informacao",
+    "imgLogoAlt2": "Logo Governo Federal",
+    "imgLogoAlt4": "Logo ministério da infraestrutura",
+    "participate": "Como Participar",
+    "participatingSchools": "Escolas Participantes",
+    "privacyPolicy": "Política de Privacidade",
+    "team": "Equipe",
+    "terms": "Desenvolvimento: LabTrans/UFSC",
+    "termsOfUse": "Termos de Uso",
+    "version": "Versão: {version}"
+  },
+  "Header": {
+    "description": "Departamento Nacional de Infraestrutura de Transportes",
+    "login": "Entrar",
+    "logout": "Sair",
+    "placeholderSearchBar": "Buscar",
+    "profile": "Perfil",
+    "signup": "Cadastrar-se",
+    "signupNow": "Não possui cadastro? Cadastre-se",
+    "title": "Portal Web - Conexão DNIT",
+    "publishText": "Publicado em:",
+    "updatedAt": "Atualizado em:",
+    "shereText": "Compartilhar:"
+  },
+  "Pagination": {
+    "itens": "Itens",
+    "page": "Página",
+    "of": "de",
+    "show": "Exibir"
+  },
+  "Menu": {
+    "sociais": "Redes Sociais",
+    "pages": {
+      "actions": "Ações de Ativação",
+      "activities": "Atividades",
+      "courses": "Cursos",
+      "cms": "Gestão",
+      "home": "Página inicial",
+      "projects": "Projetos e Campanhas",
+      "relatorios": "Relatórios"
+    }
+  },
+  "MultiSelectButton": {
+    "deselectAll": "Desmarcar Todos",
+    "disciplineSelectTitle": "Objeto de Conhecimento",
+    "schoolYearsSubTitle": "",
+    "schoolYearsTitle": "Selecione o(s) Ano(s)",
+    "selectAll": "Todos",
+    "subTitle": "",
+    "title": "Selecione a(s) Disciplina(s)",
+    "trafficSelectTitle": "Conteúdo de Trânsito"
+  },
+  "Rating": {
+    "title": "Classifique",
+    "rating": "Avaliação"
+  },
+  "Table": {
+    "selectAll": "Selecionar tudo",
+    "delete": "Deletar Selecionados"
+  }
+}

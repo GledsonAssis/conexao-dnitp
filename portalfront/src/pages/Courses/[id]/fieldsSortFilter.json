@@ -1,0 +1,9 @@
+[{
+        "label": "general:SortFilter.byTitle",
+        "value": "orderByTitle"
+    },
+    {
+        "label": "general:SortFilter.byPublishedDate",
+        "value": "orderByDateDesc"
+    }
+]

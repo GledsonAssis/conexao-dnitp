@@ -1,0 +1,92 @@
+{
+  "Attachments": {
+    "title": "Documentos"
+  },
+  "Auth": {
+    "error": "Sua sessão expirou e você foi deslogado!"
+  },
+  "CommentList": {
+    "commentBoxCommentText": "Comentar",
+    "commentBoxReplyText": "Responder",
+    "commentBoxCancelText": "Cancelar",
+    "commentBoxSendText": "Enviar",
+    "commentDisabledText": "É necessário efetuar login para comentar",
+    "delete": {
+      "error": "Erro ao deletar comentário",
+      "success": "Comentário removido"
+    },
+    "emptyMessage": "Não há nenhum comentário registrado",
+    "submitCommentError": "Não foi possível enviar o comentário",
+    "submitCommentSuccess": "Comentário enviado com sucesso",
+    "placeholder": "Deixe aqui a sua opinião",
+    "title": "Comentários"
+  },
+  "Course": {
+    "goToCourse": "Entre no Curso"
+  },
+  "Error": {
+    "accessNotAllowed": "É necessária permissão acessar essa funcionalidade. Contate o administrador.",
+    "genericError": "Ops... Ocorreu um erro, por favor tente novamente."
+  },
+  "Form": {
+    "placeholderSelect": "Selecione...",
+    "validation": {
+      "required": "Obrigatório",
+      "validationFailed": "Verifique os campos e tente novamente",
+      "genericValidationFailed": "Verifique os campos e tente novamente"
+    }
+  },
+  "Rating": {
+    "error": "Ocorreu um erro ao salvar a classificação"
+  },
+  "Routes": {
+    "/": "Página Inicial",
+    "/Actions": "Ações de Ativação",
+    "/Actions/[id]": "Detalhes da Ação de Ativação",
+    "/Activities": "Atividades",
+    "/Activities/[id]": "Detalhes de atividade",
+    "/Activities/[id]/Survey": "Avaliar Atividade",
+    "/GeneralSearch": "Busca Geral",
+    "/cadastro": "Cadastro",
+    "/Participate": "Como Participar",
+    "/Courses": "Cursos",
+    "/Courses/[id]": "Detalhes do Curso",
+    "/Team": "Equipe",
+    "/ParticipatingSchools": "Escolas Participantes",
+    "/Login": "Login",
+    "/Messages": "Mensagens",
+    "/Messages/Send": "Escrever Mensagem",
+    "/Messages/[id]": "Visualizar Mensagem",
+    "/Initiatives": "Iniciativas",
+    "/Initiatives/[id]": "Detalhes da iniciativa",
+    "/Initiatives/Send": "Enviar Iniciativa",
+    "/Profile": "Perfil",
+    "/Projects": "Projetos e Campanhas",
+    "/Projects/[id]": "Detalhes do Projeto ou Campanha",
+    "/Projects/[id]/[idAction]": "Detalhes da Ação de Projeto ou Campanha",
+    "/relatorios": "Relatórios",
+    "/About": "Sobre",
+    "/PrivacyPolicy": "Política de Privacidade",
+    "/TermsOfUse": "Termos de Uso",
+    "/404": "Página não encontrada"
+  },
+  "SchoolBonds": {
+    "other": "Outros",
+    "schoolManager": "Gestor escolar",
+    "student": "Estudante",
+    "studentParent": "Pais de estudante",
+    "teacher": "Professor"
+  },
+  "Select": {
+    "emptyOptionsMessage": "Nenhuma opção disponível"
+  },
+  "SortFilter": {
+    "byDate": "Data",
+    "byDateDesc": "Data Decrescente",
+    "byPublishedDate": "Data",
+    "byQntReplies": "Quantidade de respostas",
+    "byTitle": "Título",
+    "byRepliesNumber": "Número de Respostas",
+    "byName": "Nome"
+  }
+}

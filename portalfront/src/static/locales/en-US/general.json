@@ -1,0 +1,91 @@
+{
+  "Attachments": {
+    "title": "Attachments"
+  },
+  "Auth": {
+    "error": "Your session expired and you were logged out."
+  },
+  "CommentList": {
+    "commentBoxCommentText": "Leave a message",
+    "commentBoxReplyText": "Reply",
+    "commentBoxCancelText": "Cancel",
+    "commentBoxSendText": "Send",
+    "commentDisabledText": "Please login to comment",
+    "delete": {
+      "error": "Error: unable to delete comment",
+      "success": "Comment removed"
+    },
+    "emptyMessage": "No comments yet",
+    "submitCommentError": "Error: unable to submit comment",
+    "submitCommentSuccess": "Your comment was sent successfully",
+    "title": "Comments"
+  },
+  "Course": {
+    "goToCourse": "Go to Course"
+  },
+  "Error": {
+    "accessNotAllowed": "Permission is required to access this functionality. Contact your administrator.",
+    "genericError": "Oops... An error occurred, please try again."
+  },
+  "Form": {
+    "placeholderSelect": "Choose...",
+    "validation": {
+      "required": "Required",
+      "validationFailed": "Check the fields and try again",
+      "genericValidationFailed": "Check the fields and try again"
+    }
+  },
+  "Rating": {
+    "error": "Error: unable to submit rating"
+  },
+  "Routes": {
+    "/cadastro": "Sign up form",
+    "/": "Home",
+    "/Actions": "Activation Actions",
+    "/Actions/[id]": "Activation Action Details",
+    "/Activities": "Activities",
+    "/Activities/[id]": "Activity Details",
+    "/Activities/[id]/Survey": "Rate Activity",
+    "/GeneralSearch": "General Search",
+    "/Participate": "How to Participate",
+    "/Courses": "Courses",
+    "/Courses/[id]": "Course Details",
+    "/Team": "Team",
+    "/ParticipatingSchools": "Participating Schools",
+    "/Login": "Login",
+    "/Message": "Messages",
+    "/Message/Send": "Write Message",
+    "/Message/[id]": "View Message",
+    "/Initiatives": "Initiatives",
+    "/Initiatives/[id]": "Initiative Details",
+    "/Initiatives/Send": "Submit Initiative",
+    "/Profile": "Profile",
+    "/Projects": "Projects and Campaigns",
+    "/Projects/[id]": "Project or Campaigns Details",
+    "/Projects/idProject/acoes/idAction": "Project or Campaing Action Details",
+    "/relatorios": "Reports",
+    "/About": "About",
+    "/PrivacyPolicy": "Privacy Policy",
+    "/TermsOfuse": "Terms of Use",
+    "/404": "Page not found"
+  },
+  "SchoolBonds": {
+    "other": "Others",
+    "schoolManager": "School Manager",
+    "student": "Student",
+    "studentParent": "Student parent",
+    "teacher": "Teacher"
+  },
+  "Select": {
+    "emptyOptionsMessage": "No options available"
+  },
+  "SortFilter": {
+    "byDate": "Date",
+    "byDateDesc": "Date (descending)",
+    "byPublishedDate": "Date",
+    "byQntReplies": "Number of replies",
+    "byTitle": "Title",
+    "byRepliesNumber": "Replies Number",
+    "byName": "Name"
+  }
+}

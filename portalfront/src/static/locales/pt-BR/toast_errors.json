@@ -1,0 +1,14 @@
+{
+  "Generic": {
+    "404": "Não encontrado!",
+    "500": "Falha ao se comunicar com o servidor!"
+  },
+  "Auth": {
+    "invalid_grant": "Sua sessão expirou e você foi deslogado!",
+    "expired_session": "Sua sessão expirou e você foi deslogado!",
+    "undefined": "Falha ao se comunicar com o servidor!"
+  },
+  "Highlights": {
+    "invalid_grant": "Falha ao se comunicar com o servidor!"
+  }
+}

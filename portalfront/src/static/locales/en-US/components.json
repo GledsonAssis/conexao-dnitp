@@ -1,0 +1,80 @@
+{
+  "Footer": {
+    "Actions": "Activation Actions",
+    "Activities": "Activities",
+    "Courses": "Courses",
+    "MessageCompose": "Contact Us",
+    "Projects": "Projects and Campaigns",
+    "ShareInitiative": "Submit an Initiative",
+    "about": {
+      "about": "About – Conexão DNIT",
+      "title": "About"
+    },
+    "communication": {
+      "title": "Communicate and Collaborate"
+    },
+    "copyright": "Developed by LabTrans/UFSC. All content on this site is licensed under a Creative Commons Attribution-NoDerivs 3.0 Unported license.",
+    "explore": {
+      "title": "Explore"
+    },
+    "imgLogoAlt": "Information Access Logo",
+    "imgLogoAlt2": "Brazilian Federal Government Logo",
+    "imgLogoAlt4": "Ministry of Infrastructure Logo",
+    "participate": "How to Participate",
+    "participatingSchools": "Participating Schools",
+    "privacyPolicy": "Privacy Policy",
+    "team": "Team",
+    "terms": "Developed by: LabTrans/UFSC",
+    "termsOfUse": "Terms of Use",
+    "version": "Version: {version}"
+  },
+  "Header": {
+    "description": "National Department of Transport Infrastructure",
+    "login": "Login",
+    "logout": "Logout",
+    "placeholderSearchBar": "Search",
+    "profile": "Profile",
+    "signup": "Sign Up",
+    "signupNow": "Not registered? Sign up now",
+    "title": "Web Portal - Conexão DNIT",
+    "publishText": "Published in:",
+    "updatedAt": "updated in:",
+    "shereText": "Share:"
+  },
+  "Pagination": {
+    "itens": "Itens",
+    "page": "Page",
+    "of": "of",
+    "show": "Show"
+  },
+  "Menu": {
+    "sociais": "Social Networks",
+    "pages": {
+      "actions": "Activation Actions",
+      "activities": "Activities",
+      "courses": "Courses",
+      "cms": "Management",
+      "home": "Home page",
+      "projects": "Projects and Campaigns",
+      "relatorios": "Reports"
+    }
+  },
+  "MultiSelectButton": {
+    "deselectAll": "Deselect All",
+    "disciplineSelectTitle": "Knowledge Object",
+    "schoolYearsSubTitle": "",
+    "schoolYearsTitle": "Select the Grade(s)",
+    "selectAll": "All",
+    "subTitle": "",
+    "title": "Select the Subject(s)",
+    "trafficSelectTitle": "Traffic-related Content"
+  },
+  "Rating": {
+    "title": "Rate this",
+    "rating": "Rating"
+  },
+  "Table": {
+    "selectAll": "Select All",
+    "delete": "Delete Selected"
+  }
+}
