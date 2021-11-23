@@ -1,0 +1,1 @@
+ALTER TABLE [dnit].[AtividadeAvaliacaoPergunta] ADD obrigatoria bit NOT NULL DEFAULT 0

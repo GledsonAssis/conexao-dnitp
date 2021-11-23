@@ -1,0 +1,14 @@
+/.vscode
+node_modules
+*.log
+.env
+package-lock.json
+yarn.lock
+
+*.key
+*.cert
+*.crt
+
+# Dev
+\.idea/
+/.vs

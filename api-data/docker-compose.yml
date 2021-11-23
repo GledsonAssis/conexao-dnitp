@@ -1,0 +1,12 @@
+# docker-compose.yml
+version: '1.2'
+
+services:
+  api-conexao-dnit:
+    build: .
+    container_name: 'api'
+    restart: always
+    env_file: ./.env
+    ports:
+      - "7001:7001"
+    container_name: api-conexao-dnit
