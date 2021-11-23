@@ -1,0 +1,1482 @@
+{
+  "actions": {
+    "labels": {
+      "btnCreate": "Register",
+      "edit": "Edit Action",
+      "title": "Actions",
+      "create": "Register Action",
+      "emptyList": "No records found.",
+      "listTitle": "List of Actions",
+      "pageTitle": "Actions",
+      "search": "Search by keyword",
+      "table": {
+        "confirmInactivate": "Are you sure you want to disable this action?",
+        "confirmPublish": "Are you sure you want to publish this action?",
+        "edit": "Edit",
+        "inactivated": "Disabled",
+        "publication": "Publish",
+        "published": "Published",
+        "registered": "Registered",
+        "situation": "Situation",
+        "actions": "Actions",
+        "title": "Activation Actions",
+        "projectName": "Project"
+      }
+    },
+    "details": {
+      "attachFiles": "Attach files",
+      "attachImages": "Attach images",
+      "description": "Description",
+      "labels": {
+        "imagesTypes": "Types of files that can be uploaded",
+        "fileTypes": "Types of files that can be uploaded",
+        "attachFiles": "Attach files",
+        "attachImages": "Attach images",
+        "description": "Description",
+        "summary": "Summary",
+        "title": "Title"
+      },
+      "error": {
+        "createError": "Error: unable to register Activation Action"
+      },
+      "maxSize": "The maximum allowed file size is {{max}}. This file cannot be submitted.",
+      "pageTitle": "Activation Action Registration",
+      "placeholders": {
+        "attachFiles": "Drag and drop or click here to choose a file",
+        "description": "Enter here the description of the Activation Action",
+        "summary": "Summary",
+        "title": "Title"
+      },
+      "publish": "Publish",
+      "cancel": "Cancel",
+      "required": {
+        "description": "Please enter a description",
+        "summary": "Please enter a summary",
+        "title": "Please enter a title"
+      },
+      "submit": "Submit",
+      "success": "Successfully registered",
+      "summary": "Summary",
+      "title": "Title",
+      "warning": {
+        "submitAttachments": "Action was created, but not all attachments were saved. Try editing and adding the attachments again"
+      }
+    },
+    "warning": {
+      "unallowed_unpublish": "It is not possible to disable the record because it is published in the mural. Remove the item from the mural and try again"
+    },
+    "emptyList": "No records found"
+  },
+  "activities": {
+    "confirmDelete": "Are you sure you want to remove this activity?",
+    "details": {
+      "labels": {
+        "year": "Grade",
+        "theme": "Topic",
+        "subTheme": "Subtheme",
+        "trafficConcept": "Traffic Concept",
+        "trafficContent": "Traffic Content",
+        "knowledgeArea": "Knowledge Area",
+        "discipline": "Subject",
+        "knowledgeObject": "Knowledge Object",
+        "initiative": "Initiative",
+        "otherConnections": "Other connections",
+        "codeActivity": "Activity code",
+        "titleActivity": "Activity Title",
+        "estimatedTime": "Estimated time (in hours)",
+        "resources": "Resources",
+        "didacticArticulation": "Didactic Articulation",
+        "didacticStrategies": "Didactic Strategies",
+        "evaluation": "Evaluation",
+        "references": "References",
+        "selectYear": "{{year}}{{ordinal}} grade",
+        "upload": {
+          "maxSize": "The maximum allowed file size is {{max}}. This file cannot be submitted.",
+          "studentTitle": "Student Files",
+          "teacherTitle": "Teacher Files",
+          "uploadFile": "Select one or more files to upload"
+        },
+        "wizard": {
+          "trafficContent": "Traffic Content",
+          "identification": "Identification",
+          "details": "Details",
+          "files": "Files"
+        }
+      },
+      "error": {
+        "createError": "Error: unable to register activity",
+        "deleteForbidden": "This record has dependencies and cannot be modified"
+      },
+      "pageTitle": "Activities",
+      "placeholders": {
+        "codeActivity": "Activity code",
+        "didacticArticulation": "Didactic Articulation",
+        "didacticStrategies": "Didactic Strategies",
+        "discipline": "Select Subject",
+        "estimatedTime": "Estimated time",
+        "evaluation": "Evaluation",
+        "initiative": "Select Initiative",
+        "knowledgeArea": "Select Knowledge Area",
+        "knowledgeObject": "Select Knowledge Object",
+        "otherConnections": "Other connections",
+        "references": "References",
+        "resources": "Resources",
+        "titleActivity": "Activity Title",
+        "trafficConcept": "Select the Traffic Concept",
+        "trafficContent": "Select the Traffic Content",
+        "year": "Select the grade",
+        "upload": "Select the files you want to attach to the message"
+      },
+      "publish": "Publish",
+      "required": {
+        "duration": "Please enter the estimated time",
+        "knowledgeArea": "Please select the Knowledge Area",
+        "knowledgeObject": "Please select the Knowledge Objects",
+        "resource": "Please enter the Resources",
+        "schoolYear": "Please select the grade",
+        "teachingArticulation": "Please enter Didactic Articulation",
+        "title": "Please enter a title",
+        "trafficConcept": "Please enter the Traffic Concept",
+        "competences": "Please select the Competency",
+        "skills": "Please select the Skill",
+        "idDiscipline": "Please select the Subject",
+        "codeActivity": "Activity code is a required field."
+      },
+      "resources": "Resources",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "success": "Successfully registered",
+      "warning": {
+        "submitAttachments": "Activity was created, but not all attachments were saved. Try editing the activity and adding the attachments again"
+      },
+      "year": "Year",
+      "upload": {
+        "uploadFile": "Select one or more file(s) to upload",
+        "teacherTitle": "Teacher Files",
+        "studentTitle": "Student Files",
+        "maxSize": "The maximum size for a file must be {{max}}. This file will not be uploaded."
+      },
+      "trafficContent": "Traffic Content",
+      "trafficConcept": "Traffic Concept",
+      "titleActivity": "Activity Title",
+      "theme": "Theme",
+      "subTheme": "Subtheme",
+      "save": "Save",
+      "references": "References",
+      "otherConnections": "Other connections",
+      "knowledgeObject": "Knowledge Object",
+      "knowledgeArea": "Knowledge Area",
+      "initiative": "Initiative",
+      "evaluation": "Evaluation",
+      "estimatedTime": "Estimated Time (in hours)",
+      "discipline": "subject",
+      "didacticStrategies": "Didactic Strategies",
+      "didacticArticulation": "Didactic Articulation",
+      "codeActivity": "Activity code"
+    },
+    "labels": {
+      "emptyList": "No records found.",
+      "listTitle": "Registered Activities",
+      "btnCreate": "Register",
+      "create": "Register Activity",
+      "edit": "Edit Activity",
+      "title": "Activities",
+      "searchByKeyword": "Search by keyword",
+      "selectYear": "{{year}}{{ordinal}} grade",
+      "table": {
+        "confirmInactivate": "Are you sure you want to disable this activity?",
+        "confirmPublish": "Are you sure you want to publish this activity?",
+        "delete": "Delete",
+        "discipline": "Main Subject",
+        "edit": "Edit",
+        "knowledgeField": "Knowledge Area",
+        "name": "Activities",
+        "trafficConcept": "Traffic Concept",
+        "year": "Grade",
+        "inactivated": "Disabled",
+        "publication": "Publish",
+        "published": "Published",
+        "registered": "Registered",
+        "actions": "Actions",
+        "situation": "Situation"
+      },
+      "new": "Register Activity"
+    },
+    "warning": {
+      "unallowed_unpublish": "It is not possible to disable the record because it is published in the mural. Remove the item from the mural and try again"
+    },
+    "table": {
+      "year": "Year",
+      "trafficConcept": "Traffic Concept",
+      "situation": "Situation",
+      "registered": "Registered",
+      "published": "Published",
+      "publication": "Publish",
+      "name": "Activity",
+      "knowledgeField": "Knowledge Area",
+      "inactivated": "Inactivated",
+      "edit": "Edit",
+      "discipline": "Main Subject",
+      "delete": "Delete",
+      "confirmPublish": "Are you sure you want to post this activity?",
+      "confirmInactivate": "Are you sure you want to disable this activity?"
+    },
+    "selectYear": "{{year}}{{ordinal}} grade",
+    "searchByKeyword": "Search by keyword",
+    "pageTitle": "Activities",
+    "new": "Register Activity",
+    "listTitle": "Registered Activities"
+  },
+  "courses": {
+    "details": {
+      "error": {
+        "createError": "Error: unable to register course"
+      },
+      "labels": {
+        "imagesTypes": "Types of files that can be uploaded",
+        "fileTypes": "Types of files that can be uploaded",
+        "attachFiles": "Attach files",
+        "attachImages": "Attach images",
+        "description": "Description",
+        "link": "Course Link",
+        "summary": "Summary",
+        "title": "Title",
+        "type": "Type"
+      },
+      "maxSize": "The maximum allowed file size is {{max}}. This file cannot be submitted.",
+      "pageTitle": "Courses",
+      "placeholders": {
+        "attachFiles": "Drag and drop or click here to choose a file",
+        "description": "Enter the course description here",
+        "link": "Link to access the course - moodle",
+        "summary": "Summary",
+        "title": "Title",
+        "upload": "Select the files you want to attach to the message"
+      },
+      "publish": "Publish",
+      "cancel": "Cancel",
+      "required": {
+        "description": "Please enter a description",
+        "link": "Please enter the course link",
+        "summary": "Please enter a summary",
+        "title": "Please enter a title"
+      },
+      "submit": "Submit",
+      "success": "Successfully registered",
+      "types": {
+        "dnitEmployees": "Conexão DNIT Managers",
+        "open": "Open",
+        "participantsAndEmployees": "Program Participants or Conexão DNIT Managers",
+        "projectParticipants": "Program Participants"
+      },
+      "warning": {
+        "submitAttachments": "Course was created, but not all attachments were saved. Try editing the course and adding the attachments again"
+      }
+    },
+    "error": "Error: unable to register",
+    "labels": {
+      "btnCreate": "Register",
+      "create": "Register course",
+      "edit": "Edit course",
+      "emptyList": "No records found.",
+      "listTitle": "List of courses",
+      "pageTitle": "Courses",
+      "search": "Search by keyword",
+      "table": {
+        "confirmInactivate": "Are you sure you want to disable this course?",
+        "confirmPublish": "Are you sure you want to publish this course?",
+        "edit": "Edit",
+        "inactivated": "Disabled",
+        "publication": "Publish",
+        "published": "Published",
+        "registered": "Registered",
+        "situation": "Situation",
+        "actions": "Actions",
+        "courseName": "Courses",
+        "creationDate": "Creation Date",
+        "modifyDate": "Modify Date"
+      },
+      "title": "Courses"
+    },
+    "success": "Successfully registered",
+    "warning": {
+      "unallowed_unpublish": "It is not possible to disable the record because it is published in the mural. Remove the item from the mural and try again"
+    }
+  },
+  "dnitLocalUnits": {
+    "confirmDelete": "Are you sure you want to remove this local unit?",
+    "searchByKeyword": "Search by keyword",
+    "details": {
+      "labels": {
+        "federalHighways": "Federal Highways",
+        "identification": "Identification",
+        "isFederalDistrict": "Is Federal District?",
+        "regionalSuperintendence": "Regional Superintendence",
+        "cities": "Cities",
+        "email": "E-mail",
+        "phone1": "Phone 1",
+        "phone2": "Phone 2",
+        "submit": "Send",
+        "submiting": "Sending...",
+        "address": {
+          "city": "Select the City",
+          "complement": "Complement",
+          "district": "Neighborhood",
+          "number": "Number",
+          "state": "Select the State",
+          "street": "Street",
+          "zipCode": "Enter your ZIP code/CEP",
+          "title": "Address",
+          "zipCodeNotFound": "zip code not found"
+        }
+      },
+      "placeholders": {
+        "cities": "Select the cities",
+        "email": "Enter e-mail",
+        "federalHighways": "Select the federal highways",
+        "identification": "Enter identification",
+        "phone1": "Enter phone 1",
+        "phone2": "Insert phone 2",
+        "regionalSuperintendence": "Enter the regional superintendence",
+        "address": {
+          "city": "Select the City",
+          "complement": "Complement",
+          "district": "Neighborhood",
+          "number": "Number",
+          "state": "Select the State",
+          "street": "Street",
+          "zipCode": "Enter your ZIP code/CEP",
+          "title": "Address",
+          "zipCodeNotFound": "zip code not found"
+        }
+      },
+      "required": {
+        "identification": "Please inform the identification",
+        "phone1": "Please enter the phone number",
+        "cities": "Please select a City",
+        "address": {
+          "cep": "Please enter the ZIP code/CEP",
+          "city": "Please select a City",
+          "district": "Please inform your neighborhood",
+          "state": "Please inform your state",
+          "street": "Please inform your street",
+          "zipCode": "Please enter the ZIP code/CEP",
+          "zipCodeNotFound": "Zip code/CEP not found"
+        },
+        "email": "Email is a required field."
+      },
+      "errors": {
+        "cities": "Inform the cities covered by the local unit",
+        "identification": "An identification is required",
+        "phone": "Please enter the phone number",
+        "regSuperintendence": "The regional superintendency must be informed"
+      },
+      "submit": "Submit",
+      "cancel": "Cancel"
+    },
+    "edit": "Edit Local Unit",
+    "emptyList": "No records found.",
+    "errorMessage": "An error has occurred",
+    "labels": {
+      "btnCreate": "Create",
+      "listTitle": "Registered Local Units",
+      "pageTitle": "Local Unit",
+      "newTitle": "Register Local Unit",
+      "editTitle": "Edit Local Unit",
+      "table": {
+        "city": "City",
+        "actions": "Actions",
+        "delete": "Delete",
+        "edit": "Edit",
+        "localUnit": "Local Unit",
+        "phones": "Phone number",
+        "states": "State",
+        "participaConexaoDnit": "Conexão DNIT",
+        "regionalSuperintendence": "Regional Superintendence",
+        "state": "State"
+      },
+      "emptyList": "No records found"
+    },
+    "success": "Successfully registered"
+  },
+  "externalLinks": {
+    "details": {
+      "labels": {
+        "imagesTypes": "Types of files that can be uploaded",
+        "fileTypes": "Types of files that can be uploaded",
+        "attachFiles": "Attach files",
+        "attachImages": "Attach images",
+        "description": "Description",
+        "summary": "Summary",
+        "title": "Title",
+        "link": "Link"
+      },
+      "description": "Description",
+      "edit": "External link editing",
+      "error": {
+        "loadingData": "Error: unable to load data"
+      },
+      "link": "Link",
+      "new": "External link registration",
+      "placeholders": {
+        "description": "Enter here the description of the External Link",
+        "link": "Link",
+        "summary": "Summary",
+        "title": "Title"
+      },
+      "required": {
+        "description": "Please enter a description",
+        "link": "Please enter the link",
+        "summary": "Please enter a summary",
+        "title": "Please enter a title"
+      },
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "publish": "Publish",
+      "summary": "Summary",
+      "title": "Title"
+    },
+    "error": "Error: unable to complete registration",
+    "labels": {
+      "btnCreate": "Register",
+      "create": "Register External Link",
+      "edit": "Edit External Link",
+      "emptyList": "No records found.",
+      "listTitle": "List of External Links",
+      "pageTitle": "External Links",
+      "search": "Search by keyword",
+      "table": {
+        "confirmInactivate": "Are you sure you want to disable this external link?",
+        "confirmPublish": "Are you sure you want to publish this external link?",
+        "delete": "Delete",
+        "edit": "Edit",
+        "title": "Title",
+        "actions": "Actions",
+        "inactivated": "Disabled",
+        "publication": "Publish",
+        "published": "Published",
+        "registered": "Registered",
+        "situation": "Situation",
+        "externalLinks": "External Links",
+        "projectName": "Project"
+      },
+      "title": "Courses"
+    },
+    "new": "Register External Link",
+    "success": "Successfully registered",
+    "warning": {
+      "unallowed_unpublish": "It is not possible to disable the record because it is published in the mural. Remove the item from the mural and try again"
+    },
+    "emptyList": "No records found"
+  },
+  "highlights": {
+    "labels": {
+      "save": "Submit",
+      "emptyList": "No records found.",
+      "listTitle": "Mural list",
+      "pageTitle": "Mural",
+      "table": {
+        "title": "Title",
+        "type": "Type",
+        "highlight": "Highlight",
+        "highlightOrder": "Order",
+        "creationDate": "Creation Date",
+        "modifyDate": "Modify Date"
+      }
+    },
+    "placeholders": {
+      "search": "Search by keyword"
+    }
+  },
+  "home": {
+    "labels": {}
+  },
+  "institutions": {
+    "confirmDelete": "Are you sure you want to remove this educational institution?",
+    "details": {
+      "labels": {
+        "networkType": "Network",
+        "networkTypeOps": {
+          "city": "Municipal",
+          "state": "State",
+          "federal": "Federal",
+          "private": "Particular private",
+          "filantropica": "Philanthropic private"
+        },
+        "isDF": "Linked to DNIT headquarters",
+        "conectionDnit": "Is a participant of Conexão DNIT?",
+        "identification": "Identification",
+        "regionalSuperintendence": "Regional Superintendence",
+        "localUnit": "Local Unit",
+        "cities": "Local Unit City",
+        "codeInep": "INEP code",
+        "phone": "Phone number",
+        "quantidadeAlunos": "Number of students",
+        "quantidadeProfessores": "Number of teachers",
+        "latitude": "Latitude",
+        "longitude": "Longitude"
+      },
+      "codeInepExists": "This INEP code already exists",
+      "email": "E-mail",
+      "emptyList": "No records found.",
+      "error": {
+        "createError": "Error: unable to save educational institution",
+        "latitude": "Latitude is required",
+        "longitude": "Longitude is required"
+      },
+      "errorLoadingData": "Error: unable to load data, please contact an administrator",
+      "pageTitle": "Educational Institution",
+      "placeholders": {
+        "quantidadeAlunos": "Number of students",
+        "quantidadeProfessores": "Number of teachers",
+        "cities": "Local Unit City",
+        "codeInep": "INEP code",
+        "email": "E-mail",
+        "identification": "Identification",
+        "latitude": "Latitude",
+        "localUnit": "Local Unit",
+        "longitude": "Longitude",
+        "phone": "Phone number",
+        "regionalSuperintendence": "Regional Superintendence"
+      },
+      "required": {
+        "codeInep": "Please enter the INEP code",
+        "city": "Please enter the City",
+        "identification": "Please inform the identification",
+        "localUnit": "Please select the local unit",
+        "networkType": "Please inform the type",
+        "phone": "Please enter the phone number",
+        "regionalSuperintendence": "Please select the regional superintendency"
+      },
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "success": "Educational Institution registered successfully",
+      "pageCreateTitle": "Edit Educational Institution",
+      "pageNewTitle": "Register Educational Institution"
+    },
+    "emptyList": "No records found.",
+    "labels": {
+      "btnCreate": "Register",
+      "new": "Register Institution",
+      "edit": "Edit Institution",
+      "listTitle": "Registered Institutions",
+      "pageTitle": "Educational institutions",
+      "searchByKeyword": "Search by keyword",
+      "todos": "All",
+      "participaDNIT": "Is a participant of Conexão DNIT",
+      "naoParticipaDNIT": "Is not a participant of Conexão DNIT",
+      "table": {
+        "city": "City",
+        "isDnitConexao": "Conexão DNIT",
+        "actions": "Actions",
+        "delete": "Delete",
+        "edit": "Edit",
+        "institution": "Institution",
+        "localUnit": "Local Unit",
+        "phones": "Phone number",
+        "regionalSuperintendence": "Regional Superintendence",
+        "states": "State",
+        "labelYesDnitConexao": "Yes",
+        "labelNoDnitConexao": "No"
+      },
+      "emptyList": "No records found"
+    }
+  },
+  "knowledgeObject": {
+    "confirmDelete": "Are you sure you want to remove this Knowledge Object?",
+    "details": {
+      "labels": {
+        "discipline": "Subject",
+        "fieldKnowledge": "Knowledge Area",
+        "name": "Knowledge Object",
+        "year": "Grade"
+      },
+      "placeholders": {
+        "discipline": "Subject",
+        "fieldKnowledge": "Knowledge Area",
+        "knowledgeObject": "Knowledge Object",
+        "name": "Enter the name of the Knowledge Object",
+        "year": "Grade"
+      },
+      "required": {
+        "discipline": "Please select the Subject",
+        "fieldKnowledge": "Please select the Knowledge Area",
+        "name": "Please select a Knowledge Object",
+        "schoolYear": "Please select the grade"
+      },
+      "submit": "Submit",
+      "cancel": "Cancelar",
+      "success": "Successfully registered",
+      "error": "Error: unable to register"
+    },
+    "emptyList": "No records found.",
+    "labels": {
+      "new": "Registered Knowledge Objects",
+      "edit": "Edit Knowledge Objects",
+      "listTitle": "Registered Knowledge Objects",
+      "pageTitle": "Knowledge Object",
+      "searchByKeyword": "Search by keyword",
+      "table": {
+        "actions": "Actions",
+        "delete": "Delete",
+        "discipline": "Subject",
+        "edit": "Edit",
+        "knowledgeField": "Knowledge Area",
+        "name": "Knowledge Object",
+        "year": "Grade"
+      },
+      "btnCreate": "Register",
+      "emptyList": "No records found"
+    }
+  },
+  "Login": {
+    "emailForgotPassword": "Please check your e-mail to redefine your password",
+    "error": {
+      "email": "Invalid e-mail address",
+      "incorrectUserPwd": "Incorred username and/or password",
+      "inactive": "Inactive or unauthorized user.",
+      "password": {
+        "length": "Password must be at least 6 characters long and may contain letters, numbers and/or special characters"
+      },
+      "required": {
+        "email": "Please enter an e-mail address",
+        "password": "Please enter a password"
+      },
+      "emailNotRegistered": "This e-mail is not registered.",
+      "sendConfirmationEmail": "Unable to send confirmation e-mail"
+    },
+    "label": {
+      "backToLogin": "Back to login",
+      "email": "E-mail",
+      "forgotPassword": "Forgot my password",
+      "password": "Password",
+      "submit": "Submit",
+      "submitForgotPassword": "Recover password",
+      "didntReceiveConfirmationEmail": "I didn't receive the confirmation e-mail",
+      "submitConfirmationEmail": "Submit"
+    },
+    "placeholder": {
+      "email": "Enter your e-mail address",
+      "password": "Type your password"
+    },
+    "title": "Login",
+    "titleForgotPassword": "Recover your password",
+    "titleSendConfirmationEmail": "Send confirmation e-mail",
+    "userLogged": "You have successfully logged in",
+    "sendConfirmationEmailSuccess": "The confirmation e-mail was sent successfully",
+    "enterGovBr": "Login with ",
+    "or": "or"
+  },
+  "projects": {
+    "confirmInactivate": "Are you sure you want to disable this project?",
+    "confirmPublish": "Are you sure you want to publish this project?",
+    "create": "Register Project or Campaign",
+    "details": {
+      "attachFiles": "Attach files",
+      "attachImages": "Attach images",
+      "description": "Description",
+      "error": {
+        "createError": "Error: unable to register Project and Campaign",
+        "email": "Invalid e-mail",
+        "loadingData": "Error: unable to load data"
+      },
+      "maxSize": "The maximum allowed file size is {{max}}. This file cannot be submitted.",
+      "pageTitle": "Projects and Campaigns",
+      "placeholders": {
+        "attachFiles": "Drag and drop or click here to choose a file",
+        "description": "Enter here the description of the Project and Campaigns",
+        "summary": "Summary",
+        "title": "Title"
+      },
+      "cancel": "Cancel",
+      "publish": "Publish",
+      "required": {
+        "description": "Please enter a description",
+        "summary": "Please enter a summary",
+        "title": "Please enter a title"
+      },
+      "labels": {
+        "imagesTypes": "Types of files that can be uploaded",
+        "fileTypes": "Types of files that can be uploaded",
+        "attachFiles": "Attach files",
+        "attachImages": "Attach images",
+        "description": "Description",
+        "summary": "Summary",
+        "title": "Title"
+      },
+      "submit": "Submit",
+      "success": "Successfully registered",
+      "summary": "Summary",
+      "title": "Title",
+      "warning": {
+        "submitAttachments": "Project was created, but not all attachments were saved. Try editing the project and adding the attachments again"
+      }
+    },
+    "emptyList": "No records found.",
+    "listTitle": "Registered Projects and Campaigns",
+    "pageTitle": "Projects and Campaigns",
+    "searchByKeyword": "Search by keyword",
+    "labels": {
+      "btnCreate": "Register",
+      "create": "Register Project or Campaign",
+      "edit": "Edit Project or Campaign",
+      "emptyList": "No records found.",
+      "listTitle": "Registered Projects and Campaigns",
+      "pageTitle": "Projects and Campaigns",
+      "search": "Search by keyword",
+      "title": "Projects and Campaigns",
+      "table": {
+        "edit": "Edit",
+        "inactivated": "Disabled",
+        "publication": "Publish",
+        "published": "Published",
+        "registered": "Registered",
+        "situation": "Situation",
+        "actions": "Actions",
+        "title": "Title",
+        "projectName": "Project"
+      }
+    },
+    "warning": {
+      "unallowed_unpublish": "It is not possible to disable the record because it is published in the mural. Remove the item from the mural and try again"
+    }
+  },
+  "projectActions": {
+    "confirmInactivate": "Are you sure you want to disable this Project or Campaign Action?",
+    "confirmPublish": "Are you sure you want to publish this Project or Campaign Action?",
+    "create": "Register Project or Campaign Action",
+    "details": {
+      "attachFiles": "Attach files",
+      "attachImages": "Attach images",
+      "project": "Project/Campaign",
+      "description": "Description",
+      "error": {
+        "createError": "Error: unable to register Project or Campaign Action",
+        "email": "Invalid e-mail",
+        "loadingData": "Error: unable to load data"
+      },
+      "labels": {
+        "imagesTypes": "Types of files that can be uploaded",
+        "fileTypes": "Types of files that can be uploaded",
+        "attachFiles": "Attach files",
+        "attachImages": "Attach images",
+        "description": "Description",
+        "project": "Project/Campaign",
+        "summary": "Summary",
+        "title": "Title"
+      },
+      "maxSize": "The maximum allowed file size is {{max}}. This file cannot be submitted.",
+      "pageTitle": "Project or Campaign Action Registration",
+      "placeholders": {
+        "attachFiles": "Drag and drop or click here to choose a file",
+        "description": "Enter here the description of the Project or Campaign Action",
+        "summary": "Summary",
+        "title": "Title",
+        "project": "Project/Campaign"
+      },
+      "publish": "Publish",
+      "required": {
+        "description": "Please enter a description",
+        "summary": "Please enter a summary",
+        "title": "Please enter a title",
+        "project": "Please inform the Project/Campaign"
+      },
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "success": "Successfully registered",
+      "summary": "Summary",
+      "title": "Title",
+      "warning": {
+        "submitAttachments": "Project or Campaign action was created, but not all attachments were saved. Try editing the action and adding the attachments again"
+      }
+    },
+    "emptyList": "No records found.",
+    "listTitle": "Registered Project or Campaign Action",
+    "pageTitle": "Projects or Campaigns Actions",
+    "searchByKeyword": "Search by keyword",
+    "labels": {
+      "btnCreate": "Register",
+      "create": "Register Project or Campaign Action",
+      "edit": "Edit Project or Campaign Action",
+      "emptyList": "No records found.",
+      "listTitle": "Registered Projects or Campaigns Actions",
+      "pageTitle": "Projects or Campaigns Actions",
+      "search": "Search by keyword",
+      "title": "Projects or Campaigns Actions",
+      "table": {
+        "edit": "Edit",
+        "inactivated": "Disabled",
+        "project": "Project/Campaign",
+        "publication": "Publish",
+        "published": "Published",
+        "registered": "Registered",
+        "actions": "Actions",
+        "situation": "Situation",
+        "title": "Title",
+        "projectName": "Project"
+      }
+    },
+    "warning": {
+      "unallowed_unpublish": "It is not possible to disable the record because it is published in the mural. Remove the item from the mural and try again"
+    }
+  },
+  "regionalSuperintendence": {
+    "confirmDelete": "Are you sure you want to remove this superintendence?",
+    "details": {
+      "emptyList": "No records found.",
+      "error": {
+        "createError": "Error: unable to register superintendence",
+        "email": "Invalid e-mail",
+        "loadingData": "Error: unable to load data"
+      },
+      "placeholders": {
+        "email": "E-mail",
+        "identification": "Identification",
+        "phone1": "Phone 1",
+        "phone2": "Phone 2",
+        "address": {
+          "city": "Select the City",
+          "complement": "Complement",
+          "district": "Neighborhood",
+          "number": "Number",
+          "state": "Select the State",
+          "street": "Street",
+          "zipCode": "Enter your ZIP code/CEP"
+        }
+      },
+      "labels": {
+        "identification": "Identification",
+        "phone1": "Phone 1",
+        "phone2": "Phone 2",
+        "email": "E-mail",
+        "address": {
+          "title": "Address",
+          "city": "Cidade",
+          "complement": "Complement",
+          "district": "Neighborhood",
+          "number": "Number",
+          "state": "State",
+          "street": "Street",
+          "zipCode": "Zip code/CEP",
+          "zipCodeNotFound": "Zip code/CEP not found"
+        }
+      },
+      "required": {
+        "address": {
+          "cep": "Please enter the ZIP code/CEP",
+          "city": "Please select a City",
+          "district": "Please inform your neighborhood",
+          "state": "Please inform your state",
+          "street": "Please inform your street",
+          "zipCode": "Please enter the ZIP code/CEP",
+          "zipCodeNotFound": "Zip code/CEP not found",
+          "number": "Number is a required field."
+        },
+        "identification": "Please inform the identification",
+        "phone1": "Please enter the phone number",
+        "email": "Email is a required field."
+      },
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "submitButtonText": "Submit",
+      "success": "Successfully registered",
+      "titleEdit": "Edit Regional Superintendence",
+      "titleNew": "Register Regional Superintendence"
+    },
+    "emptyList": "No records found.",
+    "labels": {
+      "btnCreate": "Register",
+      "create": "Register Superintendence",
+      "edit": "Edit Superintendence",
+      "emptyList": "No records found.",
+      "listTitle": "Registered Regional Superintendence",
+      "pageTitle": "Regional Superintendence",
+      "search": "Search by keyword",
+      "table": {
+        "city": "City",
+        "delete": "Delete",
+        "actions": "Actions",
+        "edit": "Edit",
+        "institution": "Institution",
+        "localUnit": "Local Unit",
+        "phones": "Phone number",
+        "regionalSuperintendence": "Regional Superintendence",
+        "states": "State",
+        "state": "State"
+      },
+      "title": "Regional Superintendence"
+    }
+  },
+  "trafficConcepts": {
+    "confirmDelete": "Are you sure you want to remove this traffic concept?",
+    "details": {
+      "delete": "Delete",
+      "edit": "Edit",
+      "localUnit": "Local Unit",
+      "new": "Traffic Concept Registration",
+      "titleNew": "Register Traffic Concept",
+      "titleEdit": "Edit Traffic Concept",
+      "phones": "Phone number",
+      "placeholders": {
+        "name": "Enter the name of the traffic concept",
+        "subtheme": "Subtopic",
+        "theme": "Topic",
+        "year": "Grade"
+      },
+      "required": {
+        "name": "Please enter the Traffic Concept",
+        "schoolYear": "Please select the grade",
+        "year": "Grade is a required field."
+      },
+      "labels": {
+        "name": "Traffic Concept",
+        "subtheme": "Subtopic",
+        "theme": "Topic",
+        "year": "Grade"
+      },
+      "submit": "Submit",
+      "cancel": "Cancel"
+    },
+    "labels": {
+      "selectYear": "{{year}}{{ordinal}} grade",
+      "btnCreate": "Register",
+      "create": "Register Traffic Concepts",
+      "edit": "Edit Traffic Concepts",
+      "emptyList": "No records found.",
+      "error": "Unable to send record",
+      "listTitle": "Registered Traffic Concepts",
+      "new": "New",
+      "pageTitle": "Traffic Concept",
+      "searchByKeyword": "Search by keyword",
+      "success": "Successfully registered",
+      "table": {
+        "actions": "Actions",
+        "delete": "Delete",
+        "edit": "Edit",
+        "localUnit": "Local Unit",
+        "name": "Traffic Concept",
+        "phones": "Phone number",
+        "subTheme": "Subtopic",
+        "theme": "Topic",
+        "year": "Grade"
+      }
+    }
+  },
+  "trafficContents": {
+    "confirmDelete": "Are you sure you want to remove this traffic content?",
+    "details": {
+      "labels": {
+        "selectYear": "{{year}}{{ordinal}} grade",
+        "description": "Traffic Content",
+        "trafficConcepts": "Traffic Concept",
+        "year": "Grade"
+      },
+      "error": {
+        "createError": "Error: unable to register Traffic Content"
+      },
+      "placeholders": {
+        "name": "Enter the name of the traffic content",
+        "trafficConcepts": "Traffic Concept",
+        "year": "Grade"
+      },
+      "required": {
+        "name": "Please enter the Traffic Content",
+        "schoolYear": "Please select the grade",
+        "trafficConcept": "Please enter the Traffic Concept",
+        "competences": "Please enter the Competencies and Skills",
+        "trafficConcepts": "Traffic content is a required field."
+      },
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "success": "Successfully registered",
+      "year": "Year",
+      "trafficConcepts": "Traffic Concept",
+      "description": "Traffic Content"
+    },
+    "labels": {
+      "emptyList": "No records found.",
+      "emptyOptionsMessage": "No options available",
+      "listTitle": "Registered Traffic Contents",
+      "btnCreate": "Cadastrar",
+      "create": "Register Traffic Content",
+      "edit": "Edit Traffic Content",
+      "pageTitle": "Traffic Content",
+      "searchByKeyword": "Search by keyword",
+      "table": {
+        "selectYear": "{{year}}{{ordinal}} grade",
+        "concept": "Traffic Concept",
+        "actions": "Actions",
+        "delete": "Delete",
+        "edit": "Edit",
+        "localUnit": "Local Unit",
+        "name": "Traffic Content",
+        "phones": "Phone number",
+        "subTheme": "Subtopic",
+        "theme": "Topic",
+        "year": "Grade"
+      }
+    },
+    "error": "Unable to send record"
+  },
+  "users": {
+    "confirmDelete": "Are you sure you want to remove this user?",
+    "details": {
+      "labels": {
+        "cpf": "CPF",
+        "name": "Name",
+        "email": "E-mail",
+        "birthDate": "Date of birth",
+        "mobilePhone": "Cellphone",
+        "phone": "Phone number",
+        "profile": "Profile",
+        "regionalSuperintendence": "Regional Superintendence",
+        "localUnit": "Local Unit",
+        "state": "State",
+        "city": "City",
+        "school": "Schools",
+        "newTitle": "User Registration",
+        "editTitle": "User Edit",
+        "releaseaccess": "Release Access"
+      },
+      "error": {
+        "createError": "Error: unable to save user",
+        "cpfAlreadyTaken": "This CPF is already registered.",
+        "emailAlreadyTaken": "This E-mail is already registered.",
+        "editNotAllowed": "You do not have permission to edit this user."
+      },
+      "invalid": {
+        "cpf": "Invalid CPF"
+      },
+      "placeholders": {
+        "birthDate": "Date of birth",
+        "city": "Select the City",
+        "cpf": "Enter the CPF",
+        "email": "E-mail",
+        "localUnit": "Select a Local Unit",
+        "mobilePhone": "Cellphone",
+        "name": "User name",
+        "phone": "Phone number",
+        "profile": "Select the Profile",
+        "regionalSuperintendence": "Select a Regional Superintendence",
+        "school": "Select a School",
+        "state": "Select a State"
+      },
+      "required": {
+        "cpf": "Please enter the CPF",
+        "email": "Please enter an e-mail address",
+        "mobilePhone": "Please enter a cellphone number",
+        "name": "Please enter the name",
+        "phoneWrongFormat": "Invalid format",
+        "profile": "Please inform a profile"
+      },
+      "edit": "Submit",
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "success": "User successfully registered",
+      "releaseaccess": {
+        "success": "User successfully allowed",
+        "error": "Unable to allow access to this user",
+        "confirmation": "Do you really want to allow access for this user"
+      },
+      "label": {
+        "birthDate": "BirthDate is required"
+      }
+    },
+    "labels": {
+      "emptyList": "No records found.",
+      "listTitle": "Registered Users",
+      "title": "Users",
+      "btnCreate": "Register",
+      "pageTitleNew": "User Registration",
+      "pageTitleEdit": "User Edit",
+      "searchByKeyword": "Search by keyword",
+      "table": {
+        "actions": "Actions",
+        "inactive": "Inactive",
+        "active": "Active",
+        "city": "City",
+        "cpf": "CPF",
+        "delete": "Delete",
+        "edit": "Edit",
+        "email": "E-mail",
+        "name": "Name",
+        "profile": "Profile",
+        "state": "State",
+        "situation": "Situation",
+        "activeDeactivate": "Enable/Disable",
+        "registerDate": "Date of registration"
+      }
+    }
+  },
+  "initiatives": {
+    "details": {
+      "acceptReason": "Congratulations on the excellent initiative! It was received and forwarded to our activity production team. We will contact you for more information. Thank you and keep contributing to Conexão DNIT!",
+      "archiveReason": "Thank you for sending your initiative! It was received and stored in our idea base. Keep contributing Conexão DNIT!",
+      "error": {
+        "canNotBeEvaluate": "This initiative can no longer be evaluated.",
+        "canNotBePublish": "This initiative can no longer be published."
+      },
+      "labels": {
+        "accept": "Accept",
+        "archive": "Archive",
+        "attachments": "Attachments",
+        "attachmentsByAuthor": "Documents submitted by the author",
+        "author": "Author",
+        "description": "Description",
+        "history": "History",
+        "reason": "Reasons",
+        "title": "Title"
+      },
+      "pageTitle": {
+        "evaluate": "Evaluate Initiative",
+        "publish": "Evaluate Initiative for Publication",
+        "visualization": "View Initiative"
+      },
+      "placeholders": {
+        "attachmentsEmpty": "No attachments found.",
+        "reason": "Enter here the reasons for accepting or rejecting the initiative."
+      },
+      "required": {
+        "accept": "Please Accept or Archive.",
+        "comment": "Please enter the reasons.",
+        "reason": "Required field"
+      },
+      "submit": "Submit",
+      "cancel": "Cancel"
+    },
+    "labels": {
+      "table": {
+        "author": "Author",
+        "city": "City",
+        "Institution": "Educational Institution",
+        "status": "Situation",
+        "uf": "State",
+        "visualization": "View",
+        "title": "Initiative",
+        "actions": "Actions"
+      },
+      "listTitleEvaluate": "Initiatives for Evaluation",
+      "listTitlePublisher": "Initiatives for Evaluation by Publisher",
+      "listTitleView": "Initiatives",
+      "pageTitle": {
+        "visualization": "View Initiatives",
+        "evaluate": "Initiatives for Evaluation",
+        "publish": "Initiatives for Evaluation by Publisher"
+      },
+      "emptyList": "No records found.",
+      "searchByKeyword": "Search by keyword"
+    },
+    "error": "Unable to send record",
+    "success": "Successfully registered"
+  },
+  "surveys": {
+    "edit": "Activity Evaluation Registration",
+    "new": "Activity Evaluation Registrater",
+    "view": "Activity Evaluation View",
+    "confirmActivate": "Are you sure you want to enable this evaluation?",
+    "confirmInactivate": "Are you sure you want to disable this evaluation?",
+    "confirmSave": "You will no longer be able to modify this evaluation after saving. Do you want to save the evaluation?",
+    "report": {
+      "title": "Activity Evaluation Report",
+      "type": "Type",
+      "byActivity": "By Activity",
+      "byLocal": "By Location",
+      "byQuestion": "By Question",
+      "select": "Select",
+      "date": "Date",
+      "question": "Question",
+      "alternative": "Alternative",
+      "answer": "Answer",
+      "situation": {
+        "situation": "Situation",
+        "sent": "Pending",
+        "done": "Evaluated"
+      },
+      "period": {
+        "period": "Period",
+        "last7Days": "Last 7 days",
+        "last30Days": "Last 30 days",
+        "last12Months": "Last 12 months",
+        "otherPeriod": "Other period",
+        "between": "Between",
+        "and": "and"
+      },
+      "activity": {
+        "activity": "Activities",
+        "year": "Grade",
+        "discipline": "Subject",
+        "trafficContent": "Traffic Content",
+        "knowledgeObject": "Knowledge Object"
+      },
+      "teacher": {
+        "teacher": "Teacher",
+        "regionalSuperintendences": "Regional Superintendence",
+        "dnitLocalUnit": "Local Unit",
+        "institution": "Educational Institution"
+      },
+      "search": "Search"
+    },
+    "details": {
+      "creationDate": "Creation Date",
+      "title": "Activity Evaluation Registration",
+      "subtitle": "Questionnaire description",
+      "labels": {
+        "title": "Title",
+        "titleRequired": "*Title",
+        "descriptionOptional": "Description (optional):",
+        "descriptionRequired": "*Description:",
+        "questionRequired": "*Question:",
+        "alternative": "Alternative:",
+        "actions": "Actions",
+        "justifiable": "Justifiable"
+      },
+      "placeholders": {
+        "title": "Title",
+        "description": "Description",
+        "question": "Question",
+        "option": "Option"
+      },
+      "error": {
+        "createError": "Error: unable to register evaluation",
+        "loadingData": "Error: unable to load data"
+      },
+      "pageTitle": "Evaluation",
+      "publish": "Publish",
+      "required": {
+        "title": "Please enter a title",
+        "description": "Please enter a description",
+        "question": "Please enter a question",
+        "section": "Please enter the Section",
+        "questions": "Please enter a question",
+        "option": "Please enter an option",
+        "alternatives": "Please insert alternatives"
+      },
+      "submit": "Submit",
+      "success": "Successfully registered",
+      "summary": "Summary",
+      "cancel": "Cancel"
+    },
+    "labels": {
+      "table": {
+        "actions": "Actions",
+        "createDate": "Created date",
+        "registerList": "Evaluation Title"
+      },
+      "btnCreate": "Register",
+      "download": "Download list",
+      "emptyList": "No records found.",
+      "listTitle": "Registered Evaluations",
+      "pageTitle": "Evaluations",
+      "searchByKeyword": "Search by keyword"
+    }
+  },
+  "Reports": {
+    "Initiatives": {
+      "Labels": {
+        "Search": "Search",
+        "Clear": "Clear",
+        "Superintendence": "Regional Superintendence",
+        "LocalUnit": "Local Unit",
+        "Institution": "Educational Institution",
+        "Situation": "Situation",
+        "TimeCourse": "Period",
+        "From": "From",
+        "To": "To"
+      },
+      "Table": {
+        "Title": "Received Initiative Reports",
+        "TableTitle": "Initiative Reports",
+        "Situation": "Situation",
+        "SendDate": "Send Date",
+        "Author": "Author",
+        "Superintendence": "Superintendence",
+        "LocalUnit": "Local Unit",
+        "Institution": "Educational Institution",
+        "Download": "Download",
+        "EmptyList": "No records found."
+      }
+    },
+    "Interactivity": {
+      "Labels": {
+        "Search": "Search",
+        "Clear": "Clear",
+        "Type": "Type",
+        "UF": "State",
+        "Category": "Category",
+        "TimeCourse": "Period",
+        "From": "From",
+        "To": "To"
+      },
+      "Table": {
+        "Title": "User Interactivity Reports",
+        "TableTitle": "User Interactivity",
+        "Type": "Type",
+        "Category": "Category",
+        "Date": "Date",
+        "UF": "State",
+        "Classification": "Classification",
+        "Download": "Download",
+        "EmptyList": "No records found."
+      }
+    },
+    "Message": {
+      "Labels": {
+        "Search": "Search",
+        "Clear": "Clear",
+        "Superintendence": "Regional Superintendence",
+        "LocalUnit": "Local Units",
+        "Type": "Type",
+        "Situation": "Situation",
+        "TimeCourse": "Period",
+        "From": "From",
+        "To": "To"
+      },
+      "Table": {
+        "Title": "Messages Reports",
+        "TableTitle": "Messages Reports",
+        "Type": "Type",
+        "Date": "Date",
+        "Subject": "Subject",
+        "Superintendence": "Superintendence",
+        "LocalUnit": "Local Unit",
+        "Receiver": "Receiver",
+        "Situation": "Situation",
+        "ResponseTime": "Response Time",
+        "Download": "Download",
+        "EmptyList": "No records found."
+      }
+    },
+    "Projects": {
+      "Labels": {
+        "Search": "Search",
+        "Clear": "Clear",
+        "Superintendence": "Regional Superintendence",
+        "LocalUnit": "Local Units",
+        "Situation": "Situation",
+        "Category": "Category",
+        "TimeCourse": "Period",
+        "From": "From",
+        "To": "To"
+      },
+      "Table": {
+        "Title": "Projects and Actions Reports",
+        "TableTitle": "Projects and Actions",
+        "TitleProject": "Title",
+        "Category": "Category",
+        "Situation": "Situation",
+        "Superintendence": "Superintendence",
+        "LocalUnit": "Local Unit",
+        "Download": "Download",
+        "EmptyList": "No records found."
+      }
+    },
+    "Downloads": {
+      "Labels": {
+        "Search": "Search",
+        "Clear": "Clear",
+        "Superintendence": "Regional Superintendence",
+        "LocalUnit": "Local Units",
+        "Institution": "Educational Institution",
+        "YearSchool": "Grade",
+        "Discipline": "Discipline",
+        "Activity": "Activity",
+        "TimeCourse": "Period",
+        "From": "From",
+        "To": "To"
+      },
+      "Table": {
+        "Title": "Activity Download Reports",
+        "TableTitle": "Activity Download",
+        "Year": "Grade",
+        "Discipline": "Discipline",
+        "Activity": "Activity",
+        "DownloadDate": "Download Date",
+        "TeacherName": "Teacher's Name",
+        "Type": "Type",
+        "Superintendence": "Superintendence",
+        "LocalUnit": "Local Unit",
+        "Institution": "Institution",
+        "Download": "Download",
+        "EmptyList": "No records found."
+      }
+    },
+    "Participants": {
+      "Labels": {
+        "Search": "Search",
+        "Clear": "Clear",
+        "Superintendence": "Regional Superintendence",
+        "LocalUnit": "Local Unit",
+        "Institution": "Educational Institution",
+        "Profile": "Profile",
+        "TimeCourse": "Period",
+        "From": "From",
+        "To": "To",
+        "onlyActive": "Only users ACTIVE"
+      },
+      "Table": {
+        "Title": "Participants Reports",
+        "TableTitle": "Participants",
+        "RegisterDate": "Register Date",
+        "Name": "Name",
+        "Email": "Email",
+        "Profile": "Profile",
+        "Superintendence": "Superintendence",
+        "LocalUnit": "Local Unit",
+        "Institution": "Educational Institution",
+        "LastAccess": "Last Access",
+        "Download": "Download",
+        "EmptyList": "No records found."
+      }
+    },
+    "Survey": {
+      "Labels": {
+        "Search": "Search",
+        "Clear": "Clear",
+        "Type": "Type",
+        "Situation": "Situation",
+        "TimeCourse": "Period",
+        "From": "From",
+        "To": "To",
+        "TypeActivity": {
+          "activity": "Per Activity",
+          "locale": "Per Locale",
+          "question": "Per Question"
+        },
+        "Activity": {
+          "Year": "Year",
+          "Discipline": "Discipline",
+          "TrafficContent": "Traffic Content",
+          "KnowledgeObject": "Knowledge Object",
+          "Activity": "Activity"
+        },
+        "Teacher": {
+          "Superintendence": "Regional Superintendence",
+          "LocalUnit": "Local Unit",
+          "Institution": "Institution",
+          "Teacher": "Teacher"
+        }
+      },
+      "Table": {
+        "Title": "Surveies Report",
+        "TableTitle": "Surveies",
+        "SituationActivity": "Situation Activity",
+        "Year": "Year",
+        "Discipline": "Discipline",
+        "Teacher": "Teacher",
+        "Activity": "Activity",
+        "Download": "Download",
+        "EmptyList": "No records found."
+      }
+    }
+  },
+  "Footer": {
+    "terms": "Use Terms"
+  },
+  "ents": {
+    "listStudentsPerCycle": {
+      "errors": {
+        "amountStudents": "Number of students is a required field."
+      }
+    }
+  }
+}

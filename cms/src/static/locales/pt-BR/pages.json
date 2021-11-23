@@ -1,0 +1,1483 @@
+{
+  "actions": {
+    "labels": {
+      "btnCreate": "Cadastrar",
+      "edit": "Editar Ação",
+      "title": "Ações",
+      "create": "Cadastrar Ação",
+      "emptyList": "Nenhum registro encontrado.",
+      "listTitle": "Listagem de ações",
+      "pageTitle": "Ações",
+      "search": "Procurar por palavra chave",
+      "table": {
+        "confirmInactivate": "Você tem certeza que deseja inativar esta ação?",
+        "confirmPublish": "Você tem certeza que deseja publicar esta ação?",
+        "edit": "Editar",
+        "inactivated": "Inativado",
+        "publication": "Publicar",
+        "published": "Publicado",
+        "actions": "Ações",
+        "registered": "Cadastrado",
+        "situation": "Situação",
+        "title": "Ações de Ativação",
+        "projectName": "Projeto"
+      }
+    },
+    "details": {
+      "attachFiles": "Anexar arquivos",
+      "attachImages": "Anexar imagens",
+      "description": "Descrição",
+      "error": {
+        "createError": "Erro ao cadastrar Ação de Ativação"
+      },
+      "labels": {
+        "imagesTypes": "Tipos de arquivos que podem ser enviados",
+        "fileTypes": "Tipos de arquivos que podem ser enviados",
+        "attachFiles": "Anexar arquivos",
+        "attachImages": "Anexar imagens",
+        "description": "Descrição",
+        "summary": "Resumo",
+        "title": "Título"
+      },
+      "maxSize": "O tamanho mámixo para um arquivo deve ser de {{max}}. Este arquivo não será enviado.",
+      "pageTitle": "Cadastro de Ação de Ativação",
+      "placeholders": {
+        "attachFiles": "Clique aqui para adicionar um arquivo(s) ou arraste e solte",
+        "description": "Digite aqui a descrição da Ação de Ativação",
+        "summary": "Resumo",
+        "title": "Título"
+      },
+      "publish": "Publicar",
+      "cancel": "Cancelar",
+      "required": {
+        "description": "Descrição é obrigatória",
+        "summary": "Resumo é obrigatório",
+        "title": "Título é obrigatório"
+      },
+      "submit": "Salvar",
+      "success": "Cadastro realizado com sucesso",
+      "summary": "Resumo",
+      "title": "Título",
+      "warning": {
+        "submitAttachments": "Ação foi criada, porém nem todos os anexos foram salvos. Tente editar e adicionar os anexos novamente"
+      }
+    },
+    "warning": {
+      "unallowed_unpublish": "Não é possível inativar o registro, pois está publicado no mural. Remover item do mural e apos realizar a desativação"
+    },
+    "emptyList": "Nenhum registro encontrado"
+  },
+  "activities": {
+    "confirmDelete": "Você tem certeza que deseja remover esta atividade?",
+    "labels": {
+      "emptyList": "Nenhum registro encontrado.",
+      "btnCreate": "Cadastrar",
+      "create": "Cadastrar Atividade",
+      "edit": "Editar Atividade",
+      "listTitle": "Cadastrar Atividade",
+      "new": "Cadastrar Atividade",
+      "searchByKeyword": "Buscar palavra chave",
+      "selectYear": "{{year}}º Ano",
+      "table": {
+        "actions": "Ações",
+        "confirmInactivate": "Você tem certeza que deseja inativar esta atividade?",
+        "confirmPublish": "Você tem certeza que deseja publicar esta atividade?",
+        "delete": "Deletar",
+        "discipline": "Disciplina principal",
+        "edit": "Editar",
+        "inactivated": "Desativar",
+        "knowledgeField": "Área de Conhecimento",
+        "name": "Atividades",
+        "publication": "Publicar",
+        "published": "Publicar",
+        "registered": "Cadastrar",
+        "situation": "Situação",
+        "trafficConcept": "Conceito de Trânsito",
+        "year": "Ano"
+      },
+      "title": "Atividades"
+    },
+    "details": {
+      "codeActivity": "Código da atividade",
+      "didacticArticulation": "Articulação Didática",
+      "didacticStrategies": "Estratégias Didáticas",
+      "discipline": "Disciplina",
+      "estimatedTime": "Tempo Estimado (em horas)",
+      "error": {
+        "createError": "Erro ao cadastrar atividade",
+        "deleteForbidden": "Registro possui dependências e não pode ser modificado"
+      },
+      "evaluation": "Avaliação",
+      "initiative": "Iniciativa",
+      "knowledgeArea": "Área do Conhecimento",
+      "knowledgeObject": "Objeto de Conhecimento",
+      "otherConnections": "Outras conexões",
+      "pageTitle": "Atividade",
+      "placeholders": {
+        "codeActivity": "Código da atividade",
+        "didacticArticulation": "Articulação Didática",
+        "didacticStrategies": "Estratégias Didáticas",
+        "discipline": "Selecione a Disciplina",
+        "estimatedTime": "Tempo estimado",
+        "evaluation": "Avaliação",
+        "initiative": "Selecione a Iniciativa",
+        "knowledgeArea": "Selecione a Área do Conhecimento",
+        "knowledgeObject": "Selecione os Objetos de Conhecimento",
+        "otherConnections": "Outras conexões",
+        "references": "Referências",
+        "resources": "Recursos",
+        "titleActivity": "Título da Atividade",
+        "trafficConcept": "Selecione o Conceito de Trânsito",
+        "trafficContent": "Selecione o Conteúdo de Trânsito",
+        "year": "Selecione o Ano",
+        "upload": "Selecione os arquivos que deseja anexar à mensagem"
+      },
+      "publish": "Publicar",
+      "references": "Referências",
+      "required": {
+        "duration": "Tempo estimado é obrigatório",
+        "knowledgeArea": "Área do Conhecimento é obrigatória",
+        "knowledgeObject": "Objetos de conhecimento são obrigatórios",
+        "resource": "Recursos são obrigatórios",
+        "schoolYear": "Ano é obrigatório",
+        "teachingArticulation": "Articulação didática é obrigatória",
+        "title": "Título é obrigatório",
+        "trafficConcept": "Conceito de trânsito é obrigatório",
+        "competences": "Competência é obrigatório",
+        "skills": "Habilidade é obrigatória",
+        "idDiscipline": "Disciplina é obrigatória",
+        "codeActivity": "Código da atividade é um campo obrigatório"
+      },
+      "resources": "Recursos",
+      "save": "Salvar",
+      "subTheme": "Subtema",
+      "success": "Cadastro realizado com sucesso",
+      "theme": "Tema",
+      "titleActivity": "Título da Atividade",
+      "trafficConcept": "Conceito de Trânsito",
+      "trafficContent": "Conteúdo de Trânsito",
+      "upload": {
+        "maxSize": "O tamanho mámixo para um arquivo deve ser de {{max}}. Este arquivo não será enviado.",
+        "studentTitle": "Arquivos do Estudante",
+        "teacherTitle": "Arquivos do Professor",
+        "uploadFile": "Selecione um ou mais arquivo(s) para upload"
+      },
+      "warning": {
+        "submitAttachments": "Atividade foi criada, porém nem todos os anexos foram salvos. Tente editar a atividade e adicione os anexos novamente"
+      },
+      "year": "Ano",
+      "cancel": "Cancelar",
+      "labels": {
+        "codeActivity": "Código da Atividade",
+        "didacticArticulation": "Articulação Didática",
+        "didacticStrategies": "Estratégias Didáticas",
+        "discipline": "Disciplina",
+        "estimatedTime": "Tempo estimado (em horas)",
+        "evaluation": "Avaliação",
+        "initiative": "Iniciativa",
+        "knowledgeArea": "Área de Conhecimento",
+        "knowledgeObject": "Objeto de Conhecimento",
+        "otherConnections": "Outras Conexões",
+        "references": "Referências",
+        "resources": "Recursos",
+        "selectYear": "{{year}}º Ano",
+        "subTheme": "Subtema",
+        "theme": "Tópico",
+        "titleActivity": "Títudo da Atividade",
+        "trafficConcept": "Conceito de Trânsito",
+        "trafficContent": "Conteúdo de Trânsito",
+        "upload": {
+          "maxSize": "O tamanho máximo de arquivo permitido é {{max}}. Este arquivo não pode ser enviado.",
+          "studentTitle": "Arquivos do Estudante",
+          "teacherTitle": "Arquivos do Professor",
+          "uploadFile": "Selecione um ou mais arquivos para enviar"
+        },
+        "year": "Ano",
+        "wizard": {
+          "trafficContent": "Conteúdo de Trânsito",
+          "identification": "Identificação",
+          "details": "Detalhes",
+          "files": "Arquivos"
+        }
+      },
+      "submit": "Salvar"
+    },
+    "listTitle": "Atividades Cadastradas",
+    "new": "Cadastrar Atividade",
+    "pageTitle": "Atividades",
+    "searchByKeyword": "Buscar por palavra-chave",
+    "selectYear": "{{year}}º Ano",
+    "table": {
+      "confirmInactivate": "Você tem certeza que deseja inativar esta atividade?",
+      "confirmPublish": "Você tem certeza que deseja publicar esta atividade?",
+      "delete": "Deletar",
+      "discipline": "Disciplina Principal",
+      "edit": "Editar",
+      "knowledgeField": "Área do Conhecimento",
+      "name": "Atividade",
+      "trafficConcept": "Conceito de Trânsito",
+      "year": "Ano",
+      "inactivated": "Inativado",
+      "publication": "Publicar",
+      "published": "Publicado",
+      "registered": "Cadastrado",
+      "situation": "Situação"
+    },
+    "warning": {
+      "unallowed_unpublish": "Não é possível inativar o registro, pois está publicado no mural. Remover item do mural e apos realizar a desativação"
+    }
+  },
+  "courses": {
+    "details": {
+      "error": {
+        "createError": "Erro ao cadastrar curso"
+      },
+      "labels": {
+        "imagesTypes": "Tipos de arquivos que podem ser enviados",
+        "fileTypes": "Tipos de arquivos que podem ser enviados",
+        "attachFiles": "Anexar arquivos",
+        "attachImages": "Anexar imagens",
+        "description": "Descrição",
+        "link": "Link do curso",
+        "summary": "Resumo",
+        "title": "Título",
+        "type": "Tipo"
+      },
+      "maxSize": "O tamanho mámixo para um arquivo deve ser de {{max}}. Este arquivo não será enviado.",
+      "pageTitle": "Cursos",
+      "placeholders": {
+        "attachFiles": "Clique aqui para adicionar um arquivo(s) ou arraste e solte",
+        "description": "Digite aqui a descrição do Curso",
+        "link": "Link para acessar o curso - moodle",
+        "summary": "Resumo",
+        "title": "Título",
+        "upload": "Selecione os arquivos que deseja anexar à mensagem"
+      },
+      "publish": "Publicar",
+      "cancel": "Cancelar",
+      "required": {
+        "description": "Descrição é obrigatória",
+        "link": "Link do Curso é obrigatório",
+        "summary": "Resumo é obrigatório",
+        "title": "Título é obrigatório"
+      },
+      "submit": "Salvar",
+      "success": "Cadastro realizado com sucesso",
+      "types": {
+        "dnitEmployees": "Gestores do Conexão DNIT",
+        "open": "Aberto",
+        "participantsAndEmployees": "Participantes do Programa ou Gestores do Conexão DNIT",
+        "projectParticipants": "Participantes do Programa"
+      },
+      "warning": {
+        "submitAttachments": "Curso foi criado, porém nem todos os anexos foram salvos. Tente editar o curso e adicione os anexos novamente"
+      }
+    },
+    "error": "Erro ao realizar o cadastro",
+    "labels": {
+      "btnCreate": "Cadastrar",
+      "create": "Cadastrar curso",
+      "edit": "Editar curso",
+      "emptyList": "Nenhum registro encontrado.",
+      "listTitle": "Listagem de cursos",
+      "pageTitle": "Cursos",
+      "search": "Procurar por palavra chave",
+      "table": {
+        "confirmInactivate": "Você tem certeza que deseja inativar este curso?",
+        "confirmPublish": "Você tem certeza que deseja publicar este curso?",
+        "edit": "Editar",
+        "inactivated": "Inativado",
+        "publication": "Publicar",
+        "published": "Publicado",
+        "registered": "Cadastrado",
+        "situation": "Situação",
+        "actions": "Ações",
+        "courseName": "Cursos",
+        "creationDate": "Data Criação",
+        "modifyDate": "Data Alteração"
+      },
+      "title": "Cursos"
+    },
+    "success": "Cadastro realizado com sucesso",
+    "warning": {
+      "unallowed_unpublish": "Não é possível inativar o registro, pois está publicado no mural. Remover item do mural e apos realizar a desativação"
+    }
+  },
+  "dnitLocalUnits": {
+    "confirmDelete": "Você tem certeza que deseja remover esta unidade local?",
+    "searchByKeyword": "Buscar por palavra-chave",
+    "details": {
+      "labels": {
+        "federalHighways": "Rodovias Federais",
+        "identification": "Identificação",
+        "isFederalDistrict": "É Distrito Federal?",
+        "regionalSuperintendence": "Superintendência Regional",
+        "cities": "Municípios",
+        "email": "E-mail",
+        "phone1": "Telefone 1",
+        "phone2": "Telefone 2",
+        "submit": "Enviar",
+        "submiting": "Enviando...",
+        "address": {
+          "title": "Endereço",
+          "city": "Cidade",
+          "complement": "Complemento",
+          "district": "Bairro",
+          "number": "Número",
+          "state": "UF",
+          "street": "Logradouro",
+          "zipCode": "CEP",
+          "zipCodeNotFound": "CEP não encontrado"
+        }
+      },
+      "placeholders": {
+        "cities": "Seleciona as cidades",
+        "email": "Insira o email",
+        "federalHighways": "Selecione as rodovias federais",
+        "identification": "Insira a identificação",
+        "phone1": "Insira o telefone 1",
+        "phone2": "Insira o telefone 2",
+        "regionalSuperintendence": "Insira a Superintendência Regional",
+        "address": {
+          "title": "Endereço",
+          "city": "Cidade",
+          "complement": "Complemento",
+          "district": "Bairro",
+          "number": "Número",
+          "state": "UF",
+          "street": "Logradouro",
+          "zipCode": "CEP",
+          "zipCodeNotFound": "CEP não encontrado"
+        }
+      },
+      "errors": {
+        "cities": "Informe os municípios abrangidos pela unidade local",
+        "identification": "Necessário ter uma identificação",
+        "phone": "Telefone é obrigatório",
+        "regSuperintendence": "Necessário informar a superintendência regional"
+      },
+      "required": {
+        "identification": "Identificação é obrigatória",
+        "phone1": "Telefone é obrigatório",
+        "cities": "Cidade é obrigatória",
+        "address": {
+          "cep": "CEP é obrigatório",
+          "city": "Cidade é obrigatória",
+          "district": "Bairro é obrigatório",
+          "state": "Estado é obrigatório",
+          "street": "Rua é obrigatória",
+          "zipCode": "CEP é obrigatório",
+          "zipCodeNotFound": "CEP não encontrado"
+        },
+        "email": "Email é um campo obrigatório."
+      },
+      "submit": "Salvar",
+      "cancel": "Cancelar"
+    },
+    "emptyList": "Nenhum registro encontrado.",
+    "errorMessage": "Ocorreu um erro",
+    "labels": {
+      "btnCreate": "Cadastrar",
+      "listTitle": "Unidades Locais Cadastradas",
+      "pageTitle": "Unidade Local",
+      "newTitle": "Cadastrar Unidade Local",
+      "editTitle": "Editar Unidade Local",
+      "table": {
+        "actions": "Ações",
+        "city": "Município",
+        "delete": "Excluir",
+        "edit": "Editar",
+        "localUnit": "Unidade Local",
+        "phones": "Telefone",
+        "states": "UF",
+        "participaConexaoDnit": "Conexão DNIT",
+        "regionalSuperintendence": "Superintendência Regional",
+        "state": "Estado"
+      },
+      "emptyList": "Nenhum registro encontrado"
+    },
+    "success": "Cadastro realizado com sucesso",
+    "edit": "Editar Unidade Local"
+  },
+  "externalLinks": {
+    "details": {
+      "labels": {
+        "imagesTypes": "Tipos de arquivos que podem ser enviados",
+        "fileTypes": "Tipos de arquivos que podem ser enviados",
+        "attachFiles": "Anexar arquivos",
+        "attachImages": "Anexar imagens",
+        "description": "Descrição",
+        "summary": "Resumo",
+        "title": "Título",
+        "link": "Link"
+      },
+      "description": "Descrição",
+      "edit": "Edição de link externo",
+      "error": {
+        "loadingData": "Erro ao carregar os dados"
+      },
+      "link": "Link",
+      "new": "Cadastro de Link Externos",
+      "placeholders": {
+        "description": "Digite aqui a descrição do Link Externo",
+        "link": "Link",
+        "summary": "Resumo",
+        "title": "Título"
+      },
+      "required": {
+        "description": "Descrição é obrigatória",
+        "link": "Link é obrigatório",
+        "summary": "Resumo é obrigatório",
+        "title": "Título é obrigatório"
+      },
+      "submit": "Salvar",
+      "cancel": "Cancelar",
+      "publish": "Publicar",
+      "summary": "Resumo",
+      "title": "Título"
+    },
+    "error": "Erro ao cadastrar",
+    "labels": {
+      "btnCreate": "Cadastrar",
+      "create": "Cadastrar Link Externo",
+      "edit": "Editar Link Externo",
+      "emptyList": "Nenhum registro encontrado.",
+      "listTitle": "Listagem de Links Externos",
+      "pageTitle": "Links Externos",
+      "search": "Procurar por palavra chave",
+      "table": {
+        "confirmInactivate": "Você tem certeza que deseja inativar este link externo?",
+        "confirmPublish": "Você tem certeza que deseja publicar este link externo?",
+        "delete": "Excluir",
+        "edit": "Editar",
+        "title": "Título",
+        "actions": "Ações",
+        "inactivated": "Inativado",
+        "publication": "Publicar",
+        "published": "Publicado",
+        "registered": "Cadastrado",
+        "situation": "Situação",
+        "externalLinks": "Links Externos",
+        "projectName": "Projeto"
+      },
+      "title": "Cursos"
+    },
+    "new": "Cadastrar Link Externo",
+    "success": "Cadastro realizado com sucesso",
+    "warning": {
+      "unallowed_unpublish": "Não é possível inativar o registro, pois está publicado no mural. Remover item do mural e apos realizar a desativação"
+    },
+    "emptyList": "Nenhum registro encontrado"
+  },
+  "highlights": {
+    "labels": {
+      "save": "Salvar",
+      "emptyList": "Nenhum registro encontrado.",
+      "listTitle": "Listagem do Mural",
+      "pageTitle": "Mural",
+      "table": {
+        "title": "Título",
+        "type": "Tipo",
+        "highlight": "Destaque",
+        "highlightOrder": "Ordem",
+        "creationDate": "Data Criação",
+        "modifyDate": "Data Alteração"
+      }
+    },
+    "placeholders": {
+      "search": "Procurar por palavra chave"
+    }
+  },
+  "home": {
+    "labels": {}
+  },
+  "institutions": {
+    "confirmDelete": "Você tem certeza que deseja remover esta Instituição de ensino?",
+    "details": {
+      "labels": {
+        "networkType": "Rede",
+        "networkTypeOps": {
+          "city": "Municipal",
+          "state": "Estadual",
+          "federal": "Federal",
+          "private": "Privada particular",
+          "filantropica": "Privada filantrópica"
+        },
+        "isDF": "Vinculado ao DNIT Sede",
+        "conectionDnit": "É participante do Conexão DNIT?",
+        "identification": "Identificação",
+        "regionalSuperintendence": "Superintendência Regional",
+        "localUnit": "Unidade Local",
+        "cities": "Município Unidade Local",
+        "codeInep": "Código INEP",
+        "phone": "Telefone",
+        "quantidadeAlunos": "Quantidade de Alunos",
+        "quantidadeProfessores": "Quantidade de Professores",
+        "latitude": "Latitude",
+        "longitude": "Longitude"
+      },
+      "codeInepExists": "O código INEP já existe",
+      "email": "Email",
+      "emptyList": "Nenhum registro encontrado.",
+      "error": {
+        "createError": "Erro ao salvar Instituição de Ensino",
+        "latitude": "Necessário ter a Latitude",
+        "longitude": "Necessário ter a Longitude"
+      },
+      "errorLoadingData": "Ocorreu um erro ao carregar os dados, entre em contato com administrador",
+      "pageNewTitle": "Cadastrar Instituição de Ensino",
+      "pageCreateTitle": "Editar Instituição de Ensino",
+      "placeholders": {
+        "quantidadeAlunos": "Quantidade de Alunos",
+        "quantidadeProfessores": "Quantidade de Professores",
+        "cities": "Município Unidade Local",
+        "codeInep": "Código INEP",
+        "email": "Email",
+        "identification": "Identificação",
+        "latitude": "Latitude",
+        "localUnit": "Unidade Local",
+        "longitude": "Longitude",
+        "phone": "Telefone",
+        "regionalSuperintendence": "Superintendência Regional"
+      },
+      "required": {
+        "codeInep": "Código INEP é obrigatório",
+        "city": "Município é obrigatório",
+        "identification": "Identificação é obrigatória",
+        "localUnit": "Unidade local é obrigatória",
+        "networkType": "Tipo é obrigatório",
+        "phone": "Telefone é obrigatório",
+        "regionalSuperintendence": "Superintendência regional é obrigatória"
+      },
+      "submit": "Salvar",
+      "cancel": "Cancelar",
+      "success": "Instituição de Ensino cadastrada com sucesso",
+      "pageTitle": "Instituição Educacional"
+    },
+    "emptyList": "Nenhum registro encontrado.",
+    "labels": {
+      "btnCreate": "Cadastrar",
+      "new": "Cadastrar Instituição",
+      "edit": "Editar Instituição",
+      "listTitle": "Instituições Cadastradas",
+      "pageTitle": "Instituições de Ensino",
+      "searchByKeyword": "Buscar por palavra-chave",
+      "todos": "Todos",
+      "participaDNIT": "É participante do Conexão DNIT",
+      "naoParticipaDNIT": "Não é participante do Conexão DNIT",
+      "table": {
+        "city": "Município",
+        "actions": "Ações",
+        "isDnitConexao": "Conexão DNIT",
+        "delete": "Excluir",
+        "edit": "Editar",
+        "institution": "Instituição",
+        "localUnit": "Unidade Local",
+        "phones": "Telefone",
+        "regionalSuperintendence": "Superintendência Regional",
+        "states": "UF",
+        "labelYesDnitConexao": "Sim",
+        "labelNoDnitConexao": "Não"
+      },
+      "emptyList": "Nenhum registro encontrado"
+    }
+  },
+  "knowledgeObject": {
+    "confirmDelete": "Você tem certeza que deseja remover este Objeto de Conhecimento?",
+    "details": {
+      "labels": {
+        "discipline": "Disciplina",
+        "fieldKnowledge": "Área do Conhecimento",
+        "year": "Ano",
+        "name": "Objeto de Conhecimento"
+      },
+      "placeholders": {
+        "discipline": "Disciplina",
+        "fieldKnowledge": "Área do Conhecimento",
+        "knowledgeObject": "Objeto de Conhecimento",
+        "name": "Descreva o nome do objeto de conhecimento",
+        "year": "Ano"
+      },
+      "required": {
+        "discipline": "Disciplina é obrigatória",
+        "fieldKnowledge": "Área do Conhecimento é obrigatória",
+        "name": "Objeto de Conhecimento é obrigatório",
+        "schoolYear": "Ano é obrigatório"
+      },
+      "submit": "Salvar",
+      "cancel": "Cancelar",
+      "error": "Erro ao realizar o cadastro",
+      "success": "Cadastro realizado com sucesso"
+    },
+    "emptyList": "Nenhum registro encontrado.",
+    "labels": {
+      "btnCreate": "Cadastrar",
+      "new": "Cadastrar Objeto de Conhecimento",
+      "edit": "Editar Objeto de Conhecimento",
+      "listTitle": "Objetos de Conhecimento cadastrados",
+      "pageTitle": "Objeto de Conhecimento",
+      "searchByKeyword": "Buscar por palavra-chave",
+      "table": {
+        "actions": "Ações",
+        "delete": "Excluir",
+        "discipline": "Disciplina",
+        "edit": "Editar",
+        "knowledgeField": "Área do Conhecimento",
+        "name": "Objeto de Conhecimento",
+        "year": "Ano"
+      },
+      "emptyList": "Nenhum registro encontrado"
+    }
+  },
+  "Login": {
+    "emailForgotPassword": "Verifique seu email para redefinir sua senha",
+    "error": {
+      "email": "E-mail inválido",
+      "incorrectUserPwd": "Usuário e/ou senha incorretos",
+      "inactive": "Usuário inativo ou não autorizado.",
+      "password": {
+        "length": "Senha deve ter no mínimo 6 caracteres, podendo ser letras, números e/ou caracteres especiais"
+      },
+      "required": {
+        "email": "E-mail é obrigatório",
+        "password": "Senha é obrigatória"
+      },
+      "emailNotRegistered": "Este e-mail não está cadastrado em nosso sistema.",
+      "sendConfirmationEmail": "Não foi possível enviar o e-mail de confirmação"
+    },
+    "label": {
+      "backToLogin": "Voltar para login",
+      "email": "E-mail",
+      "forgotPassword": "Esqueci minha senha",
+      "password": "Senha",
+      "submit": "Entrar",
+      "submitForgotPassword": "Recuperar senha",
+      "didntReceiveConfirmationEmail": "Não recebi o e-mail de confirmação",
+      "submitConfirmationEmail": "Enviar"
+    },
+    "placeholder": {
+      "email": "Digite seu e-mail",
+      "password": "Digite sua senha"
+    },
+    "title": "Login",
+    "titleForgotPassword": "Recupere sua senha",
+    "titleSendConfirmationEmail": "Envie o e-mail de confirmação",
+    "userLogged": "Logado com sucesso",
+    "sendConfirmationEmailSuccess": "O e-mail de confirmação foi enviado com sucesso",
+    "enterGovBr": "Entrar com ",
+    "or": "ou"
+  },
+  "projects": {
+    "confirmInactivate": "Você tem certeza que deseja inativar este projeto?",
+    "confirmPublish": "Você tem certeza que deseja publicar este projeto?",
+    "create": "Cadastrar Projeto ou Campanha",
+    "details": {
+      "attachFiles": "Anexar arquivos",
+      "attachImages": "Anexar imagens",
+      "description": "Descrição",
+      "error": {
+        "createError": "Erro ao cadastrar Projeto e Campanha",
+        "email": "E-mail inválido",
+        "loadingData": "Erro ao carregar os dados"
+      },
+      "maxSize": "O tamanho mámixo para um arquivo deve ser de {{max}}. Este arquivo não será enviado.",
+      "pageTitle": "Projetos e Campanhas",
+      "placeholders": {
+        "attachFiles": "Clique aqui para adicionar um arquivo(s) ou arraste e solte",
+        "description": "Digite aqui a descrição do Projeto e Campanhas",
+        "summary": "Resumo",
+        "title": "Título"
+      },
+      "cancel": "Cancelar",
+      "publish": "Publicar",
+      "required": {
+        "description": "Descrição é obrigatória",
+        "summary": "Resumo é obrigatório",
+        "title": "Título é obrigatório"
+      },
+      "labels": {
+        "imagesTypes": "Tipos de arquivos que podem ser enviados",
+        "fileTypes": "Tipos de arquivos que podem ser enviados",
+        "attachFiles": "Anexar arquivos",
+        "attachImages": "Anexar imagens",
+        "description": "Descrição",
+        "summary": "Resumo",
+        "title": "Título"
+      },
+      "submit": "Salvar",
+      "success": "Cadastro realizado com sucesso",
+      "summary": "Resumo",
+      "title": "Título",
+      "warning": {
+        "submitAttachments": "Projeto foi criado, porém nem todos os anexos foram salvos. Tente editar o projeto e adicione os anexos novamente"
+      }
+    },
+    "emptyList": "Nenhum registro encontrado.",
+    "listTitle": "Projetos e Campanhas Cadastrados",
+    "pageTitle": "Projetos e Campanhas",
+    "searchByKeyword": "Buscar por palavra-chave",
+    "labels": {
+      "btnCreate": "Cadastrar",
+      "create": "Cadastrar Projeto ou Campanha",
+      "edit": "Editar Projeto ou Campanha",
+      "emptyList": "Nenhum registro encontrado.",
+      "listTitle": "Projetos e Campanhas Cadastrados",
+      "pageTitle": "Projetos e Campanhas",
+      "search": "Procurar por palavra chave",
+      "title": "Projetos e Campanhas",
+      "table": {
+        "edit": "Editar",
+        "inactivated": "Inativado",
+        "publication": "Publicar",
+        "published": "Publicado",
+        "registered": "Cadastrado",
+        "actions": "Ações",
+        "situation": "Situação",
+        "title": "Título",
+        "projectName": "Projeto"
+      }
+    },
+    "warning": {
+      "unallowed_unpublish": "Não é possível inativar o registro, pois está publicado no mural. Remover item do mural e apos realizar a desativação"
+    }
+  },
+  "projectActions": {
+    "confirmInactivate": "Você tem certeza que deseja inativar esta ação de projeto ou campanha?",
+    "confirmPublish": "Você tem certeza que deseja publicar esta ação de projeto ou campanha?",
+    "create": "Cadastrar Ação de Projeto ou Campanha",
+    "details": {
+      "attachFiles": "Anexar arquivos",
+      "attachImages": "Anexar imagens",
+      "project": "Projeto/Campanha",
+      "description": "Descrição",
+      "error": {
+        "createError": "Erro ao cadastrar Ação de Projeto ou Campanha",
+        "email": "E-mail inválido",
+        "loadingData": "Erro ao carregar os dados"
+      },
+      "labels": {
+        "imagesTypes": "Tipos de arquivos que podem ser enviados",
+        "fileTypes": "Tipos de arquivos que podem ser enviados",
+        "attachFiles": "Anexar arquivos",
+        "attachImages": "Anexar imagens",
+        "description": "Descrição",
+        "project": "Projeto/Campanha",
+        "summary": "Resumo",
+        "title": "Título"
+      },
+      "maxSize": "O tamanho máximo para um arquivo deve ser de {{max}}. Este arquivo não será enviado.",
+      "pageTitle": "Cadastro de Ação de Projeto ou Campanha",
+      "placeholders": {
+        "attachFiles": "Clique aqui para adicionar um arquivo(s) ou arraste e solte",
+        "description": "Digite aqui a descrição da Ação de Projeto ou Campanha",
+        "summary": "Resumo",
+        "title": "Título",
+        "project": "Projeto/Campanha"
+      },
+      "publish": "Publicar",
+      "required": {
+        "description": "Descrição é obrigatória",
+        "summary": "Resumo é obrigatório",
+        "title": "Título é obrigatório",
+        "project": "Projeto/Campanha é obrigatório"
+      },
+      "submit": "Salvar",
+      "cancel": "Cancelar",
+      "success": "Cadastro realizado com sucesso",
+      "summary": "Resumo",
+      "title": "Título",
+      "warning": {
+        "submitAttachments": "Ação de Projeto ou Campanha foi criada, porém nem todos os anexos foram salvos. Tente editar a ação e adicione os anexos novamente"
+      }
+    },
+    "emptyList": "Nenhum registro encontrado.",
+    "listTitle": "Ações de Projetos ou Campanhas Cadastradas",
+    "pageTitle": "Ações de Projetos ou Campanhas",
+    "searchByKeyword": "Buscar por palavra-chave",
+    "labels": {
+      "btnCreate": "Cadastrar",
+      "create": "Cadastrar Ação de Projeto ou Campanha",
+      "edit": "Editar Ação de Projeto ou Campanha",
+      "emptyList": "Nenhum registro encontrado.",
+      "listTitle": "Ações de Projetos ou Campanhas Cadastrados",
+      "pageTitle": "Ações de Projetos ou Campanhas",
+      "search": "Procurar por palavra chave",
+      "title": "Ações de Projetos ou Campanhas",
+      "table": {
+        "edit": "Editar",
+        "inactivated": "Inativado",
+        "project": "Projeto/Campanha",
+        "publication": "Publicar",
+        "published": "Publicado",
+        "actions": "Ações",
+        "registered": "Cadastrado",
+        "situation": "Situação",
+        "title": "Título",
+        "projectName": "Projeto"
+      }
+    },
+    "warning": {
+      "unallowed_unpublish": "Não é possível inativar o registro, pois está publicado no mural. Remover item do mural e apos realizar a desativação"
+    }
+  },
+  "regionalSuperintendence": {
+    "confirmDelete": "Você tem certeza que deseja remover esta Superintendência?",
+    "details": {
+      "emptyList": "Nenhum registro encontrado.",
+      "error": {
+        "createError": "Erro ao cadastrar Superintendência",
+        "email": "E-mail inválido",
+        "loadingData": "Erro ao carregar os dados"
+      },
+      "placeholders": {
+        "email": "Email",
+        "identification": "Identificação",
+        "phone1": "Telefone 1",
+        "phone2": "Telefone 2",
+        "address": {
+          "city": "Selecione o Município",
+          "complement": "Complemento",
+          "district": "Bairro",
+          "number": "Número",
+          "state": "Selecione o Estado",
+          "street": "Rua",
+          "zipCode": "Digite seu CEP"
+        }
+      },
+      "labels": {
+        "identification": "Identificação",
+        "phone1": "Telefone 1",
+        "phone2": "Telefone 2",
+        "email": "Email",
+        "address": {
+          "title": "Endereço",
+          "city": "Cidade",
+          "complement": "Complemento",
+          "district": "Bairro",
+          "number": "Número",
+          "state": "UF",
+          "street": "Logradouro",
+          "zipCode": "CEP",
+          "zipCodeNotFound": "CEP não encontrado"
+        }
+      },
+      "required": {
+        "address": {
+          "cep": "CEP é obrigatório",
+          "city": "Cidade é obrigatória",
+          "district": "Bairro é obrigatório",
+          "state": "Estado é obrigatório",
+          "street": "Rua é obrigatória",
+          "zipCode": "CEP é obrigatório",
+          "zipCodeNotFound": "CEP não encontrado",
+          "number": "Número é um campo obrigatório"
+        },
+        "identification": "Identificação é obrigatória",
+        "phone1": "Telefone é obrigatório",
+        "email": "Email é um campo obrigatório"
+      },
+      "submit": "Salvar",
+      "cancel": "Cancelar",
+      "submitButtonText": "Cadastrar",
+      "success": "Cadastro realizado com sucesso",
+      "titleEdit": "Editar Superintendência Regional",
+      "titleNew": "Cadastrar Superintendência Regional"
+    },
+    "emptyList": "Nenhum registro encontrado.",
+    "labels": {
+      "btnCreate": "Cadastrar",
+      "create": "Cadastrar Superintendência",
+      "edit": "Editar Superintendência",
+      "emptyList": "Nenhum registro encontrado.",
+      "listTitle": "Superintendências Regionais Cadastradas",
+      "pageTitle": "Superintendência Regional",
+      "search": "Procurar por palavra chave",
+      "table": {
+        "city": "Município",
+        "delete": "Excluir",
+        "actions": "Ações",
+        "edit": "Editar",
+        "institution": "Instituição",
+        "localUnit": "Unidade Local",
+        "phones": "Telefone",
+        "regionalSuperintendence": "Superintendência Regional",
+        "states": "UF",
+        "state": "Estado"
+      },
+      "title": "Superintendência Regional"
+    }
+  },
+  "trafficConcepts": {
+    "confirmDelete": "Você tem certeza que deseja remover este conceito de trânsito?",
+    "details": {
+      "delete": "Excluir",
+      "edit": "Editar",
+      "localUnit": "Unidade Local",
+      "titleNew": "Cadastrar de Conceito de Trânsito",
+      "titleEdit": "Editar Conceito de Trânsito",
+      "phones": "Telefone",
+      "placeholders": {
+        "name": "Descreva o nome do conceito de trânsito",
+        "subtheme": "Subtema",
+        "theme": "Tema",
+        "year": "Ano"
+      },
+      "required": {
+        "name": "Conceito de Trânsito é obrigatório",
+        "schoolYear": "Ano Escolar é obrigatório",
+        "year": "Ano é um campo obrigatório"
+      },
+      "labels": {
+        "name": "Conceito de Trânsito",
+        "subtheme": "Subtema",
+        "theme": "Tema",
+        "year": "Ano"
+      },
+      "submit": "Salvar",
+      "cancel": "Cancel",
+      "new": "Cadastrar Conceito de Trânsito"
+    },
+    "labels": {
+      "selectYear": "{{year}}º Ano",
+      "btnCreate": "Cadastrar",
+      "create": "Cadastrar Conceito de Trânsito",
+      "edit": "Editar Conceito de Trânsito",
+      "emptyList": "Nenhum registro encontrado.",
+      "error": "Registro não enviado",
+      "listTitle": "Conceitos de Trânsito Cadastrados",
+      "new": "Cadastrar novo",
+      "pageTitle": "Conceito de Trânsito",
+      "searchByKeyword": "Buscar por palavra-chave",
+      "success": "Cadastro realizado com sucesso",
+      "table": {
+        "actions": "Ações",
+        "delete": "Excluir",
+        "edit": "Editar",
+        "localUnit": "Unidade Local",
+        "name": "Conceito de Trânsito",
+        "phones": "Telefone",
+        "subTheme": "Sub Tema",
+        "theme": "Tema",
+        "year": "Ano"
+      }
+    }
+  },
+  "trafficContents": {
+    "confirmDelete": "Você tem certeza que deseja remover este conteúdo de trânsito?",
+    "details": {
+      "description": "Conteúdo de Trânsito",
+      "error": {
+        "createError": "Erro ao cadastrar o Conteúdo de Trânsito"
+      },
+      "placeholders": {
+        "name": "Descreva o nome do conteúdo do trânsito",
+        "trafficConcepts": "Conceito de Trânsito",
+        "year": "Ano"
+      },
+      "required": {
+        "name": "Conteúdo de Trânsito é obrigatório",
+        "schoolYear": "Ano é obrigatório",
+        "trafficConcept": "Conceito de Trânsito é obrigatório",
+        "competences": "Competências e Habilidades são obrigatórias",
+        "trafficConcepts": "O conteúdo do trânsito é um campo obrigatório."
+      },
+      "submit": "Salvar",
+      "success": "Cadastro realizado com sucesso",
+      "trafficConcepts": "Conceito de Trânsito",
+      "year": "Ano",
+      "cancel": "Cancelar",
+      "labels": {
+        "description": "Conteúdo de trânsito",
+        "selectYear": "{{year}}º Ano",
+        "trafficConcepts": "Conceito de Trânsito",
+        "year": "Ano"
+      }
+    },
+    "labels": {
+      "emptyList": "Nenhum registro encontrado.",
+      "emptyOptionsMessage": "Nenhuma opção disponível",
+      "listTitle": "Conteúdos de Trânsito Cadastrados",
+      "btnCreate": "Cadastrar",
+      "create": "Cadastrar Conteúdo de Trânsito",
+      "edit": "Editar Conteúdo de Trânsito",
+      "pageTitle": "Conteúdo de Trânsito",
+      "searchByKeyword": "Buscar por palavra-chave",
+      "table": {
+        "selectYear": "{{year}}º Ano",
+        "concept": "Conceito de Trânsito",
+        "actions": "Ações",
+        "delete": "Excluir",
+        "edit": "Editar",
+        "localUnit": "Unidade Local",
+        "name": "Conteúdo de Trânsito",
+        "phones": "Telefone",
+        "subTheme": "Sub Tema",
+        "theme": "Tema",
+        "year": "Ano"
+      }
+    },
+    "error": "Registro não enviado"
+  },
+  "users": {
+    "confirmDelete": "Você tem certeza que deseja remover este usuário?",
+    "details": {
+      "labels": {
+        "cpf": "CPF",
+        "name": "Nome",
+        "email": "Email",
+        "birthDate": "Data de nascimento",
+        "mobilePhone": "Celular",
+        "phone": "Telefone",
+        "profile": "Perfil",
+        "regionalSuperintendence": "Superintendência Regional",
+        "localUnit": "Unidade Local",
+        "state": "Estado",
+        "city": "Município",
+        "school": "Escolas",
+        "newTitle": "Cadastrar Usuário",
+        "editTitle": "Editar Usuário",
+        "releaseaccess": "Liberar Acesso"
+      },
+      "error": {
+        "createError": "Erro ao salvar usuário",
+        "cpfAlreadyTaken": "O CPF já está cadastrado.",
+        "emailAlreadyTaken": "O Email já está cadastrado.",
+        "editNotAllowed": "Você não possui permissão para editar este usuário."
+      },
+      "invalid": {
+        "cpf": "CPF inválido"
+      },
+      "placeholders": {
+        "birthDate": "Data de nascimento",
+        "city": "Selecione o Município",
+        "cpf": "Digite o CPF",
+        "email": "Email",
+        "localUnit": "Selecione uma Unidade Local",
+        "mobilePhone": "Celular",
+        "name": "Nome do usuário",
+        "phone": "Telefone",
+        "profile": "Selecione o Perfil",
+        "regionalSuperintendence": "Selecione uma Superintendência Regional",
+        "school": "Selecione uma Escola",
+        "state": "Selecione um Estado"
+      },
+      "required": {
+        "cpf": "CPF é obrigatório",
+        "email": "E-mail é obrigatório",
+        "mobilePhone": "Celular é obrigatório",
+        "name": "Nome é obrigatório",
+        "phoneWrongFormat": "Formato inválido",
+        "profile": "Perfil é obrigatório"
+      },
+      "edit": "Salvar",
+      "cancel": "Cancelar",
+      "submit": "Salvar",
+      "success": "Usuário cadastrado com sucesso",
+      "releaseaccess": {
+        "success": "Usuário liberado com sucesso",
+        "error": "Não foi possível liberar o acesso a este usuário",
+        "confirmation": "Você realmente deseja liberar o acesso deste usuário"
+      },
+      "label": {
+        "birthDate": "Data de nascimento é um campo obrigatório"
+      }
+    },
+    "labels": {
+      "emptyList": "Nenhum registro encontrado.",
+      "listTitle": "Usuários Cadastrados",
+      "title": "Usuários",
+      "btnCreate": "Cadastrar",
+      "pageTitleNew": "Cadastro de Usuários",
+      "pageTitleEdit": "Editar de Usuários",
+      "searchByKeyword": "Buscar por palavra-chave",
+      "table": {
+        "actions": "Ações",
+        "inactive": "Inativo",
+        "active": "Ativo",
+        "city": "Munícipio",
+        "cpf": "CPF",
+        "delete": "Excluir",
+        "edit": "Editar",
+        "email": "E-mail",
+        "name": "Nome",
+        "profile": "Perfil",
+        "state": "Estado",
+        "situation": "Situação",
+        "activeDeactivate": "Ativar/Desativar",
+        "registerDate": "Data de cadastro"
+      }
+    }
+  },
+  "initiatives": {
+    "details": {
+      "acceptReason": "Parabéns pela excelente iniciativa! Ela foi recebida e encaminhada para nossa equipe de produção atividades. Entraremos em contato para obter mais informações. Obrigado e continue contribuindo com o Conexão!",
+      "archiveReason": "Obrigado pelo envio de sua iniciativa! Ela foi recebida e guardada no nosso banco de ideias. Continue contribuindo com o Conexão!",
+      "error": {
+        "canNotBeEvaluate": "Está .,iniciativa não pode mais ser avaliada.",
+        "canNotBePublish": "Está iniciativa não pode mais ser publicada."
+      },
+      "labels": {
+        "accept": "Aceitar",
+        "archive": "Arquivar",
+        "attachments": "Anexos",
+        "attachmentsByAuthor": "Documentos enviados pelo autor",
+        "author": "Autor",
+        "description": "Descrição",
+        "history": "Histórico",
+        "reason": "Justificativa",
+        "title": "Título"
+      },
+      "pageTitle": {
+        "evaluate": "Avaliar Iniciativa",
+        "publish": "Avaliar Iniciativa para Publicação",
+        "visualization": "Visualizar Iniciativa"
+      },
+      "placeholders": {
+        "attachmentsEmpty": "Nenhum anexo encontrado.",
+        "reason": "Digite aqui a justificativa de ter aceitado ou rejeitado a iniciativa."
+      },
+      "required": {
+        "accept": "Aceitar/Arquivar é obrigatório.",
+        "comment": "Justificativa é obrigatória.",
+        "reason": "Campo Obrigatório"
+      },
+      "submit": "Salvar",
+      "cancel": "Cancelar"
+    },
+    "labels": {
+      "table": {
+        "author": "Autor",
+        "city": "Município",
+        "Institution": "Instituição de Ensino",
+        "status": "Situação",
+        "uf": "UF",
+        "visualization": "Visualizar",
+        "title": "Iniciativas",
+        "actions": "Ações"
+      },
+      "listTitleEvaluate": "Iniciativas para Avaliação",
+      "listTitlePublisher": "Iniciativas para Avaliação do Publicador",
+      "listTitleView": "Iniciativas",
+      "pageTitle": {
+        "visualization": "Visualização de Iniciativas",
+        "evaluate": "Iniciativas para Avaliação",
+        "publish": "Iniciativas para Avaliação do Publicador"
+      },
+      "emptyList": "Nenhum registro encontrado.",
+      "searchByKeyword": "Buscar por palavra-chave"
+    },
+    "error": "Registro não enviado",
+    "success": "Cadastro realizado com sucesso"
+  },
+  "surveys": {
+    "edit": "Cadastro de Avaliação de Atividade",
+    "new": "Cadastrar de Avaliação de Atividade",
+    "view": "Visualização de Avaliação de Atividade",
+    "confirmActivate": "Você tem certeza que deseja ativar esta avaliação?",
+    "confirmInactivate": "Você tem certeza que deseja inativar esta avaliação?",
+    "confirmSave": "Ao salvar a avaliação não será mais permitida a modificação. Deseja salvar?",
+    "report": {
+      "title": "Relatório de Avaliação de Atividade",
+      "type": "Tipo",
+      "byActivity": "Por Atividade",
+      "byLocal": "Por Local",
+      "byQuestion": "Por Questão",
+      "select": "Selecione",
+      "date": "Data",
+      "question": "Questão",
+      "alternative": "Alternativa",
+      "answer": "Resposta",
+      "situation": {
+        "situation": "Situação",
+        "sent": "Pendente",
+        "done": "Avaliado"
+      },
+      "period": {
+        "period": "Período",
+        "last7Days": "Últimos 7 dias",
+        "last30Days": "Últimos 30 dias",
+        "last12Months": "Últimos 12 meses",
+        "otherPeriod": "Outro período",
+        "between": "Entre",
+        "and": "e"
+      },
+      "activity": {
+        "activity": "Atividade",
+        "year": "Ano",
+        "discipline": "Disciplina",
+        "trafficContent": "Conteúdo de Trânsito",
+        "knowledgeObject": "Objeto de Conhecimento"
+      },
+      "teacher": {
+        "teacher": "Professor",
+        "regionalSuperintendences": "Superintendência Regional",
+        "dnitLocalUnit": "Unidade Local",
+        "institution": "Instituição de Ensino"
+      },
+      "search": "Buscar"
+    },
+    "details": {
+      "creationDate": "Data Criação",
+      "title": "Cadastro de Avaliação de Atividade",
+      "subtitle": "Descrição do Questionário",
+      "labels": {
+        "title": "Título",
+        "description": "Descrição",
+        "titleRequired": "*Título:",
+        "descriptionOptional": "Descrição (opcional):",
+        "descriptionRequired": "*Descrição:",
+        "questionRequired": "*Pergunta:",
+        "alternative": "Alternativa:",
+        "actions": "Ações",
+        "justifiable": "Justificável"
+      },
+      "placeholders": {
+        "title": "Título",
+        "description": "Descrição",
+        "question": "Pergunta",
+        "option": "Opção"
+      },
+      "error": {
+        "createError": "Erro ao cadastrar Avaliação",
+        "loadingData": "Erro ao carregar os dados"
+      },
+      "pageTitle": "Avaliação",
+      "publish": "Publicar",
+      "required": {
+        "title": "Título é obrigatório",
+        "description": "Descrição é obrigatória",
+        "question": "Pergunta é obrigatória",
+        "section": "Seção é obrigatória",
+        "questions": "Pergunta é obrigatória",
+        "option": "Opção é obrigatória",
+        "alternatives": "Alternativas são obrigatórias"
+      },
+      "submit": "Salvar",
+      "success": "Cadastro realizado com sucesso",
+      "summary": "Resumo",
+      "cancel": "Cancelar"
+    },
+    "labels": {
+      "table": {
+        "actions": "Ações",
+        "createDate": "Data de criação",
+        "registerList": "Título da Avaliação"
+      },
+      "btnCreate": "Cadastrar",
+      "listTitle": "Avaliações Cadastradas",
+      "pageTitle": "Avaliações",
+      "download": "Baixar Lista",
+      "emptyList": "Nenhum registro encontrado.",
+      "searchByKeyword": "Buscar por palavra-chave"
+    }
+  },
+  "Reports": {
+    "Initiatives": {
+      "Labels": {
+        "Search": "Buscar",
+        "Clear": "Limpar",
+        "Superintendence": "Superintendência Regional",
+        "LocalUnit": "Unidade Local",
+        "Institution": "Instituição de Ensino",
+        "Situation": "Situação",
+        "TimeCourse": "Período",
+        "From": "De",
+        "To": "Até"
+      },
+      "Table": {
+        "Title": "Relatórios de Iniciativas Recebidas",
+        "TableTitle": "Iniciativas Recebidas",
+        "Situation": "Situação",
+        "SendDate": "Data Envio",
+        "Author": "Autor",
+        "Superintendence": "Superintendência",
+        "LocalUnit": "Unidade Local",
+        "Institution": "Instituição de Ensino",
+        "Download": "Baixar Lista",
+        "EmptyList": "Nenhum registro encontrado."
+      }
+    },
+    "Interactivity": {
+      "Labels": {
+        "Search": "Buscar",
+        "Clear": "Limpar",
+        "Type": "Tipo",
+        "UF": "UF",
+        "Category": "Categoria",
+        "TimeCourse": "Período",
+        "From": "De",
+        "To": "Até"
+      },
+      "Table": {
+        "Title": "Relatórios de Interatividade de Usuário",
+        "TableTitle": "Interatividade de Usuário",
+        "Type": "Tipo",
+        "Category": "Categoria",
+        "Date": "Data",
+        "UF": "UF",
+        "Classification": "Classificação",
+        "Download": "Baixar Lista",
+        "EmptyList": "Nenhum registro encontrado."
+      }
+    },
+    "Message": {
+      "Labels": {
+        "Search": "Buscar",
+        "Clear": "Limpar",
+        "Superintendence": "Superintendência Regional",
+        "LocalUnit": "Unidade Local",
+        "Type": "Tipo",
+        "Situation": "Situação",
+        "TimeCourse": "Periodo",
+        "From": "De",
+        "To": "Até"
+      },
+      "Table": {
+        "Title": "Relatórios de Mensagens",
+        "TableTitle": "Mensagens Enviadas",
+        "Type": "Tipo",
+        "Date": "Data",
+        "Subject": "Assunto",
+        "Superintendence": "Superintendência",
+        "LocalUnit": "Unidade Local",
+        "Receiver": "Remetente",
+        "Situation": "Situação",
+        "ResponseTime": "Tempo de Resposta",
+        "Download": "Baixar Lista",
+        "EmptyList": "Nenhum registro encontrado."
+      }
+    },
+    "Projects": {
+      "Labels": {
+        "Search": "Buscar",
+        "Clear": "Limpar",
+        "Superintendence": "Superintendência Regional",
+        "LocalUnit": "Unidade Local",
+        "Situation": "Situação",
+        "Category": "Categoria",
+        "TimeCourse": "Periodo",
+        "From": "De",
+        "To": "Até"
+      },
+      "Table": {
+        "Title": "Relatórios de Projetos e Ações",
+        "TableTitle": "Projetos e Ações",
+        "Category": "Categoria",
+        "TitleProject": "Título",
+        "Situation": "Situação",
+        "Superintendence": "Superintendência",
+        "LocalUnit": "Unidade Local",
+        "Download": "Baixar Lista",
+        "EmptyList": "Nenhum registro encontrado."
+      }
+    },
+    "Downloads": {
+      "Labels": {
+        "Search": "Buscar",
+        "Clear": "Limpar",
+        "Superintendence": "Superintendência Regional",
+        "LocalUnit": "Unidade Local",
+        "Institution": "Instituição de Ensino",
+        "YearSchool": "Ano Escolar",
+        "Discipline": "Disciplina",
+        "Activity": "Atividade",
+        "TimeCourse": "Período",
+        "From": "De",
+        "To": "Até"
+      },
+      "Table": {
+        "Title": "Relatórios de Downloads de Atividades",
+        "TableTitle": "Downloads de Atividades",
+        "Year": "Ano",
+        "Discipline": "Disciplina",
+        "Activity": "Atividade",
+        "DownloadDate": "Data Download",
+        "TeacherName": "Nome do Professor",
+        "Type": "Tipo",
+        "Superintendence": "Superintendência",
+        "LocalUnit": "Unidade Local",
+        "Institution": "Instituição de Ensino",
+        "Download": "Baixar Lista",
+        "EmptyList": "Nenhum registro encontrado."
+      }
+    },
+    "Participants": {
+      "Labels": {
+        "Search": "Buscar",
+        "Clear": "Limpar",
+        "Superintendence": "Superintendência Regional",
+        "LocalUnit": "Unidade Local",
+        "Institution": "Instituição de Ensino",
+        "Profile": "Perfil",
+        "TimeCourse": "Período",
+        "From": "De",
+        "To": "Até",
+        "onlyActive": "Somente Usuários ATIVOS"
+      },
+      "Table": {
+        "Title": "Relatórios de Participantes",
+        "TableTitle": "Participantes",
+        "RegisterDate": "Data de Cadastro",
+        "Name": "Nome",
+        "Email": "E-mail",
+        "Profile": "Perfil",
+        "Superintendence": "Superintendência",
+        "LocalUnit": "Unidade Local",
+        "Institution": "Instituição de Ensino",
+        "LastAccess": "Último Acesso",
+        "Download": "Baixar Lista",
+        "EmptyList": "Nenhum registro encontrado."
+      }
+    },
+    "Survey": {
+      "Labels": {
+        "Search": "Buscar",
+        "Clear": "Limpar",
+        "Type": "Tipo",
+        "Situation": "Situação",
+        "TimeCourse": "Período",
+        "From": "De",
+        "To": "Até",
+        "TypeActivity": {
+          "activity": "Por Atividade",
+          "locale": "Por Local",
+          "question": "Por Questão"
+        },
+        "Activity": {
+          "Year": "Ano",
+          "Discipline": "Disciplina",
+          "TrafficContent": "Conteúdo de Trânsito",
+          "KnowledgeObject": "Objeto de Conhecimento",
+          "Activity": "Atividade"
+        },
+        "Teacher": {
+          "Superintendence": "Superintendência Regional",
+          "LocalUnit": "Unidade Local",
+          "Institution": "Instituição de Ensino",
+          "Teacher": "Professor"
+        }
+      },
+      "Table": {
+        "Title": "Relatórios de Avaliações",
+        "TableTitle": "Avaliações",
+        "SituationActivity": "Situação Atividade",
+        "Year": "Ano",
+        "Discipline": "Disciplina",
+        "Teacher": "Professor",
+        "Activity": "Atividade",
+        "Download": "Baixar Lista",
+        "EmptyList": "Nenhum registro encontrado."
+      }
+    }
+  },
+  "Footer": {
+    "terms": "Termos de Uso"
+  },
+  "ents": {
+    "listStudentsPerCycle": {
+      "errors": {
+        "amountStudents": "Número de estudantes é um campo obrigatório"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.presentation-page {
+  position: relative;
+  align-items: center;
+  .img__page > div {
+    background-position-y: center;
+    min-height: 200px;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin: auto;
+  }
+  @media (max-width: 992px) {
+    .img__page > div {
+      min-height: 100px;
+    }
+  }
+  .details-titles {
+    display: grid;
+    grid-template-columns: auto max-content auto;
+    width: 100%;
+    align-items: center;
+    text-transform: uppercase;
+    &::after,
+    &::before {
+      background-color: #bdbdbd;
+      height: 1px;
+      content: "";
+    }
+  }
+}

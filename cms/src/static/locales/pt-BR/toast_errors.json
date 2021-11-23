@@ -1,0 +1,119 @@
+{
+  "Generic": {
+    "404": "Não encontrado!",
+    "500": "Falha ao se comunicar com o servidor!",
+    "Csv": {
+      "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+    }
+  },
+  "Auth": {
+    "invalid_grant": "Sua sessão expirou e você foi deslogado!",
+    "expired_session": "Sua sessão expirou e você foi deslogado!",
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Highlights": {
+    "invalid_grant": "Falha ao se comunicar com o servidor!",
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Components": {
+    "Address": {
+      "undefined": "Erro Não Mapeado, entre em contato com o administrador!",
+      "cep-invalid": "CEP inválido"
+    }
+  },
+  "Activities": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Actions": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Courses": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "DnitLocalUnits": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "ExternalLinks": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Initiatives": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Home": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Institutions": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "KnowledgeObjects": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "ProjectActions": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Projects": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "RegionalSuperintendences": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Surveys": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "TrafficConcepts": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "TrafficContents": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Users": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "ParticipatingSchools": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Disciplines": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "GeneralSearch": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Messages": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "SchoolYear": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "States": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Subjects": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "TrafficScopes": {
+    "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+  },
+  "Reports": {
+    "Downloads": {
+      "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+    },
+    "Initiatives": {
+      "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+    },
+    "Interactivity": {
+      "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+    },
+    "Messages": {
+      "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+    },
+    "Participants": {
+      "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+    },
+    "Projects": {
+      "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+    },
+    "Survey": {
+      "undefined": "Erro Não Mapeado, entre em contato com o administrador!"
+    }
+  }
+}

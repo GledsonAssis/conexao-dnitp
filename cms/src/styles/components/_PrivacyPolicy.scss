@@ -1,0 +1,88 @@
+.privacy__layout {
+  // padding-bottom: 5em;
+
+  p {
+    padding-bottom: 6px;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 6px;
+    padding-top: 1.2em;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .title__terms {
+    font-weight: bold;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .subtitle__terms {
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .description {
+    color: #555;
+    // margin-right: 14px;
+    margin-top: 6px;
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      text-align: justify;
+    }
+  }
+
+  ul.decimal_list {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    li {
+      text-align: justify;
+      list-style: decimal;
+      list-style-position: inside;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  ul.roman_list {
+    line-height: 25px;
+
+    li {
+      list-style: upper-roman;
+      list-style-position: inside;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  ul.disc_list {
+    line-height: 25px;
+    padding-left: 35px;
+    padding-top: 10px;
+
+    li {
+      list-style: disc;
+      list-style-position: inside;
+      font-size: 14px;
+      font-weight: 400;
+      color: #555;
+    }
+  }
+
+  div.law {
+    padding-left: 64px;
+    padding-top: 6px;
+
+    p {
+      padding-bottom: 6px;
+    }
+  }
+}

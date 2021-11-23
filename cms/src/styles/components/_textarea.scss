@@ -1,0 +1,166 @@
+/*# sourceMappingURL=textarea.css.map*/
+.br-textarea {
+  --textarea-background: var(--color-secondary-01);
+  --textarea-color: var(--color-secondary-07);
+  --textarea-border: var(--color-secondary-06);
+  --textarea-font-weight: var(--font-weight-medium);
+  --textarea-text-size: var(--font-size-scale-up-01);
+  --textarea-border-radius: 6px;
+  --textarea-padding: var(--textarea-medium);
+  --textarea-small: var(--spacing-scale-base);
+  --textarea-medium: var(--spacing-scale-baseh);
+  --textarea-large: var(--spacing-scale-2x);
+  color: var(--text-color);
+
+  label {
+    display: inline-block;
+    margin-bottom: var(--spacing-scale-half);
+  }
+
+  textarea {
+    background: var(--textarea-background);
+    border: 1px solid var(--textarea-border);
+    border-radius: var(--textarea-border-radius);
+    color: var(--textarea-color);
+    display: block;
+    font-size: var(--textarea-text-size);
+    font-weight: var(--textarea-font-weight);
+    padding: var(--textarea-padding);
+    width: 100%;
+
+    &:focus {
+      border-color: var(--focus-color);
+      box-shadow: 0 0 0 var(--surface-width-md) var(--focus-color);
+      outline: none;
+    }
+
+    &:focus-visible {
+      border-color: var(--focus-color);
+      box-shadow: 0 0 0 var(--surface-width-md) var(--focus-color);
+      outline: none;
+    }
+
+    &:hover {
+      --interactive-rgb: var(--rgb-secondary-08);
+
+      &:not(:disabled) {
+        &:hover {
+          background-image: linear-gradient(rgba(var(--interactive-rgb), var(--hover)), rgba(var(--interactive-rgb), var(--hover)));
+        }
+
+        &:active {
+          background-image: linear-gradient(rgba(var(--interactive-rgb), var(--pressed)), rgba(var(--interactive-rgb), var(--pressed)));
+        }
+      }
+    }
+  }
+
+  textarea.focus-visible {
+    border-color: var(--focus-color);
+    box-shadow: 0 0 0 var(--surface-width-md) var(--focus-color);
+    outline: none;
+  }
+}
+
+.br-textarea.small {
+  textarea {
+    --textarea-padding: var(--textarea-small);
+  }
+}
+
+.br-textarea[data-small] {
+  textarea {
+    --textarea-padding: var(--textarea-small);
+  }
+}
+
+.br-textarea.medium {
+  textarea {
+    --textarea-padding: var(--textarea-medium);
+  }
+}
+
+.br-textarea[data-medium] {
+  textarea {
+    --textarea-padding: var(--textarea-medium);
+  }
+}
+
+.br-textarea.large {
+  textarea {
+    --textarea-padding: var(--textarea-large);
+  }
+}
+
+.br-textarea[data-large] {
+  textarea {
+    --textarea-padding: var(--textarea-large);
+  }
+}
+
+.br-textarea.success {
+  textarea {
+    --textarea-border: var(--color-success);
+    border-width: 2px;
+  }
+}
+
+.br-textarea[data-success] {
+  textarea {
+    --textarea-border: var(--color-success);
+    border-width: 2px;
+  }
+}
+
+.br-textarea.danger {
+  textarea {
+    --textarea-border: var(--color-danger);
+    border-width: 2px;
+  }
+}
+
+.br-textarea[data-danger] {
+  textarea {
+    --textarea-border: var(--color-danger);
+    border-width: 2px;
+  }
+}
+
+.br-textarea.warning {
+  textarea {
+    --textarea-border: var(--color-warning);
+    border-width: 2px;
+  }
+}
+
+.br-textarea[data-warning] {
+  textarea {
+    --textarea-border: var(--color-warning);
+    border-width: 2px;
+  }
+}
+
+.br-textarea.info {
+  textarea {
+    --textarea-border: var(--color-info);
+    border-width: 2px;
+  }
+}
+
+.br-textarea[data-info] {
+  textarea {
+    --textarea-border: var(--color-info);
+    border-width: 2px;
+  }
+}
+
+.br-textarea.inverted {
+  --text-color: var(--color-secondary-01);
+  --interactive: var(--color-primary-pastel-01);
+  --interactive-rgb: var(--rgb-primary-pastel-01);
+  --visited: var(--color-secondary-04);
+  --hover: var(--surface-opacity-sm);
+  --pressed: var(--surface-opacity-lg);
+  --focus-color: var(--color-support-10);
+  --active: var(--color-secondary-01);
+}

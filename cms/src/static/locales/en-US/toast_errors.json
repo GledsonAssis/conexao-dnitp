@@ -1,0 +1,118 @@
+{
+  "Generic": {
+    "404": "Not found!",
+    "500": "Failed to communicate with server!",
+    "Csv": {
+      "undefined": "Unmapped Error, please contact administrator!"
+    }
+  },
+  "Auth": {
+    "invalid_grant": "Your session has expired and you have been logged out!",
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Highlights": {
+    "undefined": "Unmapped Error, please contact administrator!",
+    "invalid_grant": "Failed to communicate with server!"
+  },
+  "Components": {
+    "Address": {
+      "undefined": "Unmapped Error, please contact administrator!",
+      "cep-invalid": "Invalid zip code"
+    }
+  },
+  "Activities": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Actions": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Courses": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "DnitLocalUnits": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "ExternalLinks": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Initiatives": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Home": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Institutions": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "KnowledgeObjects": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "ProjectActions": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Projects": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "RegionalSuperintendences": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Surveys": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "TrafficConcepts": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "TrafficContents": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Users": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "ParticipatingSchools": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Disciplines": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "GeneralSearch": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Messages": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "SchoolYear": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "States": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Subjects": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "TrafficScopes": {
+    "undefined": "Unmapped Error, please contact administrator!"
+  },
+  "Reports": {
+    "Downloads": {
+      "undefined": "Unmapped Error, please contact administrator!"
+    },
+    "Initiatives": {
+      "undefined": "Unmapped Error, please contact administrator!"
+    },
+    "Interactivity": {
+      "undefined": "Unmapped Error, please contact administrator!"
+    },
+    "Messages": {
+      "undefined": "Unmapped Error, please contact administrator!"
+    },
+    "Participants": {
+      "undefined": "Unmapped Error, please contact administrator!"
+    },
+    "Projects": {
+      "undefined": "Unmapped Error, please contact administrator!"
+    },
+    "Survey": {
+      "undefined": "Unmapped Error, please contact administrator!"
+    }
+  }
+}

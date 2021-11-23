@@ -1,0 +1,242 @@
+/*# sourceMappingURL=tab.css.map*/
+.br-tab {
+	--tab-color: var(--color-secondary-08);
+	--tab-surface: var(--color-secondary-01);
+	--tab-background: var(--bg-color);
+	--tab-border: var(--surface-width-lg) solid var(--interactive);
+	--tab-nav-border: var(--color-secondary-04);
+	--tab-padding-small: var(--spacing-scale-3x);
+	--tab-padding-medium: var(--spacing-scale-2x);
+	--tab-padding-large: var(--spacing-scale-base);
+	--tab-padding-x: var(--spacing-scale-3x);
+	--tab-padding-y: var(--tab-padding-medium);
+	--tab-result-small: 90px;
+	--tab-result-medium: 60px;
+	--tab-result-large: 58px;
+	--tab-result-y: 60px;
+	--tab-outcome-y: 80px;
+	.tab-nav {
+		overflow-x: auto;
+		width: 100%;
+		ul {
+			border-bottom: 1px solid var(--color-secondary-04);
+			display: flex;
+			margin-bottom: 0;
+			margin-top: 0;
+			padding: 0;
+			width: 100%;
+			.tab-item {
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				position: relative;
+				white-space: nowrap;
+				&:first-child {
+					padding-left: 0;
+				}
+				&:last-child {
+					padding-right: 0;
+				}
+				button {
+					--focus-offset: calc(var(--spacing-scale-half) * -1);
+					background-color: transparent;
+					border: none;
+					border-bottom: 4px solid transparent;
+					color: var(--tab-color);
+					display: inline-block;
+					padding: var(--tab-padding-y) var(--tab-padding-x);
+					&:focus {
+						outline: none;
+						.name {
+							color: var(--interactive);
+						}
+					}
+					&:focus-visible {
+						outline-color: var(--focus-color);
+						outline-offset: var(--focus-offset);
+						outline-style: var(--focus-style);
+						outline-width: var(--focus-width);
+					}
+					&:not(:disabled) {
+						&:hover {
+							background-image: linear-gradient(rgba(var(--interactive-rgb), var(--hover)), rgba(var(--interactive-rgb), var(--hover)));
+						}
+						&:active {
+							background-image: linear-gradient(rgba(var(--interactive-rgb), var(--pressed)), rgba(var(--interactive-rgb), var(--pressed)));
+						}
+					}
+					&:hover {
+						.name {
+							color: var(--tab-color);
+						}
+					}
+					.name {
+						color: var(--tab-color);
+						font-size: var(--font-size-scale-up-02, 20.16px);
+						font-weight: var(--font-weight-semi-bold, 600);
+						text-align: center;
+						white-space: nowrap;
+					}
+				}
+				button.focus-visible {
+					outline-color: var(--focus-color);
+					outline-offset: var(--focus-offset);
+					outline-style: var(--focus-style);
+					outline-width: var(--focus-width);
+				}
+				.results {
+					color: var(--color-secondary-07, #555);
+					display: flex;
+					font-size: var(--font-size-scale-base, 14px);
+					font-weight: var(--font-weight-semi-bold, 600);
+					justify-content: center;
+					position: absolute;
+					top: var(--tab-result-y);
+				}
+			}
+			.tab-item.is-active {
+				button {
+					border-bottom: var(--tab-border);
+					.name {
+						color: --tab-color;
+					}
+				}
+				.results {
+					color: var(--interactive);
+				}
+			}
+		}
+	}
+	.tab-content {
+		.tab-panel {
+			color: var(--text-color);
+			display: none;
+		}
+		.tab-panel.is-active {
+			display: block;
+		}
+	}
+}
+.br-tab.inverted {
+	--tab-color: var(--color-secondary-01);
+	--tab-nav-border: var(--color-secondary-02);
+	--text-color: var(--color-secondary-01);
+	--interactive: var(--color-primary-pastel-01);
+	--interactive-rgb: var(--rgb-primary-pastel-01);
+	--visited: var(--color-secondary-04);
+	--hover: var(--surface-opacity-sm);
+	--pressed: var(--surface-opacity-lg);
+	--focus-color: var(--color-support-10);
+	--active: var(--color-secondary-01);
+	ul {
+		.tab-item {
+			&:hover {
+				.name {
+					--tab-background: var(--color-secondary-02);
+				}
+			}
+			button {
+				color: var(--color-secondary-01) !important;
+				&:hover {
+					.name {
+						color: var(--color-secondary-01);
+					}
+				}
+				&:focus {
+					.name {
+						color: var(--color-secondary-01);
+					}
+				}
+			}
+		}
+	}
+}
+.br-tab[data-counter=true] {
+	.tab-nav {
+		ul {
+			margin-bottom: var(--spacing-scale-9x);
+			.tab-item[not-tab=true] {
+				.name {
+					color: var(--color-secondary-08, #333);
+					display: inline-block;
+					font-size: var(--font-size-scale-up-03, 24.192px);
+					font-weight: var(--font-weight-semi-bold, 600);
+					line-height: var(--font-size-scale-up-03, 24.192px);
+					padding: var(--tab-padding-x) var(--tab-padding-y);
+				}
+				.outcome {
+					font-size: var(--font-size-scale-up-02, 20.16px);
+					font-weight: var(--font-weight-regular, 400);
+					left: 0;
+					position: absolute;
+					top: var(--tab-outcome-y);
+					span {
+						color: var(--interactive);
+						display: inline-block;
+						font-size: var(--font-size-scale-up-03, 24.192px);
+						font-weight: var(--font-weight-semi-bold, 600);
+						margin-bottom: var(--spacing-scale-4x);
+						margin-left: var(--spacing-scale-3x);
+					}
+				}
+			}
+		}
+	}
+}
+.br-tab.xsmall {
+	--tab-result-y: var(--tab-result-xsmall);
+	--tab-padding-y: var(--tab-padding-xsmall);
+}
+.br-tab[xsmall] {
+	--tab-result-y: var(--tab-result-xsmall);
+	--tab-padding-y: var(--tab-padding-xsmall);
+}
+.br-tab.is-xsmall {
+	--tab-result-y: var(--tab-result-xsmall);
+	--tab-padding-y: var(--tab-padding-xsmall);
+}
+.br-tab.small {
+	--tab-result-y: var(--tab-result-small);
+	--tab-padding-y: var(--tab-padding-small);
+}
+.br-tab[small] {
+	--tab-result-y: var(--tab-result-small);
+	--tab-padding-y: var(--tab-padding-small);
+}
+.br-tab.is-small {
+	--tab-result-y: var(--tab-result-small);
+	--tab-padding-y: var(--tab-padding-small);
+}
+.br-tab.medium {
+	--tab-result-y: var(--tab-result-medium);
+	--tab-padding-y: var(--tab-padding-medium);
+}
+.br-tab[medium] {
+	--tab-result-y: var(--tab-result-medium);
+	--tab-padding-y: var(--tab-padding-medium);
+}
+.br-tab.is-medium {
+	--tab-result-y: var(--tab-result-medium);
+	--tab-padding-y: var(--tab-padding-medium);
+}
+.br-tab.large {
+	--tab-result-y: var(--tab-result-large);
+	--tab-padding-y: var(--tab-padding-large);
+}
+.br-tab[large] {
+	--tab-result-y: var(--tab-result-large);
+	--tab-padding-y: var(--tab-padding-large);
+}
+.br-tab.is-large {
+	--tab-result-y: var(--tab-result-large);
+	--tab-padding-y: var(--tab-padding-large);
+}
+@media (max-width: 991.98px) {
+	.br-tab {
+		.tab-nav {
+			display: flex;
+			overflow-x: auto;
+			width: 100%;
+		}
+	}
+}

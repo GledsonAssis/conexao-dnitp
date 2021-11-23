@@ -1,0 +1,191 @@
+{
+  "Address": {
+    "city": "City",
+    "complement": "Complement",
+    "district": "Neighborhood",
+    "number": "Number",
+    "placeholder": {
+      "city": "Select the City",
+      "complement": "Complement",
+      "district": "Neighborhood",
+      "number": "Number",
+      "state": "Select the State",
+      "street": "Street",
+      "zipCode": "Enter your ZIP code/CEP"
+    },
+    "required": {
+      "cep": "Please enter the ZIP code/CEP",
+      "city": "Please select a City",
+      "district": "Please inform your neighborhood",
+      "state": "Please inform your state",
+      "street": "Please inform your street",
+      "zipCode": "Zip code is a required field",
+      "number": "Number is a required field"
+    },
+    "state": "State",
+    "street": "Street",
+    "title": "Address",
+    "zipCode": "Zip code/CEP",
+    "zipCodeNotFound": "Zip code/CEP not found"
+  },
+  "Footer": {
+    "copyright": "Developed by LabTrans/UFSC",
+    "imgLogoAlt": "Information Access",
+    "imgLogoAlt2": "Pátria amada Brasil, federal government",
+    "terms": "Use Terms",
+    "version": "Version: {version}"
+  },
+  "Header": {
+    "logout": "Logout",
+    "login": "Login",
+    "title": "CMS - DNIT"
+  },
+  "listCompetences": {
+    "addBtn": "Add",
+    "add": "Add Competency",
+    "name": "Enter the Competency title",
+    "list": "List of Competencies",
+    "remove": "Remove",
+    "required": {
+      "name": "Please enter the name",
+      "skill": "Please enter the skill"
+    },
+    "skills": {
+      "add": "Add Skill...",
+      "competence": "Competency",
+      "competences": "Competency(ies)",
+      "skills": "Skill(s)",
+      "actions": "Actions",
+      "edit": "Edit Competency",
+      "name": "Enter the Skill title",
+      "remove": "Remove Skill",
+      "clear": "Clear Habilidades",
+      "removeCompetence": "Remove Competency",
+      "save": "Save Competency",
+      "skillsTitle": "Skills"
+    },
+    "title": "Competencies and Skills"
+  },
+  "listStudentsPerCycle": {
+    "selectYear": "{{year}}{{ordinal}} grade",
+    "errors": {
+      "cycle": "Please enter the cycle",
+      "studentsAmount": "Please enter the student numbers",
+      "amountStudents": "Number of students is a required field."
+    },
+    "add": "Add",
+    "remove": "Remove",
+    "cycle": "Cycle",
+    "studentsAmount": "Number of students",
+    "title": "Students by Cycle",
+    "students": "{{students}} students"
+  },
+  "listSelectCompetences": {
+    "add": "Add Competency",
+    "name": "Select Competency",
+    "remove": "Remove",
+    "skills": {
+      "add": "Submit",
+      "competence": "Competency",
+      "name": "Select Skills",
+      "removeCompetence": "Remove Competency",
+      "skillsTitle": "Selected Skills"
+    },
+    "title": "Competencies and Skills"
+  },
+  "pagination": {
+    "itens": "Itens",
+    "page": "Page",
+    "of": "of",
+    "show": "Show"
+  },
+  "sideNav": {
+    "admin": "Administration",
+    "home": "Home Page",
+    "info": "Information",
+    "materials": "Materials",
+    "menu": "Menu",
+    "mural": "Mural",
+    "pages": {
+      "actions": "Activation Actions",
+      "activities": "Activities",
+      "admin": "Administration",
+      "courses": "Courses",
+      "evaluateInitiative": "Evaluate Initiatives",
+      "externalLinks": "External Links",
+      "highlights": "Mural",
+      "home": "Home Page",
+      "info": "Information",
+      "institution": "Educational Institution",
+      "knowledgeObject": "Knowledge Object",
+      "localUnit": "Local Unit",
+      "materials": "Materials",
+      "mural": "Mural",
+      "projectActions": "Project or Campaign Actions",
+      "projects": "Projects and Campaigns",
+      "publishInitiative": "Publish Initiatives",
+      "initiativeVisualization": "View Initiatives",
+      "regionalSuperintendence": "Regional Superintendence",
+      "register": "Registrations",
+      "reports": "Reports",
+      "trafficConcept": "Traffic Concept",
+      "trafficContent": "Traffic Content",
+      "user": "Users",
+      "surveys": "Evaluations",
+      "reportIniciatives": "Received Initiatives",
+      "reportInteractivity": "User Interactivity",
+      "reportProjects": "Projects and Actions",
+      "reportMessages": "Received Messages",
+      "reportDownloads": "Activities Downloads",
+      "reportSurveys": "Evaluations",
+      "reportParticipants": "Program Participants"
+    },
+    "register": "Registrations",
+    "reports": "Reports",
+    "toggleCollapse": "Minimize"
+  },
+  "Modal": {
+    "Close": "Close",
+    "Cancel": "Cancel",
+    "Ok": "Ok"
+  },
+  "Upload": {
+    "Submited": "(Submited)"
+  },
+  "Select": {
+    "selectAll": "Select All",
+    "all": "All"
+  },
+  "section": {
+    "title": "Section",
+    "FormTitle": "Title",
+    "FormDescription": "Description",
+    "add": "Add Section",
+    "remove": "Remove Section"
+  },
+  "question": {
+    "title": "Question",
+    "add": "Add Question",
+    "remove": "Remove Question",
+    "labels": {
+      "title": "Question",
+      "type": "Type",
+      "required": "Required"
+    },
+    "types": {
+      "text": "Text",
+      "oneChoice": "Single choice",
+      "multiChoice": "Multiple choice"
+    }
+  },
+  "alternative": {
+    "add": "Add Option",
+    "remove": "Remove Option"
+  },
+  "Wizard": {
+    "cancel": "Cancelar",
+    "next": "Próxima",
+    "back": "Voltar",
+    "submit": "Salvar"
+  }
+}

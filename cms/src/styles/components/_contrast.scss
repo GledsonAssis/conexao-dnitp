@@ -1,0 +1,115 @@
+.contrast {
+  background: black !important;
+  box-shadow: none;
+  color: white !important;
+
+  ::placeholder {
+    color: gray !important;
+    opacity: 1;
+  }
+
+  *:not(#__next, .contrast-ignore-bg, .nitf-basic-tile, .year-seletor, .disciplines-seletor) {
+    background: black !important;
+  }
+
+  nav,
+  div,
+  li,
+  ol,
+  header,
+  footer,
+  section,
+  main,
+  aside,
+  article {
+    box-shadow: none;
+    color: white !important;
+  }
+
+  .card-content {
+    border: 1px solid white !important;
+  }
+
+  .year-seletor input,
+  .disciplines-seletor input {
+    &:not(:checked)+label {
+      color: yellow !important;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  label,
+  strong,
+  em,
+  cite,
+  q,
+  i,
+  b,
+  u,
+  span {
+    color: white !important;
+  }
+
+  .br-button {
+    i {
+      color: yellow !important;
+    }
+  }
+
+  a,
+  .clickable-item,
+  .table-item-clickable {
+    color: yellow !important;
+
+    h1,
+    div,
+    i,
+    h2,
+    h3,
+    h4,
+    h5,
+    span,
+    h6 {
+      color: yellow !important;
+    }
+  }
+
+  button,
+  input[type=button],
+  input[type=reset],
+  input[type=submit] {
+    color: yellow !important;
+    border: none !important;
+  }
+
+  img.on-contrast-force-gray {
+    filter: grayscale(100%) contrast(120%);
+  }
+
+  img.on-contrast-force-white {
+    filter: brightness(0) invert(1);
+  }
+
+  input[type=text],
+  input[type=password],
+  input[type=url],
+  input[type=search],
+  input[type=email],
+  input[type=tel],
+  input[type=date],
+  input[type=month],
+  input[type=week],
+  input[type=datetime],
+  input[type=datetime-local],
+  textarea,
+  input[type=number] {
+    border: 1px solid white !important;
+    color: white !important;
+  }
+}

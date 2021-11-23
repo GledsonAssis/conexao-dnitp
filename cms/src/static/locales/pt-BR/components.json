@@ -1,0 +1,191 @@
+{
+  "Address": {
+    "city": "Cidade",
+    "complement": "Complemento",
+    "district": "Bairro",
+    "number": "Número",
+    "placeholder": {
+      "city": "Selecione o Município",
+      "complement": "Complemento",
+      "district": "Bairro",
+      "number": "Número",
+      "state": "Selecione o Estado",
+      "street": "Rua",
+      "zipCode": "Digite seu CEP"
+    },
+    "required": {
+      "cep": "CEP é obrigatório",
+      "city": "Cidade é obrigatória",
+      "district": "Bairro é obrigatório",
+      "state": "Estado é obrigatório",
+      "street": "Rua é obrigatória",
+      "zipCode": "CEP é um campo requerido",
+      "number": "Número é um campo requirido"
+    },
+    "state": "UF",
+    "street": "Logradouro",
+    "title": "Endereço",
+    "zipCode": "CEP",
+    "zipCodeNotFound": "CEP não encontrado"
+  },
+  "Footer": {
+    "copyright": "Desenvolvido por LabTrans/UFSC. Todo o conteúdo deste site está publicado sob licença Creative Commons Atribuição -Sem Derivações 3.0 Não Adaptada.",
+    "imgLogoAlt": "Acesso à informação",
+    "imgLogoAlt2": "Pátria amada Brasil, governo federal",
+    "terms": "Termos de Uso",
+    "version": "Versão: {version}"
+  },
+  "Header": {
+    "logout": "Sair",
+    "login": "Entrar",
+    "title": "CMS - DNIT"
+  },
+  "listCompetences": {
+    "addBtn": "Adicionar",
+    "add": "Adicionar Competência",
+    "name": "Digite o título da Competência",
+    "list": "Lista de Competências",
+    "remove": "Remover",
+    "required": {
+      "name": "Campo Obrigatório",
+      "skill": "Campo Obrigatório"
+    },
+    "skills": {
+      "add": "Adicionar Habilidade...",
+      "competence": "Competência",
+      "competences": "Competência(s)",
+      "skills": "Habilidade(s)",
+      "actions": "Ações",
+      "edit": "Editar Competência",
+      "name": "Digite o título da Habilidade",
+      "remove": "Excluir Habilidade",
+      "clear": "Limpar Habilidades",
+      "removeCompetence": "Excluir Competência",
+      "save": "Salvar Competência",
+      "skillsTitle": "Habilidades"
+    },
+    "title": "Competências e Habilidades"
+  },
+  "listStudentsPerCycle": {
+    "selectYear": "{{year}}º Ano",
+    "errors": {
+      "cycle": "Ciclo é obrigatório",
+      "studentsAmount": "Número de estudantes é obrigatório",
+      "amountStudents": "Número de estudantes é um campo obrigatório"
+    },
+    "add": "Adicionar",
+    "remove": "Remover",
+    "cycle": "Ciclo",
+    "studentsAmount": "Quantidade de Alunos",
+    "title": "Estudantes por Ciclo",
+    "students": "{{students}} estudantes"
+  },
+  "listSelectCompetences": {
+    "add": "Adicionar Competência",
+    "name": "Selecione a Competência",
+    "remove": "Remover",
+    "skills": {
+      "add": "Salvar",
+      "competence": "Competência",
+      "name": "Selecione as Habilidades",
+      "removeCompetence": "Excluir Competência",
+      "skillsTitle": "Habilidades Selecionadas"
+    },
+    "title": "Competências e Habilidades"
+  },
+  "pagination": {
+    "itens": "Itens",
+    "page": "Página",
+    "of": "de",
+    "show": "Exibir"
+  },
+  "sideNav": {
+    "admin": "Administração",
+    "home": "Página Inicial",
+    "info": "Informações",
+    "materials": "Materiais",
+    "menu": "Menu",
+    "mural": "Mural",
+    "pages": {
+      "actions": "Ações de Ativação",
+      "activities": "Atividades",
+      "admin": "Administração",
+      "courses": "Cursos",
+      "evaluateInitiative": "Avaliação de Iniciativas",
+      "externalLinks": "Links Externos",
+      "highlights": "Mural",
+      "home": "Página Inicial",
+      "info": "Informações",
+      "institution": "Instituição de Ensino",
+      "knowledgeObject": "Objeto de Conhecimento",
+      "localUnit": "Unidade Local",
+      "materials": "Materiais",
+      "mural": "Mural",
+      "projectActions": "Ações de Projeto ou Campanha",
+      "projects": "Projetos e Campanhas",
+      "publishInitiative": "Publicação de Iniciativas",
+      "initiativeVisualization": "Visualização de Iniciativas",
+      "regionalSuperintendence": "Superintendência Regional",
+      "register": "Cadastros",
+      "reports": "Relatórios",
+      "trafficConcept": "Conceito de Trânsito",
+      "trafficContent": "Conteúdo de Trânsito",
+      "user": "Usuários",
+      "surveys": "Avaliações",
+      "reportIniciatives": "Iniciativas Recebidas",
+      "reportInteractivity": "Interatividade de Usuário",
+      "reportProjects": "Projetos e Ações",
+      "reportMessages": "Mensagens Recebidas",
+      "reportDownloads": "Downloads de Atividades",
+      "reportSurveys": "Avaliações",
+      "reportParticipants": "Participantes do Programa"
+    },
+    "register": "Cadastros",
+    "reports": "Relatórios",
+    "toggleCollapse": "Minimizar"
+  },
+  "Modal": {
+    "Close": "Fechar",
+    "Cancel": "Cancelar",
+    "Ok": "Ok"
+  },
+  "Upload": {
+    "Submited": "(Enviado)"
+  },
+  "Select": {
+    "selectAll": "Selecionar Todos",
+    "all": "Todos"
+  },
+  "section": {
+    "title": "Sessão",
+    "FormTitle": "Título",
+    "FormDescription": "Descrição",
+    "add": "Adicionar Seção",
+    "delete": "Remover Seção"
+  },
+  "question": {
+    "title": "Questão",
+    "add": "Adicionar Pergunta",
+    "remove": "Remover Pergunta",
+    "labels": {
+      "title": "Pergunta",
+      "type": "Tipo",
+      "required": "Obrigatório"
+    },
+    "types": {
+      "text": "Texto",
+      "oneChoice": "Única escolha",
+      "multiChoice": "Múltipla escolha"
+    }
+  },
+  "alternative": {
+    "add": "Adicionar Opção",
+    "remove": "Remover Opção"
+  },
+  "Wizard": {
+    "cancel": "Cancelar",
+    "next": "Próxima",
+    "back": "Voltar",
+    "submit": "Salvar"
+  }
+}

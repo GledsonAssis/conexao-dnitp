@@ -1,0 +1,69 @@
+$checkbox-diameter: 40px;
+$checkbox-bg: #c8dbff;
+$checkbox-bg-selected: #356cd2;
+$checkbox-tick: #fff;
+
+.wrapper {
+  margin: 0 auto;
+  height: auto;
+}
+
+.year-seletor:not(last-of-type) {
+  display: inline-block;
+  margin-right: $checkbox-diameter;
+}
+
+.year-seletor {
+  position: relative;
+  height: $checkbox-diameter;
+
+  // circle
+  label {
+    color: $checkbox-tick;
+    font-weight: bold;
+    font-size: 25px;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: $checkbox-diameter;
+    height: $checkbox-diameter;
+    background-color: $checkbox-bg-selected;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 300ms ease, colour 300ms ease, box-shadow 300ms ease;
+  }
+
+}
+
+body:not(.contrast) .year-seletor input {
+  &:not(:checked)+label {
+    background-color: $checkbox-bg !important;
+  }
+}
+
+.disciplines-seletor {
+  position: relative;
+
+  label {
+    color: $checkbox-tick;
+    font-weight: bold;
+    align-items: center;
+    // position: absolute;
+    text-align: center;
+    width: max-content;
+    padding: 6px 15px;
+    white-space: nowrap;
+    background-color: $checkbox-bg-selected;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 300ms ease, colour 300ms ease, box-shadow 300ms ease;
+  }
+
+  input {
+    &:not(:checked)+label {
+      background-color: $checkbox-bg;
+    }
+  }
+}
