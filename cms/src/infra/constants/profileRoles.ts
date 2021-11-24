@@ -26,6 +26,8 @@ const cadastrador = 9;
 const suportePedagogico = 17;
 const suporteTecnico = 18;
 
+const infantil = 24;
+
 export {
   admin,
   anonimo,
@@ -47,4 +49,5 @@ export {
   suportePedagogico,
   suporteTecnico,
   visitante,
+  infantil
 };

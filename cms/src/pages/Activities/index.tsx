@@ -165,7 +165,7 @@ export const ActivitiesPage: React.FC<Props> = ({ propsModel, t }) => {
               <button
                 className="br-button secondary"
                 type="button"
-                onClick={() => dispatch(actionsActivities.loadGetListCSVsRequest({}))}>
+                onClick={() => dispatch(actionsActivities.loadGetListCSVsRequest({ keyword: keywordSearch }))}>
                 <i className="fas fa-download mr-1" aria-hidden="true"></i>
                 {t('general:commom.DownloadList')}
               </button>

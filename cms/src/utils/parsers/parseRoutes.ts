@@ -17,6 +17,7 @@ import {
   suportePedagogico,
   suporteTecnico,
   visitante,
+  infantil,
 } from '@/infra/constants/profileRoles';
 
 const parserRouter = (t: any) => [
@@ -27,6 +28,7 @@ const parserRouter = (t: any) => [
     roles: [
       admin,
       anonimo,
+      infantil,
       visitante,
       professor,
       gestorEscolar,
@@ -52,6 +54,7 @@ const parserRouter = (t: any) => [
     roles: [
       admin,
       anonimo,
+      infantil,
       cadastrador,
       gestorEscolar,
       gestorEstratLocal,
@@ -96,6 +99,7 @@ const parserRouter = (t: any) => [
     roles: [
       admin,
       anonimo,
+      infantil,
       visitante,
       professor,
       gestorEscolar,

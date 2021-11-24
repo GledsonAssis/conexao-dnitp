@@ -23,8 +23,6 @@ interface OwnProps {
 
 type Props = StateProps & DispatchProps & OwnProps;
 
-// TODO: Chamada das apis externas pelo próprio componente
-
 export const AddressForm: FC<Props> = ({ useFormProps, t }) => {
   const dispatch = useDispatch();
   const [stSearch, SetStSearch] = useState<boolean>(false);

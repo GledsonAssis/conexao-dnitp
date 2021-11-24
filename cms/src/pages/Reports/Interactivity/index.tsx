@@ -431,7 +431,8 @@ export const InitiativesPage: React.FC<Props> = ({ propsModel, t }) => {
                     params: {
                       ...watch(),
                       dateEnd: watch('dateEnd') ? moment(watch('dateEnd'), 'DD/MM/YYYY').utc().format('YYYY-MM-DD') : null,
-                      dateInit: watch('dateInit') ? moment(watch('dateInit'), 'DD/MM/YYYY').utc().format('YYYY-MM-DD') : null
+                      dateInit: watch('dateInit') ? moment(watch('dateInit'), 'DD/MM/YYYY').utc().format('YYYY-MM-DD') : null,
+                      limit: 'all'
                     }
                   }))
                 }

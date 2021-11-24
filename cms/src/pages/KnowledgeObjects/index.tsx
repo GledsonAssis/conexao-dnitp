@@ -153,7 +153,7 @@ export const KnowledgObjectsPage: React.FC<Props> = ({ propsModel, t }) => {
               <button
                 className="br-button secondary"
                 type="button"
-                onClick={() => dispatch(actionsKnowledgObjects.loadGetListCSVsRequest({}))}>
+                onClick={() => dispatch(actionsKnowledgObjects.loadGetListCSVsRequest({ keyword: keywordSearch }))}>
                 <i className="fas fa-download mr-1" aria-hidden="true"></i>
                 {t('general:commom.DownloadList')}
               </button>
