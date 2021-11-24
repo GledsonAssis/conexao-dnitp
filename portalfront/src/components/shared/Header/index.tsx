@@ -34,6 +34,7 @@ export const Header: React.FC<Props> = ({ translation, Session, handleLogin }) =
   const messages = useSelector((state: ApplicationState) => state.messages);
   const [stContrast, setStContrast] = useState(false);
   const [stCron, setStCron] = useState(false);
+  const [stFirstMount, setStFirstMount] = useState(true);
   const [govbrNonce, setGovbrNonce] = useState('');
   const [govbrState, setGovbrState] = useState('');
   const router = useRouter();
@@ -47,7 +48,6 @@ export const Header: React.FC<Props> = ({ translation, Session, handleLogin }) =
   } = useForm<any>();
 
   useEffect(() => {
-    dispatch(actionsMessages.loadInboxFetchRequest({}));
     if (child1.current && child1.current.querySelector('.br-header:not(.dsgov)')) {
       new BRHeader('br-header', child1.current.querySelector('.br-header:not(.dsgov)'));
     }
@@ -85,6 +85,7 @@ export const Header: React.FC<Props> = ({ translation, Session, handleLogin }) =
   // Check email every 30 seconds
   if (!messages.cronCheck && Session?.isLogged && !stCron) {
     setStCron(true)
+    dispatch(actionsMessages.loadInboxFetchRequest({ cron: true }))
     setInterval(function () {
       dispatch(actionsMessages.loadInboxFetchRequest({ cron: true }));
     }, 30 * 1000)

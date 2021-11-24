@@ -178,7 +178,7 @@ export const ProfilePage: React.FC<Props> = ({ children, ...props }) => {
   function onSubmit(data: any) {
     const params = {
       idCity: +data.idCity,
-      birthDate: moment(data.birthDate, 'DD-MM-YYYY').toISOString(),
+      birthDate: moment(data.birthDate, 'DD/MM/YYYY').toISOString(),
       idSchoolBonds: +data.idSchoolBonds,
       idState: +data.idState,
       idEducationalInstitution: +data.idEducationalInstitution || null,
