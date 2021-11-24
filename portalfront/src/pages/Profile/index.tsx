@@ -55,9 +55,10 @@ export const ProfilePage: React.FC<Props> = ({ children, ...props }) => {
   } = useForm<any>();
 
   useEffect(() => {
+    console.log(moment(user.birthDate).toISOString())
     if (user) {
       setValue('idSchoolBonds', `${user?.schoolBonds?.id}`)
-      setValue('birthDate', user.birthDate ? moment(user.birthDate).format('DD/MM/yyyy') : null)
+      setValue('birthDate', user.birthDate ? moment(user.birthDate).toISOString() : null)
       setValue('idState', `${user?.city?.state?.id}`)
       setValue('idCity', `${user?.city?.id}`)
       setValue('idEducationalInstitution', `${user?.instituitions?.[0]?.id}`)
@@ -177,11 +178,11 @@ export const ProfilePage: React.FC<Props> = ({ children, ...props }) => {
   function onSubmit(data: any) {
     const params = {
       idCity: +data.idCity,
-      birthDate: moment(data.birthDate).toISOString(),
+      birthDate: moment(data.birthDate, 'DD-MM-YYYY').toISOString(),
       idSchoolBonds: +data.idSchoolBonds,
       idState: +data.idState,
       idEducationalInstitution: +data.idEducationalInstitution || null,
-      instituitions: [+data.idEducationalInstitution],
+      instituitions: +data.idEducationalInstitution ? [+data.idEducationalInstitution] : [],
       id: user.id,
       name: user.name,
       cpf: user.cpf,
@@ -267,7 +268,7 @@ export const ProfilePage: React.FC<Props> = ({ children, ...props }) => {
                   <Datapicker
                     id="birthDate"
                     minDate=""
-                    defaultDate={user?.birthDate ? moment(user.birthDate).format('DD/MM/yyyy') : null}
+                    // defaultDate={user?.birthDate ? moment(user.birthDate).format('DD/MM/yyyy') : null}
                     title={`${t('pages:Register.label.birthDate')}:`}
                     inputProps={{ ...register('birthDate', { required: true }) }}
                     className={`br-input mb-4 col-12 col-md-6 ${errors?.birthDate?.type ? 'danger' : ''}`}

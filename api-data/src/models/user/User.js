@@ -4,7 +4,7 @@ import moment from 'moment';
 import db from '../../config/database';
 
 import City from '../general/City';
-import { visitante } from '../../constants/Role';
+import { anonimo } from '../../constants/Role';
 import SchoolBonds from './SchoolBonds';
 import Roles from './Roles';
 import Terms from '../general/Terms';
@@ -58,7 +58,7 @@ const User = db.define('User', {
   },
   idRole: {
     allowNull: false,
-    defaultValue: visitante,
+    defaultValue: anonimo,
     field: 'idPerfil',
     references: {
       key: 'id',

@@ -86,6 +86,7 @@ export function* isModerator() {
 export function* submit({ payload }: any) {
   try {
     const response = yield call(service.client.put, `/users`, payload);
+    yield Session.setUser(response.data);
     yield put(loadSubmitSuccess(response));
   } catch (err) {
     const parser = parseError(err.error.response);

@@ -9,6 +9,9 @@ const gestorOpLocal = 5;
 const gestorTatLocal = 6;
 const gestorEstratLocal = 7;
 
+const publicador = 8;
+const cadastrador = 9;
+
 const gestorOpRegional = 11;
 const gestorTatRegional = 12;
 const gestorEstratRegional = 13;
@@ -17,14 +20,13 @@ const gestorOpNacional = 14;
 const gestorTatNacional = 15;
 const gestorEstratNacional = 16;
 
+const suportePedagogico = 17;
+const suporteTecnico = 18;
+
 const gestorEstadual = 21;
 const gestorMunicipal = 23;
 
-const publicador = 8;
-const cadastrador = 9;
-
-const suportePedagogico = 17;
-const suporteTecnico = 18;
+const infantil = 24;
 
 export {
   admin,
@@ -47,4 +49,5 @@ export {
   suportePedagogico,
   suporteTecnico,
   visitante,
+  infantil
 };

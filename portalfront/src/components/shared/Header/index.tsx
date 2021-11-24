@@ -47,6 +47,7 @@ export const Header: React.FC<Props> = ({ translation, Session, handleLogin }) =
   } = useForm<any>();
 
   useEffect(() => {
+    dispatch(actionsMessages.loadInboxFetchRequest({}));
     if (child1.current && child1.current.querySelector('.br-header:not(.dsgov)')) {
       new BRHeader('br-header', child1.current.querySelector('.br-header:not(.dsgov)'));
     }

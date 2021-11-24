@@ -21,6 +21,7 @@ import {
   suportePedagogico,
   visitante,
   suporteTecnico,
+  infantil
 } from '../constants/profileRoles';
 import { EnvsConfig } from '../config/envs.config';
 
@@ -31,6 +32,7 @@ export default {
   '/': [
     permission(admin, [R, C, W, P, M, O]),
     permission(anonimo, [R]),
+    permission(infantil, [R]),
     permission(cadastrador, [R]),
     permission(gestorEscolar, [R]),
     permission(gestorEstratLocal, [R]),
@@ -51,6 +53,7 @@ export default {
   '/cursos': [
     permission(admin, [R, C, W, P, M, O]),
     permission(anonimo, [R]),
+    permission(infantil, [R]),
     permission(cadastrador, [R, C]),
     permission(gestorEscolar, [R, C]),
     permission(gestorEstratLocal, [R, C]),
@@ -71,6 +74,7 @@ export default {
   '/cursos/:id': [
     permission(admin, [R, C, W, P, M, O]),
     permission(anonimo, [R]),
+    permission(infantil, [R]),
     permission(cadastrador, [R, C]),
     permission(gestorEscolar, [R, C]),
     permission(gestorEstratLocal, [R, C]),
@@ -91,6 +95,7 @@ export default {
   '/busca-geral': [
     permission(admin, [R, C, W, P, M, O]),
     permission(anonimo, [R]),
+    permission(infantil, [R]),
     permission(cadastrador, [R]),
     permission(gestorEscolar, [R]),
     permission(gestorEstratLocal, [R]),
@@ -316,6 +321,7 @@ export default {
   '/projetos': [
     permission(admin, [R, C, W, P, M, O]),
     permission(anonimo, [R]),
+    permission(infantil, [R]),
     permission(cadastrador, [R, C]),
     permission(gestorEscolar, [R, C]),
     permission(gestorEstratLocal, [R, C]),
@@ -336,6 +342,7 @@ export default {
   '/projetos/:id': [
     permission(admin, [R, C, W, P, M, O]),
     permission(anonimo, [R]),
+    permission(infantil, [R]),
     permission(cadastrador, [R, C]),
     permission(gestorEscolar, [R, C]),
     permission(gestorEstratLocal, [R, C]),
@@ -356,6 +363,7 @@ export default {
   '/projetos/:idProject/acoes/:idAction': [
     permission(admin, [R, C, W, P, M, O]),
     permission(anonimo, [R]),
+    permission(infantil, [R]),
     permission(cadastrador, [R, C]),
     permission(gestorEscolar, [R, C]),
     permission(gestorEstratLocal, [R, C]),
@@ -485,6 +493,7 @@ export default {
   '/politica-de-privacidade': [
     permission(admin, [R, C, W, P, M, O]),
     permission(anonimo, [R]),
+    permission(infantil, [R]),
     permission(cadastrador, [R]),
     permission(gestorEscolar, [R]),
     permission(gestorEstratLocal, [R]),
@@ -505,6 +514,7 @@ export default {
   '/termos-de-uso': [
     permission(admin, [R, C, W, P, M, O]),
     permission(anonimo, [R]),
+    permission(infantil, [R]),
     permission(cadastrador, [R]),
     permission(gestorEscolar, [R]),
     permission(gestorEstratLocal, [R]),

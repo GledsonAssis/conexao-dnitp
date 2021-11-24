@@ -25,7 +25,7 @@ import compareObject from '../../utils/compare/object';
 import IdentityServer from '../../utils/http/IdentityServer';
 import parseUser from '../../utils/parsers/parseUser';
 import { currentUserCanViewUser } from '../../utils/validators/roleValidator';
-import getJwtToken from '../../utils/http/getJwtToken';
+import { visitante, anonimo, infantil } from '../../constants/Role';
 
 /**
  * cms create user
@@ -53,7 +53,7 @@ const create = (req, res) => {
       return found;
     })
     .then(() => IdentityServer.createUser(newUser))
-    .then(User.create(newUser))
+    .then(User.create({ newUser, idRole: visitante }))
     .then(() => res.sendStatus(HttpStatus.CREATED))
     .catch((error) => {
       if (error.code === HttpStatus.CONFLICT) {
@@ -317,7 +317,7 @@ const update = (req, res) => {
     id,
     idCity,
     idDnitUnit,
-    idRole,
+    idRole: idRole === anonimo ? visitante : idRole,
     idState,
     birthDate,
     idSchoolBonds: idSchoolBonds === '' ? null : idSchoolBonds,
@@ -326,6 +326,10 @@ const update = (req, res) => {
     phones,
     instituitions,
   };
+
+  if (moment().diff(birthDate, 'years') <= +process.env.INFANTIL_YEARS_OLD_REGISTER) {
+    userUpdated.idRole = infantil
+  }
 
   const shouldUpdate = !compareObject(
     {
