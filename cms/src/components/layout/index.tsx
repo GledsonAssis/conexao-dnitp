@@ -42,8 +42,8 @@ export const Template: React.FC<Props> = ({ children }) => {
     const user = await Session.getUser();
     const session = await Session.getSession();
     if (!session) {
-      const sessionCookie = JSON.parse(cookieCutter.get('session_cnx'))
-      // const sessionCookie = JSON.parse(mock) // TODO: Remover após homologação
+      // const sessionCookie = JSON.parse(cookieCutter.get('session_cnx'))
+      const sessionCookie = JSON.parse(mock) // TODO: Remover após homologação
       Session.login(sessionCookie)
       cookieCutter.set('session_cnx', '', { expires: new Date(0) })
     }

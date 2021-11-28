@@ -146,9 +146,9 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^@root(.*)$": "<rootDir>/cms/src$1",
-      "@/tests/(.*)": "<rootDir>/cms/tests/$1",
-      "@/(.*)": "<rootDir>/cms/src$1"
+      "^@root(.*)$": "<rootDir>/src$1",
+      "@/tests/(.*)": "<rootDir>/tests/$1",
+      "@/(.*)": "<rootDir>/src$1"
     }
   }
 }

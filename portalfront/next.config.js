@@ -5,6 +5,15 @@ const { routes } = require('./src/infra/services/routes');
 
 module.exports = {
   compress: false,
+  async redirects() {
+    return [
+      {
+        source: '/cms/:path*',
+        destination: '/cms/:path*',
+        permanent: true,
+      }
+    ];
+  },
   async rewrites() {
     return routes;
   },

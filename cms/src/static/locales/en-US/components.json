@@ -147,7 +147,15 @@
   "Modal": {
     "Close": "Close",
     "Cancel": "Cancel",
-    "Ok": "Ok"
+    "Ok": "Ok",
+    "Yes": "Yes",
+    "TextBody": {
+      "DeleteAsk": "Do you really want to delete this item?",
+      "ReleaseAccessAsk": "Deseja realmente conceder o acesso?"
+    },
+    "Title": {
+      "Confirm": "Confirmation"
+    }
   },
   "Upload": {
     "Submited": "(Submited)"

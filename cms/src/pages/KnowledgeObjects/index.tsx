@@ -9,10 +9,9 @@ import Link from 'next/link';
 import { Table, TBody, THead, SearchTrigger, ActionTrigger } from '@/components/shared/Table';
 import { useDispatch, useSelector } from 'react-redux';
 import { ApplicationState } from '@/store';
-import moment from 'moment';
 import { useRouter } from 'next/router';
-import normalizePhone from '@/utils/normalize/normalizePhone';
 import { useForm } from 'react-hook-form';
+import Modal from '@/components/shared/Modal';
 
 interface StateProps {
   header?: string;
@@ -33,6 +32,8 @@ export const KnowledgObjectsPage: React.FC<Props> = ({ propsModel, t }) => {
   const [numberItensPer, setNumberItensPer] = useState(10);
   const [keywordSearch, setKeywordSearch] = useState('');
   const router = useRouter();
+  const [stModalDelete, setStModalDelete] = useState(false);
+  const [idToDelete, setIdToDelete] = useState<string | number>(null);
 
   const {
     register,
@@ -105,7 +106,12 @@ export const KnowledgObjectsPage: React.FC<Props> = ({ propsModel, t }) => {
   }
 
   function deleteHandle(id: string | number) {
-    // TODO: Modal de confirmação
+    setStModalDelete(!stModalDelete)
+    setIdToDelete(id)
+  }
+
+  function confirmDelete(id: string | number) {
+    setIdToDelete(null)
     dispatch(actionsKnowledgObjects.loadDeleteRequest({
       id,
       page: currentPage,
@@ -124,58 +130,79 @@ export const KnowledgObjectsPage: React.FC<Props> = ({ propsModel, t }) => {
   }
 
   return (
-    <div className="main-content mt-3 px-md-3" id="main-content">
-      <div className="row">
-        <div className='col-12 d-flex justify-content-between align-items-center'>
-          <p className="h1">{t('pages:knowledgeObject.labels.pageTitle')}</p>
-          <Link href={`${router.asPath}/novo`}>
-            <button className="br-button secondary" type="button">
-              <i className="fas fa-plus mr-1" aria-hidden="true"></i>
-              {t('pages:knowledgeObject.labels.btnCreate')}
-            </button>
-          </Link>
-        </div>
-        <div className='col-12'>
-          <div className="header-search w-100 my-4"></div>
-          <Table
-            Title={t('pages:knowledgeObject.labels.listTitle')}
-            Options={{
-              id: 'knowledgeObjects',
-              paginate: true,
-              count: knowledgeObjectsList.data?.count,
-              searchItens: onSubmit
-            }}
-            translations={t}
-            elemListName="ParticipatingSchools"
-            paramsNavigation={paramsNavigation}
-          >
-            <ActionTrigger nameKey='top-bar' className={'mr-1'}>
-              <button
-                className="br-button secondary"
-                type="button"
-                onClick={() => dispatch(actionsKnowledgObjects.loadGetListCSVsRequest({ keyword: keywordSearch }))}>
-                <i className="fas fa-download mr-1" aria-hidden="true"></i>
-                {t('general:commom.DownloadList')}
+    <>
+      <div className="main-content mt-3 px-md-3" id="main-content">
+        <div className="row">
+          <div className='col-12 d-flex justify-content-between align-items-center'>
+            <p className="h1">{t('pages:knowledgeObject.labels.pageTitle')}</p>
+            <Link href={`${router.asPath}/novo`}>
+              <button className="br-button secondary" type="button">
+                <i className="fas fa-plus mr-1" aria-hidden="true"></i>
+                {t('pages:knowledgeObject.labels.btnCreate')}
               </button>
-            </ActionTrigger>
-            <SearchTrigger nameKey='trigger-search' />
-            <THead nameKey='t-head'>
-              <tr>
-                <th scope="col" className={'px-0'} />
-                <th scope="col" className={'text-nowrap pl-4'}><span>{t('pages:knowledgeObject.labels.table.year')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:knowledgeObject.labels.table.name')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:knowledgeObject.labels.table.knowledgeField')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:knowledgeObject.labels.table.discipline')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:knowledgeObject.labels.table.actions')}</span></th>
-              </tr>
-            </THead>
-            <TBody nameKey='t-body' style={{ whiteSpace: 'nowrap' }}>
-              {renderList()}
-            </TBody>
-          </Table>
+            </Link>
+          </div>
+          <div className='col-12'>
+            <div className="header-search w-100 my-4"></div>
+            <Table
+              Title={t('pages:knowledgeObject.labels.listTitle')}
+              Options={{
+                id: 'knowledgeObjects',
+                paginate: true,
+                count: knowledgeObjectsList.data?.count,
+                searchItens: onSubmit
+              }}
+              translations={t}
+              elemListName="ParticipatingSchools"
+              paramsNavigation={paramsNavigation}
+            >
+              <ActionTrigger nameKey='top-bar' className={'mr-1'}>
+                <button
+                  className="br-button secondary"
+                  type="button"
+                  onClick={() => dispatch(actionsKnowledgObjects.loadGetListCSVsRequest({ keyword: keywordSearch }))}>
+                  <i className="fas fa-download mr-1" aria-hidden="true"></i>
+                  {t('general:commom.DownloadList')}
+                </button>
+              </ActionTrigger>
+              <SearchTrigger nameKey='trigger-search' />
+              <THead nameKey='t-head'>
+                <tr>
+                  <th scope="col" className={'px-0'} />
+                  <th scope="col" className={'text-nowrap pl-4'}><span>{t('pages:knowledgeObject.labels.table.year')}</span></th>
+                  <th scope="col" className={'text-nowrap'}><span>{t('pages:knowledgeObject.labels.table.name')}</span></th>
+                  <th scope="col" className={'text-nowrap'}><span>{t('pages:knowledgeObject.labels.table.knowledgeField')}</span></th>
+                  <th scope="col" className={'text-nowrap'}><span>{t('pages:knowledgeObject.labels.table.discipline')}</span></th>
+                  <th scope="col" className={'text-nowrap'}><span>{t('pages:knowledgeObject.labels.table.actions')}</span></th>
+                </tr>
+              </THead>
+              <TBody nameKey='t-body' style={{ whiteSpace: 'nowrap' }}>
+                {renderList()}
+              </TBody>
+            </Table>
+          </div>
         </div>
       </div>
-    </div>
+
+      <Modal handleClose={() => { setIdToDelete(null); setStModalDelete(!stModalDelete) }} statusModal={stModalDelete} customClass="p-0">
+        <div className="br-modal-header">
+          <div className="br-modal-title text-bold" title={t('components:Modal.Title.Confirm')}>
+            {t('components:Modal.Title.Confirm')}
+          </div>
+        </div>
+        <div className="br-modal-body">
+          {t('components:Modal.TextBody.DeleteAsk')}
+        </div>
+        <div className="br-modal-footer justify-content-end">
+          <button className="br-button secondary small m-2" onClick={() => { setIdToDelete(null); setStModalDelete(!stModalDelete) }} type="button">
+            {t('components:Modal.Cancel')}
+          </button>
+          <button className="br-button primary small m-2" onClick={() => confirmDelete(idToDelete)} type="button">
+            {t('components:Modal.Yes')}
+          </button>
+        </div>
+      </Modal>
+    </>
   );
 };
 

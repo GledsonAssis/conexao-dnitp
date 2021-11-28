@@ -8,10 +8,6 @@ import { useRouter } from 'next/router';
 import InputMask from "react-input-mask";
 import { useDispatch, useSelector } from 'react-redux';
 
-import {
-  validateCPF,
-} from '@/utils/validate';
-
 import * as actionsStates from '@/store/ducks/states/actions';
 import * as actionsUsers from '@/store/ducks/users/actions';
 import * as actionsDnitLocalUnits from '@/store/ducks/dnitLocalUnits/actions';
@@ -23,6 +19,7 @@ import { Datapicker } from '@/components/shared/DataPicker';
 import { DnitLocalUnits, Superintendence } from '@/store/ducks/dnitLocalUnits/types';
 import moment from 'moment';
 import normalizePhone from '@/utils/normalize/normalizePhone';
+import Modal from '@/components/shared/Modal';
 
 interface StateProps {
   header?: string;
@@ -50,6 +47,8 @@ export const FormUsersPage: React.FC<Props> = ({
   const users = useSelector((state: ApplicationState) => state.users);
   const dnitLocalUnits = useSelector((state: ApplicationState) => state.dnitLocalUnits);
   const [cities, setCities] = useState<any[]>([]);
+  const [stModalReleaseAccess, setStModalReleaseAccess] = useState(false);
+  const [idToReleaseAccess, setIdToReleaseAccess] = useState<string | number>(null);
 
   const {
     register,
@@ -219,283 +218,232 @@ export const FormUsersPage: React.FC<Props> = ({
     ));
   }
 
-  function releaseaccessHandle(id: number) {
-    // TODO: Modal de confirmação
+  function releaseAccessHandle(id: number) {
+    setStModalReleaseAccess(!stModalReleaseAccess)
+    setIdToReleaseAccess(id)
+  }
+
+  function confirmReleaseAccess(id: string | number) {
+    setIdToReleaseAccess(null)
     dispatch(actionsUsers.loadReleaseAccessRequest({ id }))
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit, (e) => console.log(e))}>
-      <div className="main-content mt-3 px-md-3" id="main-content">
-        <div className="row">
-          <div className='col'>
-            <p className="h1">{titlePage}</p>
-          </div>
-          {data?.id ?
-            <div className='col-auto'>
-              <button
-                className={`br-button ${users.releaseAccess === 1 ? 'secondary' : (
-                  users.releaseAccess === 2 ? 'success' : (
-                    users.releaseAccess === 3 ? 'danger' : 'secondary'))
-                  } mr-sm-auto`}
-                type="button"
-                onClick={() => releaseaccessHandle(data.id)}>
-                {
-                  users.releaseAccess === 2 ? <i className="fas fa-check mr-2"></i> :
-                    users.releaseAccess === 3 ? <i className="fas fa-times mr-2"></i> : ''
-                }
-                {t('pages:users.details.labels.releaseaccess')}
-              </button>
+    <>
+      <form onSubmit={handleSubmit(onSubmit, (e) => console.log(e))}>
+        <div className="main-content mt-3 px-md-3" id="main-content">
+          <div className="row">
+            <div className='col'>
+              <p className="h1">{titlePage}</p>
             </div>
-            : ''}
-        </div>
-        <div className="row">
-          <div className='col-12'>
-            <div className={`br-input medium`}>
-              <label>{t('pages:users.details.labels.name')}*:</label>
-              <label className="label-info">{data?.name}</label>
-              {/* <input
-                {...register('name', { required: true })}
-                className={`medium ${errors?.name?.type ? 'danger' : ''}`}
-                id="name"
-                disabled={true}
-                type="text"
-                placeholder={t('pages:users.details.placeholders.name')} />
-              {errors?.name?.type ?
-                <div className="mt-1">
-                  <span className="feedback danger" role="alert">
-                    <i className="fas fa-times-circle" aria-hidden="true"></i>
-                    {t('pages:users.details.required.name')}
-                  </span>
-                </div>
-                : ''} */}
+            {data?.id ?
+              <div className='col-auto'>
+                <button
+                  className={`br-button ${users.releaseAccess === 1 ? 'secondary' : (
+                    users.releaseAccess === 2 ? 'success' : (
+                      users.releaseAccess === 3 ? 'danger' : 'secondary'))
+                    } mr-sm-auto`}
+                  type="button"
+                  onClick={() => releaseAccessHandle(data.id)}>
+                  {
+                    users.releaseAccess === 2 ? <i className="fas fa-check mr-2"></i> :
+                      users.releaseAccess === 3 ? <i className="fas fa-times mr-2"></i> : ''
+                  }
+                  {t('pages:users.details.labels.releaseaccess')}
+                </button>
+              </div>
+              : ''}
+          </div>
+          <div className="row">
+            <div className='col-12'>
+              <div className={`br-input medium`}>
+                <label>{t('pages:users.details.labels.name')}*:</label>
+                <label className="label-info">{data?.name}</label>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="row">
-          <div className='col-12 col-md-4'>
-            <div className={`br-input medium`}>
-              <label htmlFor="cpfNumber">{t('pages:users.details.labels.cpf')}*:</label>
-              <label className="label-info">{data?.cpf}</label>
-              {/* <InputMask
-                mask={'999.999.999-99'}
-                {...register('cpf', {
-                  required: true,
-                  pattern: /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/gim,
-                  validate: validateCPF
-                })}
-                className={`medium ${errors?.cpf?.type ? 'danger' : ''}`}
-                id="cpfNumber"
-                disabled={true}
-                type="text"
-                placeholder={t('pages:users.details.placeholders.cpf')} />
-              {errors?.cpf?.type === 'validate' ?
-                <div className="mt-1">
-                  <span className="feedback danger" role="alert">
-                    <i className="fas fa-times-circle" aria-hidden="true"></i>
-                    {t('pages:users.details.invalid.cpf')}
-                  </span>
-                </div>
-                : ''}
-              {errors?.cpf?.type && errors?.cpf?.type !== 'validate' ?
-                <div className="mt-1">
-                  <span className="feedback danger" role="alert">
-                    <i className="fas fa-times-circle" aria-hidden="true"></i>
-                    {t('pages:users.details.required.cpf')}
-                  </span>
-                </div>
-                : ''} */}
+          <div className="row">
+            <div className='col-12 col-md-4'>
+              <div className={`br-input medium`}>
+                <label htmlFor="cpfNumber">{t('pages:users.details.labels.cpf')}*:</label>
+                <label className="label-info">{data?.cpf}</label>
+              </div>
+            </div>
+            <div className='col-12 col-md-4'>
+              <div className={`br-input medium ${errors?.email?.type ? 'danger' : ''}`}>
+                <label htmlFor="email">{t('pages:users.details.labels.email')}*:</label>
+                <label className="label-info">{data?.email}</label>
+              </div>
+            </div>
+            <div className='col-12 col-md-4'>
+              <div className={`br-input medium`}>
+                <label htmlFor="birthDate">{t('pages:users.details.labels.birthDate')}:</label>
+                <Datapicker
+                  id="birthDate"
+                  minDate=""
+                  title={`${t('pages:users.details.label.birthDate')}:`}
+                  inputProps={{ ...register('birthDate') }}
+                />
+              </div>
             </div>
           </div>
-          <div className='col-12 col-md-4'>
-            <div className={`br-input medium ${errors?.email?.type ? 'danger' : ''}`}>
-              <label htmlFor="email">{t('pages:users.details.labels.email')}*:</label>
-              <label className="label-info">{data?.email}</label>
-              {/* <input
-                {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
-                className={`medium ${errors?.email?.type ? 'danger' : ''}`}
-                id="email"
-                disabled={true}
-                type="text"
-                placeholder={t('pages:users.details.placeholders.email')} />
-              {errors?.email?.type ?
-                <div className="mt-1">
-                  <span className="feedback danger" role="alert">
-                    <i className="fas fa-times-circle" aria-hidden="true"></i>
-                    {t('pages:users.details.required.email')}
-                  </span>
-                </div>
-                : ''} */}
+          <div className="row">
+            <div className='col-12 col-md-4'>
+              <div className={`br-input medium ${errors?.mobilePhone?.type ? 'danger' : ''}`}>
+                <label htmlFor="mobilePhone">{t('pages:users.details.labels.mobilePhone')}*:</label>
+                <label className="label-info">{normalizePhone(`${data?.phones?.[0]?.DDD}${data?.phones?.[0]?.number}`)}</label>
+              </div>
             </div>
-          </div>
-          <div className='col-12 col-md-4'>
-            <div className={`br-input medium`}>
-              <label htmlFor="birthDate">{t('pages:users.details.labels.birthDate')}:</label>
-              <Datapicker
-                id="birthDate"
-                minDate=""
-                title={`${t('pages:users.details.label.birthDate')}:`}
-                inputProps={{ ...register('birthDate') }}
-              />
+            <div className='col-12 col-md-4'>
+              <div className={`br-input medium`}>
+                <label htmlFor="phone">{t('pages:users.details.labels.phone')}:</label>
+                <InputMask
+                  mask={watch('phone')?.split('')[5] === '9' ? '(99) 99999-9999' : '(99) 9999-9999'}
+                  {...register('phone', {
+                    required: false,
+                    pattern: /^[+]?(?:\(\d+(?:\.\d+)?\)|\d+(?:\.\d+)?)(?:[ -]?(?:\(\d+(?:\.\d+)?\)|\d+(?:\.\d+)?))*(?:[ ]?(?:x|ext)\.?[ ]?\d{1,5})?|$/gim
+                  })}
+                  className={`medium`}
+                  id="phone"
+                  type="text"
+                  placeholder={t('pages:users.details.placeholders.phone')} />
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className='col-12 col-md-4'>
-            <div className={`br-input medium ${errors?.mobilePhone?.type ? 'danger' : ''}`}>
-              <label htmlFor="mobilePhone">{t('pages:users.details.labels.mobilePhone')}*:</label>
-              <label className="label-info">{normalizePhone(`${data?.phones?.[0]?.DDD}${data?.phones?.[0]?.number}`)}</label>
-              {/* <InputMask
-                mask={
-                  [watch('mobilePhone')?.split('')[5], watch('mobilePhone')?.split('')[3]].includes('9') ? '(99) 99999-9999' : '(99) 9999-9999'}
-                {...register('mobilePhone', {
-                  required: true,
-                  pattern: /^[+]?(?:\(\d+(?:\.\d+)?\)|\d+(?:\.\d+)?)(?:[ -]?(?:\(\d+(?:\.\d+)?\)|\d+(?:\.\d+)?))*(?:[ ]?(?:x|ext)\.?[ ]?\d{1,5})?$/gim
-                })}
-                className={`medium ${errors?.mobilePhone?.type ? 'danger' : ''}`}
-                id="mobilePhone"
-                type="text"
-                placeholder={t('pages:users.details.placeholders.mobilePhone')} />
-              {errors?.mobilePhone?.type ?
-                <div className="mt-1">
-                  <span className="feedback danger" role="alert">
-                    <i className="fas fa-times-circle" aria-hidden="true"></i>
-                    {t('pages:users.details.required.mobilePhone')}
-                  </span>
-                </div>
-                : ''} */}
-            </div>
-          </div>
-          <div className='col-12 col-md-4'>
-            <div className={`br-input medium`}>
-              <label htmlFor="phone">{t('pages:users.details.labels.phone')}:</label>
-              <InputMask
-                mask={watch('phone')?.split('')[5] === '9' ? '(99) 99999-9999' : '(99) 9999-9999'}
-                {...register('phone', {
-                  required: false,
-                  pattern: /^[+]?(?:\(\d+(?:\.\d+)?\)|\d+(?:\.\d+)?)(?:[ -]?(?:\(\d+(?:\.\d+)?\)|\d+(?:\.\d+)?))*(?:[ ]?(?:x|ext)\.?[ ]?\d{1,5})?|$/gim
-                })}
-                className={`medium`}
-                id="phone"
-                type="text"
-                placeholder={t('pages:users.details.placeholders.phone')} />
-            </div>
-          </div>
-          <div className='col-12 col-md-4'>
-            <div className={`br-input medium ${errors?.profile?.type ? 'danger' : ''}`}>
-              <label htmlFor="profile">{t('pages:users.details.labels.profile')}*:</label>
-              <Select
-                placeholder={t('pages:users.details.placeholders.profile')}
-                id="profile"
-                CustomclassName={`mw-100 ${errors?.profile?.type ? 'danger' : ''}`}
-                className={`mw-100`}
-              >
-                {renderRoles()}
-              </Select>
-              {errors?.profile?.type ?
-                <div className="mt-1">
-                  <span className="feedback danger" role="alert">
-                    <i className="fas fa-times-circle" aria-hidden="true"></i>
-                    {t('pages:users.details.required.profile')}
-                  </span>
-                </div>
-                : ''}
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className='col-12 col-md-6'>
-            <div className={`br-input medium`}>
-              <label htmlFor="regionalSuperintendence">{t('pages:users.details.labels.regionalSuperintendence')}:</label>
-              <Select
-                placeholder={t('pages:users.details.placeholders.regionalSuperintendence')}
-                id="regionalSuperintendence"
-                CustomclassName={`mw-100`}
-                className="mw-100"
-              >
-                {renderSuperintendences()}
-              </Select>
-            </div>
-          </div>
-          <div className='col-12 col-md-6'>
-            <div className={`br-input medium`}>
-              <label htmlFor="localUnit">{t('pages:users.details.labels.localUnit')}:</label>
-              <Select
-                placeholder={t('pages:users.details.placeholders.localUnit')}
-                id="localUnit"
-                disabled={!watch('regionalSuperintendence')}
-                CustomclassName={`mw-100`}
-                className="mw-100"
-              >
-                {renderLocalUnits()}
-              </Select>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className='col-12 col-md-6'>
-            <div className={`br-input medium`}>
-              <label htmlFor="state">{t('pages:users.details.labels.state')}:</label>
-              <Select
-                placeholder={t('pages:users.details.placeholders.state')}
-                id="state"
-                CustomclassName={`mw-100`}
-                className="mw-100"
-              >
-                {renderStates()}
-              </Select>
-            </div>
-          </div>
-          <div className='col-12 col-md-6'>
-            <div className={`br-input medium`}>
-              <label htmlFor="city">{t('pages:users.details.labels.city')}:</label>
-              <Select
-                placeholder={t('pages:users.details.placeholders.city')}
-                id="city"
-                disabled={!watch('state')}
-                CustomclassName={`mw-100`}
-                className="mw-100"
-              >
-                {renderCities()}
-              </Select>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className='col-12 col-md-8'>
-            <div className={`br-input medium`}>
-              <label htmlFor="school">{t('pages:users.details.labels.school')}:</label>
-              <Select
-                placeholder={t('pages:users.details.placeholders.school')}
-                id="school"
-                disabled={!watch('state') || !watch('city')}
-                multiple
-                CustomclassName={`mw-100`}
-                className="mw-100"
-              >
-                <div className="br-item highlighted" data-all="data-all">
-                  <div className="br-checkbox">
-                    <input id="roads-all" type="checkbox" />
-                    <label htmlFor="roads-all">{t('components:Select.selectAll')}</label>
+            <div className='col-12 col-md-4'>
+              <div className={`br-input medium ${errors?.profile?.type ? 'danger' : ''}`}>
+                <label htmlFor="profile">{t('pages:users.details.labels.profile')}*:</label>
+                <Select
+                  placeholder={t('pages:users.details.placeholders.profile')}
+                  id="profile"
+                  CustomclassName={`mw-100 ${errors?.profile?.type ? 'danger' : ''}`}
+                  className={`mw-100`}
+                >
+                  {renderRoles()}
+                </Select>
+                {errors?.profile?.type ?
+                  <div className="mt-1">
+                    <span className="feedback danger" role="alert">
+                      <i className="fas fa-times-circle" aria-hidden="true"></i>
+                      {t('pages:users.details.required.profile')}
+                    </span>
                   </div>
-                </div>
-                {renderSchools()}
-              </Select>
+                  : ''}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="mt-3 d-flex">
-          <Link href={router.asPath.substring(0, router.asPath.indexOf('/', 1))}>
-            <button className="br-button mr-auto" type="button">
-              {t('pages:users.details.cancel')}
+          <div className="row">
+            <div className='col-12 col-md-6'>
+              <div className={`br-input medium`}>
+                <label htmlFor="regionalSuperintendence">{t('pages:users.details.labels.regionalSuperintendence')}:</label>
+                <Select
+                  placeholder={t('pages:users.details.placeholders.regionalSuperintendence')}
+                  id="regionalSuperintendence"
+                  CustomclassName={`mw-100`}
+                  className="mw-100"
+                >
+                  {renderSuperintendences()}
+                </Select>
+              </div>
+            </div>
+            <div className='col-12 col-md-6'>
+              <div className={`br-input medium`}>
+                <label htmlFor="localUnit">{t('pages:users.details.labels.localUnit')}:</label>
+                <Select
+                  placeholder={t('pages:users.details.placeholders.localUnit')}
+                  id="localUnit"
+                  disabled={!watch('regionalSuperintendence')}
+                  CustomclassName={`mw-100`}
+                  className="mw-100"
+                >
+                  {renderLocalUnits()}
+                </Select>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className='col-12 col-md-6'>
+              <div className={`br-input medium`}>
+                <label htmlFor="state">{t('pages:users.details.labels.state')}:</label>
+                <Select
+                  placeholder={t('pages:users.details.placeholders.state')}
+                  id="state"
+                  CustomclassName={`mw-100`}
+                  className="mw-100"
+                >
+                  {renderStates()}
+                </Select>
+              </div>
+            </div>
+            <div className='col-12 col-md-6'>
+              <div className={`br-input medium`}>
+                <label htmlFor="city">{t('pages:users.details.labels.city')}:</label>
+                <Select
+                  placeholder={t('pages:users.details.placeholders.city')}
+                  id="city"
+                  disabled={!watch('state')}
+                  CustomclassName={`mw-100`}
+                  className="mw-100"
+                >
+                  {renderCities()}
+                </Select>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className='col-12 col-md-8'>
+              <div className={`br-input medium`}>
+                <label htmlFor="school">{t('pages:users.details.labels.school')}:</label>
+                <Select
+                  placeholder={t('pages:users.details.placeholders.school')}
+                  id="school"
+                  disabled={!watch('state') || !watch('city')}
+                  multiple
+                  CustomclassName={`mw-100`}
+                  className="mw-100"
+                >
+                  <div className="br-item highlighted" data-all="data-all">
+                    <div className="br-checkbox">
+                      <input id="roads-all" type="checkbox" />
+                      <label htmlFor="roads-all">{t('components:Select.selectAll')}</label>
+                    </div>
+                  </div>
+                  {renderSchools()}
+                </Select>
+              </div>
+            </div>
+          </div>
+          <div className="mt-3 d-flex">
+            <Link href={router.asPath.substring(0, router.asPath.indexOf('/', 1))}>
+              <button className="br-button mr-auto" type="button">
+                {t('pages:users.details.cancel')}
+              </button>
+            </Link>
+            <button className="br-button primary" value='save' type="submit">
+              {t('pages:users.details.submit')}
             </button>
-          </Link>
-          <button className="br-button primary" value='save' type="submit">
-            {t('pages:users.details.submit')}
+          </div>
+        </div>
+      </form>
+
+      <Modal handleClose={() => { setIdToReleaseAccess(null); setStModalReleaseAccess(!stModalReleaseAccess) }} statusModal={stModalReleaseAccess} customClass="p-0">
+        <div className="br-modal-header">
+          <div className="br-modal-title text-bold" title={t('components:Modal.Title.Confirm')}>
+            {t('components:Modal.Title.Confirm')}
+          </div>
+        </div>
+        <div className="br-modal-body">
+          {t('components:Modal.TextBody.ReleaseAccessAsk')}
+        </div>
+        <div className="br-modal-footer justify-content-end">
+          <button className="br-button secondary small m-2" onClick={() => { setIdToReleaseAccess(null); setStModalReleaseAccess(!stModalReleaseAccess) }} type="button">
+            {t('components:Modal.Cancel')}
+          </button>
+          <button className="br-button primary small m-2" onClick={() => confirmReleaseAccess(idToReleaseAccess)} type="button">
+            {t('components:Modal.Yes')}
           </button>
         </div>
-      </div>
-    </form>
+      </Modal>
+    </>
   );
 };
 

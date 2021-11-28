@@ -8,10 +8,10 @@ import Link from 'next/link';
 import { Table, TBody, THead, SearchTrigger, ActionTrigger } from '@/components/shared/Table';
 import { useDispatch, useSelector } from 'react-redux';
 import { ApplicationState } from '@/store';
-import moment from 'moment';
 import { useRouter } from 'next/router';
 import normalizePhone from '@/utils/normalize/normalizePhone';
 import { useForm } from 'react-hook-form';
+import Modal from '@/components/shared/Modal';
 
 interface StateProps {
   header?: string;
@@ -31,6 +31,8 @@ export const InstitutionsPage: React.FC<Props> = ({ propsModel, t }) => {
   const [numberItensPer, setNumberItensPer] = useState(10);
   const [keywordSearch, setKeywordSearch] = useState('');
   const router = useRouter();
+  const [stModalDelete, setStModalDelete] = useState(false);
+  const [idToDelete, setIdToDelete] = useState<string | number>(null);
 
   const {
     register,
@@ -114,7 +116,12 @@ export const InstitutionsPage: React.FC<Props> = ({ propsModel, t }) => {
   }
 
   function deleteHandle(id: string | number) {
-    // TODO: Modal de confirmação
+    setStModalDelete(!stModalDelete)
+    setIdToDelete(id)
+  }
+
+  function confirmDelete(id: string | number) {
+    setIdToDelete(null)
     dispatch(actionsInstitutions.loadDeleteRequest({
       id,
       page: currentPage,
@@ -133,84 +140,105 @@ export const InstitutionsPage: React.FC<Props> = ({ propsModel, t }) => {
   }
 
   return (
-    <div className="main-content mt-3 px-md-3" id="main-content">
-      <div className="row">
-        <div className='col-12 d-flex justify-content-between align-items-center'>
-          <p className="h1">{t('pages:institutions.labels.pageTitle')}</p>
-          <Link href={`${router.asPath}/novo`}>
-            <button className="br-button secondary" type="button">
-              <i className="fas fa-plus mr-1" aria-hidden="true"></i>
-              {t('pages:institutions.labels.btnCreate')}
-            </button>
-          </Link>
-        </div>
-        <div className='col-12'>
-          <div className="d-inline-block mr-5">
-            <div className="br-radio">
-              <input {...register('filterCnx')} defaultChecked id="filter-cnx-1" type="radio" value="2" />
-              <label htmlFor="filter-cnx-1">{t('pages:institutions.labels.todos')}</label>
-            </div>
-          </div>
-          <div className="d-inline-block mr-5">
-            <div className="br-radio">
-              <input {...register('filterCnx')} id="filter-cnx-2" type="radio" value="1" />
-              <label htmlFor="filter-cnx-2">{t('pages:institutions.labels.participaDNIT')}</label>
-            </div>
-          </div>
-          <div className="d-inline-block mr-5">
-            <div className="br-radio">
-              <input {...register('filterCnx')} id="filter-cnx-3" type="radio" value="0" />
-              <label htmlFor="filter-cnx-3">{t('pages:institutions.labels.naoParticipaDNIT')}</label>
-            </div>
-          </div>
-        </div>
-        <div className='col-12'>
-          <div className="header-search w-100 my-4"></div>
-          <Table
-            Title={t('pages:institutions.labels.listTitle')}
-            Options={{
-              id: 'institutions',
-              paginate: true,
-              count: institutionsList.data?.count,
-              searchItens: onSubmit
-            }}
-            translations={t}
-            elemListName="ParticipatingSchools"
-            paramsNavigation={paramsNavigation}
-          >
-            <ActionTrigger nameKey='top-bar' className={'mr-1'}>
-              <button
-                className="br-button secondary"
-                type="button"
-                onClick={() => dispatch(actionsInstitutions.loadGetListCSVsRequest({
-                  keyword: keywordSearch,
-                  searchDnit: watch('filterCnx')
-                }))}>
-                <i className="fas fa-download mr-1" aria-hidden="true"></i>
-                {t('general:commom.DownloadList')}
+    <>
+      <div className="main-content mt-3 px-md-3" id="main-content">
+        <div className="row">
+          <div className='col-12 d-flex justify-content-between align-items-center'>
+            <p className="h1">{t('pages:institutions.labels.pageTitle')}</p>
+            <Link href={`${router.asPath}/novo`}>
+              <button className="br-button secondary" type="button">
+                <i className="fas fa-plus mr-1" aria-hidden="true"></i>
+                {t('pages:institutions.labels.btnCreate')}
               </button>
-            </ActionTrigger>
-            <SearchTrigger nameKey='trigger-search' />
-            <THead nameKey='t-head'>
-              <tr>
-                <th scope="col" className={'px-0'} />
-                <th scope="col" className={'text-nowrap pl-4'}><span>{t('pages:institutions.labels.table.institution')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:institutions.labels.table.regionalSuperintendence')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:institutions.labels.table.localUnit')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:institutions.labels.table.phones')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:institutions.labels.table.states')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:institutions.labels.table.city')}</span></th>
-                <th scope="col" className={'text-nowrap text-center'}><span>{t('pages:institutions.labels.table.isDnitConexao')}</span></th>
-                <th scope="col" className={'text-nowrap text-center'}><span>{t('pages:institutions.labels.table.actions')}</span></th>
-              </tr>
-            </THead>
-            <TBody nameKey='t-body' style={{ whiteSpace: 'nowrap' }}>
-              {renderList()}
-            </TBody>
-          </Table>
+            </Link>
+          </div>
+          <div className='col-12'>
+            <div className="d-inline-block mr-5">
+              <div className="br-radio">
+                <input {...register('filterCnx')} defaultChecked id="filter-cnx-1" type="radio" value="2" />
+                <label htmlFor="filter-cnx-1">{t('pages:institutions.labels.todos')}</label>
+              </div>
+            </div>
+            <div className="d-inline-block mr-5">
+              <div className="br-radio">
+                <input {...register('filterCnx')} id="filter-cnx-2" type="radio" value="1" />
+                <label htmlFor="filter-cnx-2">{t('pages:institutions.labels.participaDNIT')}</label>
+              </div>
+            </div>
+            <div className="d-inline-block mr-5">
+              <div className="br-radio">
+                <input {...register('filterCnx')} id="filter-cnx-3" type="radio" value="0" />
+                <label htmlFor="filter-cnx-3">{t('pages:institutions.labels.naoParticipaDNIT')}</label>
+              </div>
+            </div>
+          </div>
+          <div className='col-12'>
+            <div className="header-search w-100 my-4"></div>
+            <Table
+              Title={t('pages:institutions.labels.listTitle')}
+              Options={{
+                id: 'institutions',
+                paginate: true,
+                count: institutionsList.data?.count,
+                searchItens: onSubmit
+              }}
+              translations={t}
+              elemListName="ParticipatingSchools"
+              paramsNavigation={paramsNavigation}
+            >
+              <ActionTrigger nameKey='top-bar' className={'mr-1'}>
+                <button
+                  className="br-button secondary"
+                  type="button"
+                  onClick={() => dispatch(actionsInstitutions.loadGetListCSVsRequest({
+                    keyword: keywordSearch,
+                    searchDnit: watch('filterCnx')
+                  }))}>
+                  <i className="fas fa-download mr-1" aria-hidden="true"></i>
+                  {t('general:commom.DownloadList')}
+                </button>
+              </ActionTrigger>
+              <SearchTrigger nameKey='trigger-search' />
+              <THead nameKey='t-head'>
+                <tr>
+                  <th scope="col" className={'px-0'} />
+                  <th scope="col" className={'text-nowrap pl-4'}><span>{t('pages:institutions.labels.table.institution')}</span></th>
+                  <th scope="col" className={'text-nowrap'}><span>{t('pages:institutions.labels.table.regionalSuperintendence')}</span></th>
+                  <th scope="col" className={'text-nowrap'}><span>{t('pages:institutions.labels.table.localUnit')}</span></th>
+                  <th scope="col" className={'text-nowrap'}><span>{t('pages:institutions.labels.table.phones')}</span></th>
+                  <th scope="col" className={'text-nowrap'}><span>{t('pages:institutions.labels.table.states')}</span></th>
+                  <th scope="col" className={'text-nowrap'}><span>{t('pages:institutions.labels.table.city')}</span></th>
+                  <th scope="col" className={'text-nowrap text-center'}><span>{t('pages:institutions.labels.table.isDnitConexao')}</span></th>
+                  <th scope="col" className={'text-nowrap text-center'}><span>{t('pages:institutions.labels.table.actions')}</span></th>
+                </tr>
+              </THead>
+              <TBody nameKey='t-body' style={{ whiteSpace: 'nowrap' }}>
+                {renderList()}
+              </TBody>
+            </Table>
+          </div>
         </div>
       </div>
-    </div>
+
+      <Modal handleClose={() => { setIdToDelete(null); setStModalDelete(!stModalDelete) }} statusModal={stModalDelete} customClass="p-0">
+        <div className="br-modal-header">
+          <div className="br-modal-title text-bold" title={t('components:Modal.Title.Confirm')}>
+            {t('components:Modal.Title.Confirm')}
+          </div>
+        </div>
+        <div className="br-modal-body">
+          {t('components:Modal.TextBody.DeleteAsk')}
+        </div>
+        <div className="br-modal-footer justify-content-end">
+          <button className="br-button secondary small m-2" onClick={() => { setIdToDelete(null); setStModalDelete(!stModalDelete) }} type="button">
+            {t('components:Modal.Cancel')}
+          </button>
+          <button className="br-button primary small m-2" onClick={() => confirmDelete(idToDelete)} type="button">
+            {t('components:Modal.Yes')}
+          </button>
+        </div>
+      </Modal>
+    </>
   );
 };
 

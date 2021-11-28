@@ -13,7 +13,7 @@ class PrivacyPolicy extends PureComponent {
           <div className="page__list">
 
             <div className="pb-3">
-              <span className={'text-bold'}>Início da vigência: 01/10/021</span>
+              <span className={'text-bold'}>Início da vigência: 01/10/2021</span>
             </div>
 
             <div>

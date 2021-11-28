@@ -55,10 +55,9 @@ export const ProfilePage: React.FC<Props> = ({ children, ...props }) => {
   } = useForm<any>();
 
   useEffect(() => {
-    console.log(moment(user.birthDate).toISOString())
     if (user) {
       setValue('idSchoolBonds', `${user?.schoolBonds?.id}`)
-      setValue('birthDate', user.birthDate ? moment(user.birthDate).toISOString() : null)
+      setValue('birthDate', user.birthDate ? moment(user.birthDate).format('DD/MM/yyyy') : null)
       setValue('idState', `${user?.city?.state?.id}`)
       setValue('idCity', `${user?.city?.id}`)
       setValue('idEducationalInstitution', `${user?.instituitions?.[0]?.id}`)

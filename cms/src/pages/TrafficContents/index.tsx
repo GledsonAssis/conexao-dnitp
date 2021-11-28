@@ -11,6 +11,7 @@ import { Table, TBody, THead, SearchTrigger, ActionTrigger } from '@/components/
 import { useDispatch, useSelector } from 'react-redux';
 import { ApplicationState } from '@/store';
 import { useRouter } from 'next/router';
+import Modal from '@/components/shared/Modal';
 
 interface StateProps {
   header?: string;
@@ -32,6 +33,8 @@ export const HomePage: React.FC<Props> = ({ propsModel, t }) => {
   const [numberItensPer, setNumberItensPer] = useState(10);
   const [keywordSearch, setKeywordSearch] = useState('');
   const router = useRouter();
+  const [stModalDelete, setStModalDelete] = useState(false);
+  const [idToDelete, setIdToDelete] = useState<string | number>(null);
 
   useEffect(() => {
     dispatch(actionsSchoolYears.loadListRequest());
@@ -46,14 +49,6 @@ export const HomePage: React.FC<Props> = ({ propsModel, t }) => {
     }));
     // eslint-disable-next-line
   }, [currentPage, numberItensPer, trafficContentssList.dataId, keywordSearch]);
-
-  const {
-    register,
-    watch,
-    formState: { errors },
-    handleSubmit,
-    setValue,
-  } = useForm<any>();
 
   function renderList() {
     if (trafficContents?.data?.count && schoolYears?.data.length) {
@@ -100,7 +95,12 @@ export const HomePage: React.FC<Props> = ({ propsModel, t }) => {
   }
 
   function deleteHandle(id: string | number) {
-    // TODO: Modal de confirmação
+    setStModalDelete(!stModalDelete)
+    setIdToDelete(id)
+  }
+
+  function confirmDelete(id: string | number) {
+    setIdToDelete(null)
     dispatch(actionsTrafficContents.loadDeleteRequest({
       id,
       page: currentPage,
@@ -120,57 +120,78 @@ export const HomePage: React.FC<Props> = ({ propsModel, t }) => {
   }
 
   return (
-    <div className="main-content mt-3 px-md-3" id="main-content">
-      <div className="row">
-        <div className='col-12 d-flex justify-content-between align-items-center'>
-          <p className="h1">{t('pages:trafficContents.labels.pageTitle')}</p>
-          <Link href={`${router.asPath}/novo`}>
-            <button className="br-button secondary" type="button">
-              <i className="fas fa-plus mr-1" aria-hidden="true"></i>
-              {t('pages:trafficContents.labels.btnCreate')}
-            </button>
-          </Link>
-        </div>
-        <div className='col-12'>
-          <Table
-            Title={t('pages:trafficContents.labels.listTitle')}
-            Options={{
-              id: 'trafficContents',
-              paginate: true,
-              count: trafficContents?.data?.count,
-              searchItens: onSubmit
-            }}
-            translations={t}
-            elemListName="ParticipatingSchools"
-            paramsNavigation={paramsNavigation}
-          >
-            <ActionTrigger nameKey='top-bar' className={'mr-1'}>
-              <button
-                className="br-button secondary"
-                type="button"
-                onClick={() => dispatch(actionsTrafficContents.loadGetListCSVsRequest({
-                  keyword: keywordSearch
-                }))}
-              >
-                <i className="fas fa-download mr-1" aria-hidden="true"></i>
-                {t('general:commom.DownloadList')}
+    <>
+      <div className="main-content mt-3 px-md-3" id="main-content">
+        <div className="row">
+          <div className='col-12 d-flex justify-content-between align-items-center'>
+            <p className="h1">{t('pages:trafficContents.labels.pageTitle')}</p>
+            <Link href={`${router.asPath}/novo`}>
+              <button className="br-button secondary" type="button">
+                <i className="fas fa-plus mr-1" aria-hidden="true"></i>
+                {t('pages:trafficContents.labels.btnCreate')}
               </button>
-            </ActionTrigger>
-            <SearchTrigger nameKey='trigger-search' />
-            <THead nameKey='t-head'>
-              <tr>
-                <th scope="col" className={'px-0'} />
-                <th className={'text-center'} scope="col"><span>{t('pages:trafficContents.labels.table.year')}</span></th>
-                <th scope="col"><span>{t('pages:trafficContents.labels.table.name')}</span></th>
-                <th scope="col"><span>{t('pages:trafficContents.labels.table.concept')}</span></th>
-                <th className={'text-center'} scope="col"><span>{t('pages:trafficContents.labels.table.actions')}</span></th>
-              </tr>
-            </THead>
-            <TBody nameKey='t-body' style={{ whiteSpace: 'nowrap' }}>{renderList()}</TBody>
-          </Table>
+            </Link>
+          </div>
+          <div className='col-12'>
+            <Table
+              Title={t('pages:trafficContents.labels.listTitle')}
+              Options={{
+                id: 'trafficContents',
+                paginate: true,
+                count: trafficContents?.data?.count,
+                searchItens: onSubmit
+              }}
+              translations={t}
+              elemListName="ParticipatingSchools"
+              paramsNavigation={paramsNavigation}
+            >
+              <ActionTrigger nameKey='top-bar' className={'mr-1'}>
+                <button
+                  className="br-button secondary"
+                  type="button"
+                  onClick={() => dispatch(actionsTrafficContents.loadGetListCSVsRequest({
+                    keyword: keywordSearch
+                  }))}
+                >
+                  <i className="fas fa-download mr-1" aria-hidden="true"></i>
+                  {t('general:commom.DownloadList')}
+                </button>
+              </ActionTrigger>
+              <SearchTrigger nameKey='trigger-search' />
+              <THead nameKey='t-head'>
+                <tr>
+                  <th scope="col" className={'px-0'} />
+                  <th className={'text-center'} scope="col"><span>{t('pages:trafficContents.labels.table.year')}</span></th>
+                  <th scope="col"><span>{t('pages:trafficContents.labels.table.name')}</span></th>
+                  <th scope="col"><span>{t('pages:trafficContents.labels.table.concept')}</span></th>
+                  <th className={'text-center'} scope="col"><span>{t('pages:trafficContents.labels.table.actions')}</span></th>
+                </tr>
+              </THead>
+              <TBody nameKey='t-body' style={{ whiteSpace: 'nowrap' }}>{renderList()}</TBody>
+            </Table>
+          </div>
         </div>
       </div>
-    </div>
+
+      <Modal handleClose={() => { setIdToDelete(null); setStModalDelete(!stModalDelete) }} statusModal={stModalDelete} customClass="p-0">
+        <div className="br-modal-header">
+          <div className="br-modal-title text-bold" title={t('components:Modal.Title.Confirm')}>
+            {t('components:Modal.Title.Confirm')}
+          </div>
+        </div>
+        <div className="br-modal-body">
+          {t('components:Modal.TextBody.DeleteAsk')}
+        </div>
+        <div className="br-modal-footer justify-content-end">
+          <button className="br-button secondary small m-2" onClick={() => { setIdToDelete(null); setStModalDelete(!stModalDelete) }} type="button">
+            {t('components:Modal.Cancel')}
+          </button>
+          <button className="br-button primary small m-2" onClick={() => confirmDelete(idToDelete)} type="button">
+            {t('components:Modal.Yes')}
+          </button>
+        </div>
+      </Modal>
+    </>
   );
 };
 

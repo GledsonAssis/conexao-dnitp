@@ -26,7 +26,7 @@ const suporteTecnico = 18;
 const gestorEstadual = 21;
 const gestorMunicipal = 23;
 
-const infantil = 24;
+const infantil = 19;
 
 export {
   admin,

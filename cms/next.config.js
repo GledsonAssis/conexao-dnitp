@@ -9,16 +9,9 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/cms',
-        has: [
-          {
-            type: 'header',
-            key: 'referer',
-            value: '(?<utm_source>http://localhost:3000/)'
-          },
-        ],
+        source: '/cms/:path*',
+        destination: '/cms/:path*',
         permanent: true,
-        destination: '/cms?utm_source=teste',
       }
     ];
   },

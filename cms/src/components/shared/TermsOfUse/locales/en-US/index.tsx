@@ -12,7 +12,7 @@ class TermsOfUse extends PureComponent {
         <div className="terms__layout">
           <div className="page__list px-3">
             <div className="pb-3">
-              <span className={'text-bold'}>Início da vigência: 01/10/021</span>
+              <span className={'text-bold'}>Início da vigência: 01/10/2021</span>
             </div>
             <div>
               <span className={'h6'}>Disposições gerais</span>

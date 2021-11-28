@@ -34,17 +34,13 @@ export const Header: React.FC<Props> = ({ translation, Session, handleLogin }) =
   const messages = useSelector((state: ApplicationState) => state.messages);
   const [stContrast, setStContrast] = useState(false);
   const [stCron, setStCron] = useState(false);
-  const [stFirstMount, setStFirstMount] = useState(true);
   const [govbrNonce, setGovbrNonce] = useState('');
   const [govbrState, setGovbrState] = useState('');
   const router = useRouter();
 
   const {
     register,
-    watch,
-    formState: { errors },
     handleSubmit,
-    setValue,
   } = useForm<any>();
 
   useEffect(() => {
@@ -114,6 +110,11 @@ export const Header: React.FC<Props> = ({ translation, Session, handleLogin }) =
   }, []);
 
   function renderLoginButton() {
+    const baseUrl = `${EnvsConfig.getGovBrAddress()}/authorize`
+    const response_type = `response_type=${EnvsConfig.getGovBrResponseType()}`
+    const client_id = `client_id=${EnvsConfig.getGovBrClientId()}`
+    const scope = `scope=${EnvsConfig.getGovBrScope()}`
+    const redirect_uri = `redirect_uri=${EnvsConfig.getGovBrRedirectUri()}`
     if (Session && Session.isLogged) {
       return (
         <button onClick={handleLogout} className="br-button secondary br-button-login" type="button">
@@ -132,7 +133,7 @@ export const Header: React.FC<Props> = ({ translation, Session, handleLogin }) =
     }
 
     return (
-      <Link href={`${EnvsConfig.getGovBrAddress()}/authorize\?response_type=${EnvsConfig.getGovBrResponseType()}&client_id=${EnvsConfig.getGovBrClientId()}&scope=${EnvsConfig.getGovBrScope()}&redirect_uri=${EnvsConfig.getGovBrRedirectUri()}&nonce=${govbrNonce}&state=${govbrState}`}>
+      <Link href={`${baseUrl}\?${response_type}&${client_id}&${scope}&${redirect_uri}&nonce=${govbrNonce}&state=${govbrState}`}>
         <a>
           <button className="br-button secondary" type="button">
             <span className="br-avatar mr-1">

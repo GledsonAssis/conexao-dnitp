@@ -52,8 +52,17 @@ const create = (req, res) => {
       }
       return found;
     })
-    .then(() => IdentityServer.createUser(newUser))
-    .then(User.create({ newUser, idRole: visitante }))
+    .then(User.create({ newUser, idRole: anonimo }))
+    .then(() => {
+      const message = {
+        destinatarios: [newUser.email],
+        assunto: '[Conexão DNIT] Confirmação de conta',
+        name: newUser.name,
+        template: 'AccountConfirmation',
+        url: `${process.env.PORTAL__URL}/#/`,
+      };
+      SendMail.sendMail(message)
+    })
     .then(() => res.sendStatus(HttpStatus.CREATED))
     .catch((error) => {
       if (error.code === HttpStatus.CONFLICT) {
