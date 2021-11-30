@@ -35,10 +35,8 @@ export function* getListCSV({ payload }: any) {
     downloadData(
       handleResponse(yield* call(
         service.client.post,
-        `/cms/dnit/units/download/${(
-          keyword ? `?keyword=${keyword}` : '')}${(
-            order ? `${!keyword ? '?' : '&'}order=${sorter}` : '')}`,
-        { responseType: 'blob' })),
+        `/cms/dnit/units/download`,
+        { responseType: 'blob', params: { keyword, order: sorter } })),
     );
   } catch (err) {
     let parser = err.error?.response?.data;

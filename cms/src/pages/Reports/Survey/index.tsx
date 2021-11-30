@@ -43,7 +43,7 @@ interface OwnProps {
 
 type Props = StateProps & DispatchProps & OwnProps;
 
-export const InitiativesPage: React.FC<Props> = ({ propsModel, t }) => {
+export const ReportSurveiesPage: React.FC<Props> = ({ propsModel, t }) => {
   const dispatch = useDispatch();
   const reportsList = useSelector((state: ApplicationState) => state.reports);
   const schoolYears = useSelector((state: ApplicationState) => state.schoolYears);
@@ -57,6 +57,7 @@ export const InitiativesPage: React.FC<Props> = ({ propsModel, t }) => {
   const users = useSelector((state: ApplicationState) => state.users);
   const [currentPage, setCurrentPage] = useState(1);
   const [numberItensPer, setNumberItensPer] = useState(10);
+  const [sortData, setSortData] = useState('');
 
   const {
     register,
@@ -148,9 +149,30 @@ export const InitiativesPage: React.FC<Props> = ({ propsModel, t }) => {
     }
   }, [watch('period')]);
 
+  function sortItens(data: any[]) {
+    return data.sort((a, b) => (new Date(b[sortData]).getTime() - new Date(a[sortData]).getTime()))
+  }
+
+  function changePage(pageChange: number, itensPerChange: number, data: any[]): any[] {
+    pageChange = Math.min(Math.max(pageChange, 1), numPages(data.length, itensPerChange));
+    const arrayItens = [];
+    for (let i = (pageChange - 1) * itensPerChange; i < pageChange * itensPerChange; i++) {
+      if (data[i]) {
+        arrayItens.push(data[i]);
+      }
+    }
+    return arrayItens;
+  }
+
+  function numPages(numItens: number, itensPerChange: number) {
+    return Math.ceil(numItens / itensPerChange);
+  }
+
   function renderList() {
     if (reportsList?.surveies?.length) {
-      return reportsList.surveies.map((item, index) => (
+      const data = sortItens(reportsList.surveies);
+      const listFiltered = changePage(currentPage, numberItensPer, data)
+      return listFiltered.map((item, index) => (
         <tr key={`reports_surveies_${item.activity}_${item.year}_${index}`}>
           <td className={'px-0'} />
           <td className="pl-4 text-truncate" data-th={t('pages:Reports.Survey.Table.SituationActivity')}>
@@ -766,7 +788,7 @@ export const InitiativesPage: React.FC<Props> = ({ propsModel, t }) => {
           <Table
             Title={t('pages:Reports.Survey.Table.Title')}
             Options={{
-              id: 'initiatives',
+              id: 'surveies',
               paginate: true,
               count: reportsList?.surveies?.length,
             }}
@@ -820,10 +842,10 @@ export const getStaticProps = async ({ locale }) => ({
   },
 });
 
-export default function Initiatives() {
+export default function ReportSurveies() {
   return (
     <Template>
-      <InitiativesPage
+      <ReportSurveiesPage
         propsModel={(propsModel: any) => propsModel}
         t={(t: TFunction) => t} />
     </Template>

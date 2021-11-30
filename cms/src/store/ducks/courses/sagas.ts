@@ -49,10 +49,8 @@ export function* getListCSV({ payload }: any) {
     downloadData(
       handleResponse(yield* call(
         service.client.get,
-        `/cms/courses/download/${(
-          keyword ? `?keyword=${keyword}` : '')}${(
-            order ? `${!keyword ? '?' : '&'}order=${sorter}` : '')}`,
-        { responseType: 'blob' })),
+        `/cms/courses/download`,
+        { responseType: 'blob', params: { keyword, order: sorter } })),
     );
   } catch (err) {
     let parser = err.error?.response?.data;

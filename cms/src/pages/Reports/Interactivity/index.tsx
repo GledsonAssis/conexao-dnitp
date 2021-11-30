@@ -26,7 +26,7 @@ interface OwnProps {
 
 type Props = StateProps & DispatchProps & OwnProps;
 
-export const InitiativesPage: React.FC<Props> = ({ propsModel, t }) => {
+export const ReportInteractivityPage: React.FC<Props> = ({ propsModel, t }) => {
   const dispatch = useDispatch();
   const reportsList = useSelector((state: ApplicationState) => state.reports);
   const states = useSelector((state: ApplicationState) => state.states);
@@ -467,10 +467,10 @@ export const getStaticProps = async ({ locale }) => ({
   },
 });
 
-export default function Initiatives() {
+export default function ReportInteractivity() {
   return (
     <Template>
-      <InitiativesPage
+      <ReportInteractivityPage
         propsModel={(propsModel: any) => propsModel}
         t={(t: TFunction) => t} />
     </Template>

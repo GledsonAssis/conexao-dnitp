@@ -29,7 +29,7 @@ interface OwnProps {
 
 type Props = StateProps & DispatchProps & OwnProps;
 
-export const InitiativesPage: React.FC<Props> = ({ propsModel, t }) => {
+export const ReportParticipantsPage: React.FC<Props> = ({ propsModel, t }) => {
   const dispatch = useDispatch();
   const reportsList = useSelector((state: ApplicationState) => state.reports);
   const dnitLocalUnit = useSelector((state: ApplicationState) => state.dnitLocalUnits);
@@ -497,7 +497,7 @@ export const InitiativesPage: React.FC<Props> = ({ propsModel, t }) => {
           <Table
             Title={t('pages:Reports.Participants.Table.Title')}
             Options={{
-              id: 'initiatives',
+              id: 'participants',
               paginate: true,
               count: reportsList?.participants?.length,
             }}
@@ -554,10 +554,10 @@ export const getStaticProps = async ({ locale }) => ({
   },
 });
 
-export default function Initiatives() {
+export default function ReportParticipants() {
   return (
     <Template>
-      <InitiativesPage
+      <ReportParticipantsPage
         propsModel={(propsModel: any) => propsModel}
         t={(t: TFunction) => t} />
     </Template>

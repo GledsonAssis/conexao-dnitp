@@ -377,7 +377,7 @@
         "email": "E-mail é obrigatório",
         "name": "Nome é obrigatório",
         "password": "Senha é obrigatória",
-        "schoolBonds": "Vínculo escolar é obrigatório",
+        "schoolBonds": "Categoria é obrigatório",
         "state": "Estado é obrigatório",
         "wrongFormat": "Telefone inválido",
         "cellphoneWrongFormat": "Celular inválido"
@@ -396,7 +396,7 @@
       "name": "Nome",
       "password": "Senha",
       "phone": "Telefone",
-      "schoolBonds": "Vínculo escolar",
+      "schoolBonds": "Categoria",
       "state": "Estado"
     },
     "placeholder": {
@@ -406,7 +406,7 @@
       "institution": "Selecione a instituição de ensino",
       "name": "Digite seu nome aqui",
       "phone": "(00) 0000-0000",
-      "schoolBonds": "Selecione o vínculo escolar",
+      "schoolBonds": "Selecione a categoria",
       "state": "Selecione Estado"
     },
     "schoolBonds": {
@@ -446,7 +446,7 @@
         "email": "E-mail é obrigatório",
         "name": "Nome é obrigatório",
         "password": "Senha é obrigatória",
-        "schoolBonds": "Vínculo escolar é obrigatório",
+        "schoolBonds": "Categoria é obrigatório",
         "state": "Estado é obrigatório",
         "wrongFormat": "Telefone inválido",
         "cellphoneWrongFormat": "Celular inválido",
@@ -458,7 +458,7 @@
       "cpf": "CPF",
       "email": "E-mail",
       "phone": "Telefone",
-      "schoolBonds": "Vínculo escolar*",
+      "schoolBonds": "Categoria*",
       "birthDate": "Data de Nascimento*",
       "cellphone": "Celular*",
       "state": "UF",
@@ -472,7 +472,7 @@
       "institution": "Selecione a instituição de ensino",
       "name": "Digite seu nome aqui",
       "phone": "(00) 0000-0000",
-      "schoolBonds": "Selecione o vínculo escolar",
+      "schoolBonds": "Selecione a categoria",
       "state": "Selecione Estado"
     },
     "schoolBonds": {
@@ -533,7 +533,7 @@
         "email": "E-mail é obrigatório",
         "name": "Nome é obrigatório",
         "password": "Senha é obrigatória",
-        "schoolBonds": "Vínculo escolar é obrigatório",
+        "schoolBonds": "Categoria é obrigatório",
         "state": "Estado é obrigatório",
         "termsOfUse": "Você precisa aceitar os Termos de Uso e a Política de Privacidade.",
         "wrongFormat": "Telefone inválido",
@@ -553,7 +553,7 @@
       "name": "Nome",
       "password": "Senha",
       "phone": "Telefone",
-      "schoolBonds": "Vínculo escolar",
+      "schoolBonds": "Categoria",
       "state": "Estado",
       "birthDate": "Data de nascimento"
     },
@@ -564,7 +564,7 @@
       "institution": "Selecione a instituição de ensino",
       "name": "Digite seu nome aqui",
       "phone": "(00) 0000-0000",
-      "schoolBonds": "Selecione o vínculo escolar",
+      "schoolBonds": "Selecione a Categoria",
       "state": "Selecione Estado",
       "birthDate": "Preencha a data de nascimento"
     },

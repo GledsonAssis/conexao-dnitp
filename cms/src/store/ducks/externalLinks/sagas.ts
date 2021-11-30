@@ -48,10 +48,8 @@ export function* getListCSV({ payload }: any) {
     const sorter = order ? Object.keys(order).map(key => `${key},${order[key]}`).join('') : null;
     downloadData(
       handleResponse(yield* call(service.client.get,
-        `/cms/externalLinks/download/${(
-          keyword ? `?keyword=${keyword}` : '')}${(
-            order ? `${!keyword ? '?' : '&'}order=${sorter}` : '')}`,
-        { responseType: 'blob' })),
+        `/cms/externalLinks/download`,
+        { responseType: 'blob', params: { keyword, order: sorter } })),
     );
   } catch (err) {
     let parser = err.error?.response?.data;

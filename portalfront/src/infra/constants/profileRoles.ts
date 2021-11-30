@@ -1,5 +1,5 @@
 const admin = 10;
-const anonimo = -1;
+const anonimo = 0;
 
 const visitante = 2;
 const professor = 3;
