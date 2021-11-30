@@ -52,7 +52,7 @@ export const Header: React.FC<Props> = ({ translation, Session, handleLogin }) =
   useEffect(() => {
     if (router.query.code) {
       dispatch(OAuthActions.loadLoginRequest({ code: router.query.code }));
-      router.replace('/')
+      // router.replace('/')
       handleLogin();
     }
   }, [router.query.code]);

@@ -22,6 +22,8 @@ export function* loadLogin({ payload }: any) {
     yield Session.setUser(responseUser.data);
     if (!responseUser.data.primeiroAcessoGovbr) {
       window.location.href = '/perfil';
+    } else {
+      window.location.href = '/';
     }
     yield put(loadLoginSuccess(responseUser.data));
   } catch (err) {
