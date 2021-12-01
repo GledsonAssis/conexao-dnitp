@@ -7,7 +7,6 @@ import { pathName as getFirstUrlPath } from '@/utils/parsers/getFirstUrlPath';
 import parseRoutes from '@/utils/parsers/parseRoutes';
 import { userParser } from '@/utils/parsers/userParser';
 import { useRouter } from 'next/router';
-import { anonimo } from '@/infra/constants/profileRoles';
 import privatePaths from '@/infra/services/privatePaths';
 import headerMenuIcons from '@/infra/services/headerMenuIcons';
 

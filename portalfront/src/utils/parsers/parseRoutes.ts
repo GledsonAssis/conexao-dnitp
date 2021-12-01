@@ -18,6 +18,7 @@ import {
   suportePedagogico,
   suporteTecnico,
   visitante,
+  naoConfirmado
 } from '@/infra/constants/profileRoles';
 
 const parserRouter = (t: any) => [
@@ -45,6 +46,7 @@ const parserRouter = (t: any) => [
       publicador,
       suportePedagogico,
       suporteTecnico,
+      naoConfirmado
     ],
   },
   {
@@ -71,6 +73,7 @@ const parserRouter = (t: any) => [
       suportePedagogico,
       suporteTecnico,
       visitante,
+      naoConfirmado
     ],
   },
   {
@@ -116,6 +119,7 @@ const parserRouter = (t: any) => [
       publicador,
       suportePedagogico,
       suporteTecnico,
+      naoConfirmado
     ],
   },
 ];

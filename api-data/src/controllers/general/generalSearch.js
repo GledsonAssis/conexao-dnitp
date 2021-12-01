@@ -1,7 +1,7 @@
 import GeneralSearch from '../../services/general/GeneralSearch';
 
 import {
-  anonimo,
+  naoConfirmado,
 } from '../../constants/Role';
 
 import {
@@ -33,7 +33,7 @@ const find = (req, res) => {
 
   const idRole = currentUser
     ? currentUser.role.id
-    : anonimo;
+    : naoConfirmado;
 
   const categories = categoriesParser(searchCategories, idRole);
 

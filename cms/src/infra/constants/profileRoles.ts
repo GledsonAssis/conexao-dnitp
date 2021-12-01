@@ -27,6 +27,7 @@ const suportePedagogico = 17;
 const suporteTecnico = 18;
 
 const infantil = 19;
+const naoConfirmado = 20;
 
 export {
   admin,
@@ -49,5 +50,6 @@ export {
   suportePedagogico,
   suporteTecnico,
   visitante,
-  infantil
+  infantil,
+  naoConfirmado
 };

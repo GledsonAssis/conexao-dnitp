@@ -25,7 +25,7 @@ import compareObject from '../../utils/compare/object';
 import IdentityServer from '../../utils/http/IdentityServer';
 import parseUser from '../../utils/parsers/parseUser';
 import { currentUserCanViewUser } from '../../utils/validators/roleValidator';
-import { visitante, anonimo, infantil } from '../../constants/Role';
+import { visitante, naoConfirmado, infantil } from '../../constants/Role';
 
 /**
  * cms create user
@@ -52,7 +52,7 @@ const create = (req, res) => {
       }
       return found;
     })
-    .then(User.create({ newUser, idRole: anonimo }))
+    .then(User.create({ newUser, idRole: naoConfirmado }))
     .then(() => {
       const message = {
         destinatarios: [newUser.email],
@@ -326,7 +326,7 @@ const update = (req, res) => {
     id,
     idCity,
     idDnitUnit,
-    idRole: idRole === anonimo ? visitante : idRole,
+    idRole: idRole === naoConfirmado ? visitante : idRole,
     idState,
     birthDate,
     idSchoolBonds: idSchoolBonds === '' ? null : idSchoolBonds,

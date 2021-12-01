@@ -27,6 +27,7 @@ const gestorEstadual = 21;
 const gestorMunicipal = 23;
 
 const infantil = 19;
+const naoConfirmado = 20;
 
 export {
   admin,
@@ -49,5 +50,6 @@ export {
   suportePedagogico,
   suporteTecnico,
   visitante,
-  infantil
+  infantil,
+  naoConfirmado
 };

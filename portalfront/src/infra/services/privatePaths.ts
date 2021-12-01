@@ -21,7 +21,8 @@ import {
   suportePedagogico,
   visitante,
   suporteTecnico,
-  infantil
+  infantil,
+  naoConfirmado
 } from '../constants/profileRoles';
 import { EnvsConfig } from '../config/envs.config';
 
@@ -49,6 +50,7 @@ export default {
     permission(suportePedagogico, [R]),
     permission(suporteTecnico, [R]),
     permission(visitante, [R]),
+    permission(naoConfirmado, [R]),
   ],
   '/cursos': [
     permission(admin, [R, C, W, P, M, O]),
@@ -70,6 +72,7 @@ export default {
     permission(suportePedagogico, [R, C]),
     permission(suporteTecnico, [R, C]),
     permission(visitante, [R, C]),
+    permission(naoConfirmado, [R]),
   ],
   '/cursos/:id': [
     permission(admin, [R, C, W, P, M, O]),
@@ -91,6 +94,7 @@ export default {
     permission(suportePedagogico, [R, C]),
     permission(suporteTecnico, [R, C]),
     permission(visitante, [R, C]),
+    permission(naoConfirmado, [R, C]),
   ],
   '/busca-geral': [
     permission(admin, [R, C, W, P, M, O]),
@@ -112,6 +116,7 @@ export default {
     permission(suportePedagogico, [R]),
     permission(suporteTecnico, [R]),
     permission(visitante, [R]),
+    permission(naoConfirmado, [R]),
   ],
 
   '/acoes/:id': [
@@ -161,6 +166,7 @@ export default {
     permission(suportePedagogico, [R]),
     permission(suporteTecnico, [R]),
     permission(visitante, [R]),
+    permission(naoConfirmado, [R]),
   ],
   '/atividades/:id': [
     permission(admin, [R, C, W, P, M, O]),
@@ -180,6 +186,7 @@ export default {
     permission(suportePedagogico, [R]),
     permission(suporteTecnico, [R]),
     permission(visitante, [R]),
+    permission(naoConfirmado, [R]),
   ],
   '/atividades/:id/avaliacoes': [
     permission(admin, [R, C, W, P, M, O]),
@@ -199,6 +206,7 @@ export default {
     permission(suportePedagogico, [R]),
     permission(suporteTecnico, [R]),
     permission(visitante, [R]),
+    permission(naoConfirmado, [R]),
   ],
   '/mensagens/:id': [
     permission(admin, [R, C, W, P, M, O]),
@@ -218,6 +226,7 @@ export default {
     permission(suportePedagogico, [R, W]),
     permission(suporteTecnico, [R, W]),
     permission(visitante, [R, W]),
+    permission(naoConfirmado, [R, W]),
   ],
   '/mensagens': [
     permission(admin, [R, C, W, P, M, O]),
@@ -237,6 +246,7 @@ export default {
     permission(suportePedagogico, [R, W]),
     permission(suporteTecnico, [R, W]),
     permission(visitante, [R, W]),
+    permission(naoConfirmado, [R, W]),
   ],
   '/mensagens/enviar': [
     permission(admin, [R, C, W, P, M, O]),
@@ -256,6 +266,7 @@ export default {
     permission(suportePedagogico, [R, W]),
     permission(suporteTecnico, [R, W]),
     permission(visitante, [R, W]),
+    permission(naoConfirmado, [R, W]),
   ],
   '/minhas-iniciativas/:id': [
     permission(admin, [R, C, W, P, M, O]),
@@ -317,6 +328,7 @@ export default {
     permission(suportePedagogico, [R, W]),
     permission(suporteTecnico, [R, W]),
     permission(visitante, [R, W]),
+    permission(naoConfirmado, [R, W]),
   ],
   '/projetos': [
     permission(admin, [R, C, W, P, M, O]),
@@ -338,6 +350,7 @@ export default {
     permission(suportePedagogico, [R, C]),
     permission(suporteTecnico, [R, C]),
     permission(visitante, [R, C]),
+    permission(naoConfirmado, [R]),
   ],
   '/projetos/:id': [
     permission(admin, [R, C, W, P, M, O]),
@@ -359,6 +372,7 @@ export default {
     permission(suportePedagogico, [R, C]),
     permission(suporteTecnico, [R, C]),
     permission(visitante, [R, C]),
+    permission(naoConfirmado, [R]),
   ],
   '/projetos/:idProject/acoes/:idAction': [
     permission(admin, [R, C, W, P, M, O]),
@@ -380,6 +394,7 @@ export default {
     permission(suportePedagogico, [R, C]),
     permission(suporteTecnico, [R, C]),
     permission(visitante, [R, C]),
+    permission(naoConfirmado, [R]),
   ],
 
   '/relatorios': [
@@ -413,6 +428,7 @@ export default {
     permission(suportePedagogico, [R, C, W, P, M, O]),
     permission(suporteTecnico, [R, C, W, P, M, O]),
     permission(visitante, [R, C, W, P, M, O]),
+    permission(naoConfirmado, [R, O]),
   ],
   '/como-participar': [
     permission(admin, [R, C, W, P, M, O]),
@@ -433,6 +449,7 @@ export default {
     permission(suportePedagogico, [R, C, W, P, M, O]),
     permission(suporteTecnico, [R, C, W, P, M, O]),
     permission(visitante, [R, C, W, P, M, O]),
+    permission(naoConfirmado, [R, O]),
   ],
   '/equipe': [
     permission(admin, [R, C, W, P, M, O]),
@@ -453,6 +470,7 @@ export default {
     permission(suportePedagogico, [R, C, W, P, M, O]),
     permission(suporteTecnico, [R, C, W, P, M, O]),
     permission(visitante, [R, C, W, P, M, O]),
+    permission(naoConfirmado, [R, O]),
   ],
   '/escolas-participantes': [
     permission(admin, [R, C, W, P, M, O]),
@@ -473,6 +491,7 @@ export default {
     permission(suportePedagogico, [R, C, W, P, M, O]),
     permission(suporteTecnico, [R, C, W, P, M, O]),
     permission(visitante, [R, C, W, P, M, O]),
+    permission(naoConfirmado, [R, O]),
   ],
   [CMS_URL]: [
     permission(admin, [O, P, R, W]),
@@ -510,6 +529,7 @@ export default {
     permission(suportePedagogico, [R]),
     permission(suporteTecnico, [R]),
     permission(visitante, [R]),
+    permission(naoConfirmado, [R]),
   ],
   '/termos-de-uso': [
     permission(admin, [R, C, W, P, M, O]),
@@ -531,5 +551,6 @@ export default {
     permission(suportePedagogico, [R]),
     permission(suporteTecnico, [R]),
     permission(visitante, [R]),
+    permission(naoConfirmado, [R]),
   ],
 };
