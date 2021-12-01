@@ -63,12 +63,6 @@ export const HomePage: React.FC<Props> = () => {
     // eslint-disable-next-line
   }, []);
 
-  useEffect(() => {
-    if (highlights.errors) {
-      ToastMessage({ message: t(highlights.errors.message), type: typesToast.TOAST_ERROR })
-    }
-  }, [highlights.errors])
-
   function nth(n: number) { return ["st", "nd", "rd"][((n + 90) % 100 - 10) % 10 - 1] || "th" }
 
   function render_anos() {
