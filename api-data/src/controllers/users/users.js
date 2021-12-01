@@ -364,7 +364,7 @@ const update = (req, res) => {
         return true;
       })
       .then(() => {
-        if (idRole !== currentIdRole && currentIdRole === naoConfirmado) {
+        if (idRole !== currentIdRole && idRole === naoConfirmado) {
           const message = {
             destinatarios: [email],
             assunto: '[Conexão DNIT] Confirmação de conta',
