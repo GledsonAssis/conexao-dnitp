@@ -1,4 +1,5 @@
 import isUserLogged from './isUserLogged';
+import isUserComment from './isUserComment';
 import validateCPF from './cpf';
 import validateCellphone from './cellphone';
 import validateEmail from './email';
@@ -14,4 +15,5 @@ export {
   validatePassword,
   validatePhone,
   validateBirthDate,
+  isUserComment
 };

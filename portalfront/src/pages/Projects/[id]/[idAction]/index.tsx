@@ -164,7 +164,7 @@ export const Profile: React.FC<Props> = ({ propsModel, t }) => {
         <CommentList
           onSubmitComment={submitNewComment}
           onDelete={deleteComment}
-          allowReply={propsModel?.isLogged}
+          allowReply={propsModel?.isAllowComment}
           translation={t}
           commentBoxCommentText={fetchProject.dataById?.comments}
         />

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Provider, useSelector } from 'react-redux';
-import store, { ApplicationState } from '@/store';
+import { Provider } from 'react-redux';
+import store from '@/store';
 import Session from '@/utils/Session';
-import { isUserLogged } from '@/utils/validate';
+import { isUserLogged, isUserComment } from '@/utils/validate';
 import getFirstUrlPath from '@/utils/parsers/getFirstUrlPath';
 import parseRoutes from '@/utils/parsers/parseRoutes';
 import userParser from '@/utils/parsers/userParser';
@@ -39,6 +39,7 @@ export const Template: React.FC<Props> = ({ children, ...props }) => {
       userRole: user.role,
       currentPath: getFirstUrlPath(router.pathname),
       isLogged: isUserLogged(user),
+      isAllowComment: isUserComment(user),
       routes: parseRoutes(t),
       sociais: {
         twitter: EnvsConfig.getTwitter(),

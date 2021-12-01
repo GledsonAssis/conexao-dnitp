@@ -138,7 +138,7 @@ export const ActionsIdPage: React.FC<Props> = ({ propsModel, t }) => {
         <CommentList
           onSubmitComment={submitNewComment}
           onDelete={deleteComment}
-          allowReply={propsModel?.isLogged}
+          allowReply={propsModel?.isAllowComment}
           translation={t}
           commentBoxCommentText={fetchActions.dataById && fetchActions.dataById.comments}
         />
