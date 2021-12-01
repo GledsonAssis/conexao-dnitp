@@ -50,6 +50,7 @@ export default {
     permission(suportePedagogico, [R]),
     permission(suporteTecnico, [R]),
     permission(visitante, [R]),
+    permission(naoConfirmado, [R]),
   ],
   '/cursos': [
     permission(admin, [R, C, W, P, M, O]),
@@ -146,7 +147,10 @@ export default {
     permission(gestorTatRegional, [R, C]),
     permission(publicador, [R, C, M]),
   ],
-  '/cadastro': [permission(anonimo, [R, W])],
+  '/cadastro': [
+    permission(naoConfirmado, [R]),
+    permission(anonimo, [R, W])
+  ],
   '/atividades': [
     permission(admin, [R, C, W, P, M, O]),
     permission(cadastrador, [R]),
