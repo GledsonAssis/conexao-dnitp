@@ -366,9 +366,9 @@ const update = (req, res) => {
       .then(() => {
         if (idRole !== currentIdRole && currentIdRole === naoConfirmado) {
           const message = {
-            destinatarios: [newUser.email],
+            destinatarios: [email],
             assunto: '[Conexão DNIT] Confirmação de conta',
-            name: newUser.name,
+            name,
             template: 'AccountConfirmation',
             url: `${process.env.PORTAL__URL}/#/`,
           };
