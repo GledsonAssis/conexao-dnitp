@@ -25,7 +25,7 @@ import compareObject from '../../utils/compare/object';
 import IdentityServer from '../../utils/http/IdentityServer';
 import parseUser from '../../utils/parsers/parseUser';
 import { currentUserCanViewUser } from '../../utils/validators/roleValidator';
-import { visitante, naoConfirmado, infantil } from '../../constants/Role';
+import { visitante, naoConfirmado, infantil, professor } from '../../constants/Role';
 
 /**
  * cms create user
@@ -53,16 +53,6 @@ const create = (req, res) => {
       return found;
     })
     .then(User.create({ newUser, idRole: naoConfirmado }))
-    .then(() => {
-      const message = {
-        destinatarios: [newUser.email],
-        assunto: '[Conexão DNIT] Confirmação de conta',
-        name: newUser.name,
-        template: 'AccountConfirmation',
-        url: `${process.env.PORTAL__URL}/#/`,
-      };
-      SendMail.sendMail(message)
-    })
     .then(() => res.sendStatus(HttpStatus.CREATED))
     .catch((error) => {
       if (error.code === HttpStatus.CONFLICT) {
@@ -360,7 +350,7 @@ const update = (req, res) => {
   if (shouldUpdate) {
     User.update(userUpdated)
       .then(() => {
-        if (idRole !== currentIdRole && idRole === 3) {
+        if (idRole !== currentIdRole && idRole === professor) {
           const message = {
             destinatarios: [email],
             assunto: 'Alteração para perfil professor',
@@ -370,6 +360,19 @@ const update = (req, res) => {
           };
 
           SendMail.sendMail(message);
+        }
+        return true;
+      })
+      .then(() => {
+        if (idRole !== currentIdRole && currentIdRole === naoConfirmado) {
+          const message = {
+            destinatarios: [newUser.email],
+            assunto: '[Conexão DNIT] Confirmação de conta',
+            name: newUser.name,
+            template: 'AccountConfirmation',
+            url: `${process.env.PORTAL__URL}/#/`,
+          };
+          SendMail.sendMail(message)
         }
         return true;
       })
