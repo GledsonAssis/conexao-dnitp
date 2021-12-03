@@ -247,7 +247,7 @@ const updateHighlightItems = payload => db.transaction(async (transaction) => {
                   idMensagem: mensagem.id,
                   idUsuario: mensagem.idUserFrom,
                   dataHora: new Date(),
-                  texto: `${highlight.type}: ${highlight.title} ${highlight.link ? `<br/><br/> ${highlight.link}` : ''}`,
+                  texto: `${highlight.type}: ${highlight.title} ${highlight.link ? `<br/><br/> <a href="${highlight.link}">Clique aqui para acessar</a>` : ''}`,
                 },
                 type: QueryTypes.SELECT,
               });

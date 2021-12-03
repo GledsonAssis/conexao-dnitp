@@ -96,9 +96,25 @@ const download = (req, res) => {
     page: parseInt(page, 10),
   };
   return Activity.cmsDownload(payload)
-  .then(file => mapCSVFile(file, 'lista_atividades'))
-  .then(dbFileHandler(req, res))
-  .catch(dbErrorHandler(req, res));
+    .then(list => list.map((row) => ({
+      'Id': row.Id,
+      'Ano': row.Ano,
+      'Título': row.Titulo,
+      'Area do Conhecimento': row.Area_Do_Conhecimento,
+      'Disciplina': row.Disciplina,
+      'Objeto de Conhecimento': row.Objeto_De_Conhecimento,
+      'Tema': row.Tema,
+      'Subtema': row.Subtema,
+      'Conceito do Trânsito': row.Conceito_Do_Trânsito,
+      'Conteúdo do Trânsito': row.Conteúdo_do_Trânsito,
+      'Habilidades': row.Habilidades,
+      'Competências': row.Competencias,
+      'Iniciativa': row.Iniciativa,
+      'Professor': row.Professor
+    })))
+    .then(file => mapCSVFile(file, 'lista_atividades'))
+    .then(dbFileHandler(req, res))
+    .catch(dbErrorHandler(req, res));
 };
 
 /**

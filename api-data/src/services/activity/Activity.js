@@ -667,7 +667,9 @@ const cmsDownload = ({
 				LEFT JOIN [dnit].[TransitoCompetencia] t2 on t1.[idTransitoCompetencia] = t2.id
 				WHERE t1.idAtividade = [Activity].id
 				FOR XML PATH ('')
-  ) [Competencia]) [Main]) as Competencias
+  ) [Competencia]) [Main]) as Competencias,
+  [initiative].[titulo] AS [Iniciativa],
+  [usuario].[nome] AS [Professor]
 FROM   [dnit].[atividade] AS [Activity] 
   LEFT OUTER JOIN [dnit].[transitoconceito] AS [trafficConcept] 
                ON [Activity].[idtransitoconceito] = [trafficConcept].[id] 
@@ -680,7 +682,11 @@ FROM   [dnit].[atividade] AS [Activity]
   LEFT OUTER JOIN [dnit].[disciplinaescolar] AS [discipline] 
                ON [Activity].[iddisciplinaprincipal] = [discipline].[id] 
   LEFT OUTER JOIN [dnit].[areaconhecimento] AS [discipline->knowledgeArea] 
-               ON [discipline].[idareaconhecimento] = [discipline->knowledgeArea].[id] 
+               ON [discipline].[idareaconhecimento] = [discipline->knowledgeArea].[id]
+  LEFT OUTER JOIN [dnit].[Iniciativa] AS [initiative] 
+               ON [Activity].[idIniciativa] = [initiative].[id]
+  LEFT OUTER JOIN [seguranca].[Usuario] AS [usuario] 
+               ON [initiative].[idUsuarioAutor] = [usuario].[id]
 WHERE  ` + where + `
 ORDER  BY [Activity].[tituloatividade] ASC; `;
 

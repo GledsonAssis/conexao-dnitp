@@ -88,9 +88,14 @@ const downloadCSV = (req, res) => {
     .then(list => list.map(({
       id,
       title,
+      date,
+      excludedDate,
+      isPublished
     }) => ({
       Id: id,
-      'T�tulo': title,
+      'Título': title,
+      'Data': moment.utc(date).format("DD/MM/YYYY"),
+      'Situação': isPublished ? 'Publicado' : excludedDate ? 'Inativado' : 'Cadastrado'
     })))
     .then(file => mapCSVFile(file, 'lista_projetos'))
     .then(dbFileHandler(req, res))

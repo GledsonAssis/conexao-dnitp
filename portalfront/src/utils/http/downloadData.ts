@@ -33,8 +33,14 @@ const downloadData = (apiRequest: Promise<any>) =>
       return Promise.all([filenamePromise(), new Blob([response.data])]);
     })
     .then(([filename, file]) => {
-      const objectUrl = window.URL.createObjectURL(file);
-      download(objectUrl, filename, file);
+      file.text().then(item => {
+        var link = window.document.createElement("a");
+        link.setAttribute("href", "data:text/csv;charset=utf-8,%EF%BB%BF" + encodeURI(item));
+        link.setAttribute("download", `${filename}`);
+        link.click();
+      });
+      // const objectUrl = window.URL.createObjectURL(file);
+      // download(objectUrl, filename, file);
     })
     .catch((error) => console.error(error)); // eslint-disable-line no-console
 

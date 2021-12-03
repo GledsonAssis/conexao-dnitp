@@ -456,18 +456,19 @@ const downloadCSV = (req, res) => {
     order,
   })
     .then(result => result.rows)
-    .then(list => list.map(({
-      id, cpf = '', email, name, address, role, phones, registerDate, city,
-    }) => ({
-      Id: id,
-      Nome: name,
-      CPF: cpf,
-      Email: email,
-      Perfil: role ? role.name : '',
-      UF: city && city.state ? city.state.name : address && address.city ? address.city.state.initials : '',
-      Município: city ? city.name : address && address.city ? address.city.name || '' : '',
-      Fone: phones.map(phone => `(${phone.DDD}) ${phone.number}`).join(', '),
-      "Data de cadastro": moment.utc(registerDate).format("DD/MM/YYYY"),
+    .then(list => list.map((row) => ({
+      Id: row.id,
+      Nome: row.name,
+      CPF: row.cpf,
+      Email: row.email,
+      Perfil: row.role ? row.role.name : '',
+      UF: row.city && row.city.state ? row.city.state.name : row.address && row.address.city ? row.address.city.state.initials : '',
+      Município: row.city ? row.city.name : row.address && row.address.city ? row.address.city.name || '' : '',
+      Fone: row.phones.map(phone => `(${phone.DDD}) ${phone.number}`).join(', '),
+      "Data de cadastro": moment.utc(row.registerDate).format("DD/MM/YYYY"),
+      "Último acesso": moment.utc(row.dataUltimoAcesso).format("DD/MM/YYYY"),
+      "Concluiu cadastro complementar": row.primeiroAcessoGovbr ? 'sim' : 'não',
+      Ativo: JSON.parse(JSON.stringify(row)).ativo ? 'sim' : 'não',
     })))
     .then(file => mapCSVFile(file, 'lista_usuarios'))
     .then(dbFileHandler(req, res))

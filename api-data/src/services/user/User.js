@@ -561,7 +561,10 @@ const searchUsers = async ({
       'schoolBondsId',
       'roleId',
       'ativo',
+      ['ativo', 'usuarioAtivo'],
       'registerDate',
+      'dataUltimoAcesso',
+      'primeiroAcessoGovbr'
     ],
     include: [
       {

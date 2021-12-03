@@ -70,9 +70,14 @@ const downloadCSV = (req, res) => {
     .then(list => list.map(({
       id,
       title,
+      tipo,
+      excludedDate,
+      isPublished
     }) => ({
       Id: id,
-      Titulo: title,
+      'Título': title,
+      Tipo: tipo,
+      'Situação': isPublished ? 'Publicado' : excludedDate ? 'Inativado' : 'Cadastrado'
     })))
     .then(file => mapCSVFile(file, 'lista_cursos'))
     .then(dbFileHandler(req, res))

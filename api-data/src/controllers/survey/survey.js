@@ -116,8 +116,9 @@ const countAll = (req, res) => Survey.countAll()
 
 const download = (req, res) => Survey.findAll()
   .then(list => list.rows.map(({ title, date }) => ({
-    Título: title,
+    'Título': title,
     'Data Criação': date ? moment(date).utc().format('DD/MM/YYYY hh:mm') : '',
+
   })))
   .then(file => mapCSVFile(file, 'lista_questionários'))
   .then(dbFileHandler(req, res))
