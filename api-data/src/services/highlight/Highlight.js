@@ -3,8 +3,15 @@ import db from '../../config/database';
 import HighlightItem, { HighlightMural } from '../../models/highlight/HighlightItem';
 import Message from '../../models/message/Message';
 import User from '../../models/user/User';
+import Action from '../../models/action/Action';
+import Course from '../../models/course/Course';
+import Activity from '../../models/activity/Activity';
+import Project from '../../models/project/Project';
+import ExternalLink from '../../models/ExternalLink/ExternalLink';
+import ProjectAction from '../../models/projectAction/ProjectAction';
 import courseTypeWhereClause from '../../utils/validators/courseTypeWhereClause';
 import { canViewActivationAction } from '../../utils/validators/roleValidator';
+import Sequelize from 'sequelize';
 
 const HighlightTypes = {
   Curso: 1,
@@ -81,7 +88,7 @@ const search = ({ order: sort, type, startDate, endDate }) => {
   }
 
 
-  return HighlightItem.findAndCountAll({
+  return HighlightItem.findAndCount({
     attributes: [
       'id',
       'title',
@@ -90,6 +97,60 @@ const search = ({ order: sort, type, startDate, endDate }) => {
       'position',
       'creationDate',
       'modifyDate',
+      [Sequelize.literal(`
+      CASE
+        WHEN [HighlightItem].[identificadorTipo] = 'ACA' THEN concat('${process.env.PORTAL__URL}/acoes/', [Acao].[id])
+        WHEN [HighlightItem].[identificadorTipo] = 'CAP' THEN concat('${process.env.PORTAL__URL}/cursos/', [Capacitacao].[id])
+        WHEN [HighlightItem].[identificadorTipo] = 'ATV' THEN concat('${process.env.PORTAL__URL}/atividades/', [Atividade].[id])
+        WHEN [HighlightItem].[identificadorTipo] = 'PJT' THEN concat('${process.env.PORTAL__URL}/projetos/', [Projeto].[id])
+        WHEN [HighlightItem].[identificadorTipo] = 'LEX' THEN [LinkExterno].[link]
+        WHEN [HighlightItem].[identificadorTipo] = 'APJ' THEN concat('${process.env.PORTAL__URL}/projetos/', [ProjetoAcao].[idProjeto] , '/acoes/', [ProjetoAcao].[id] )
+        ELSE null
+      END`), 'link'],
+    ],
+    include: [
+      {
+        as: 'Acao',
+        attributes: [],
+        on: Sequelize.literal(`[Acao].[id] = [HighlightItem].[id] AND [HighlightItem].[identificadorTipo] = 'ACA'`),
+        model: Action,
+        required: false
+      },
+      {
+        as: 'Capacitacao',
+        attributes: [],
+        on: Sequelize.literal(`[Capacitacao].[id] = [HighlightItem].[id] AND [HighlightItem].[identificadorTipo] = 'CAP'`),
+        model: Course,
+        required: false
+      },
+      {
+        as: 'Atividade',
+        attributes: [],
+        on: Sequelize.literal(`[Atividade].[id] = [HighlightItem].[id] AND [HighlightItem].[identificadorTipo] = 'ATV'`),
+        model: Activity,
+        required: false
+      },
+      {
+        as: 'Projeto',
+        attributes: [],
+        on: Sequelize.literal(`[Projeto].[id] = [HighlightItem].[id] AND [HighlightItem].[identificadorTipo] = 'PJT'`),
+        model: Project,
+        required: false
+      },
+      {
+        as: 'LinkExterno',
+        attributes: [],
+        on: Sequelize.literal(`[LinkExterno].[id] = [HighlightItem].[id] AND [HighlightItem].[identificadorTipo] = 'LEX'`),
+        model: ExternalLink,
+        required: false
+      },
+      {
+        as: 'ProjetoAcao',
+        attributes: [],
+        on: Sequelize.literal(`[ProjetoAcao].[id] = [HighlightItem].[id] AND [HighlightItem].[identificadorTipo] = 'APJ'`),
+        model: ProjectAction,
+        required: false
+      },
     ],
     where,
     order,
