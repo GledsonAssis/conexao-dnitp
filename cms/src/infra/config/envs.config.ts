@@ -48,6 +48,10 @@ export class EnvsConfig {
   }
 
   static getBaseUrl(): string {
-    return String(process.env.BASEURL);
+    return String(process.env.NEXT_PUBLIC_BASEURL);
+  }
+
+  static getLocal(): string {
+    return String(process.env.NEXT_PUBLIC_LOCAL);
   }
 }

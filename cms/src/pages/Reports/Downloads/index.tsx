@@ -71,11 +71,10 @@ export const ReportDownloadsPage: React.FC<Props> = ({ propsModel, t }) => {
       limit: numberItensPer,
     }));
     // eslint-disable-next-line
-  }, [currentPage, numberItensPer]);
+  }, []);
 
   useEffect(() => {
     dispatch(actionsDnitLocalUnits.loadListSuperintendencesRequest());
-    // dispatch(actionsDownloads.loadListStatusRequest());
     dispatch(actionsSchoolYears.loadListRequest());
     dispatch(actionsDisciplines.loadListRequest({}));
     dispatch(actionsActivities.loadListRequest({ limit: 10000 }));

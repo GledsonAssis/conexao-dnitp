@@ -4,7 +4,6 @@ import * as actionsHighlights from '@/store/ducks/highlights/actions';
 import Template from '@/components/layout';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { TFunction } from 'next-i18next';
-import Link from 'next/link';
 import { Table, TBody, THead, SearchTrigger, ActionTrigger } from '@/components/shared/Table';
 import { useDispatch, useSelector } from 'react-redux';
 import { ApplicationState } from '@/store';
@@ -30,7 +29,6 @@ export const HighlightsPage: React.FC<Props> = ({ propsModel, t }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [numberItensPer, setNumberItensPer] = useState(10);
   const [keywordSearch, setKeywordSearch] = useState('');
-  const router = useRouter();
 
   const MAX_HIGHLIGHTS = 9;
 

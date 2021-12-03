@@ -4,7 +4,7 @@ const { i18n } = require('./next-i18next.config');
 const { routes } = require('./src/infra/services/routes');
 
 module.exports = {
-  basePath: process.env.BASEURL,
+  basePath: process.env.NEXT_PUBLIC_BASEURL,
   compress: false,
   async redirects() {
     return [

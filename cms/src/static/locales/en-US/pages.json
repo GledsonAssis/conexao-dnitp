@@ -1459,13 +1459,36 @@
       "Table": {
         "Title": "Surveies Report",
         "TableTitle": "Surveies",
-        "SituationActivity": "Situation Activity",
-        "Year": "Year",
-        "Discipline": "Discipline",
-        "Teacher": "Teacher",
-        "Activity": "Activity",
         "Download": "Download",
-        "EmptyList": "No records found."
+        "EmptyList": "No records found.",
+        "Activity": {
+          "SituationActivity": "Situation Activity",
+          "Year": "Year",
+          "Discipline": "Discipline",
+          "Teacher": "Teacher",
+          "Activity": "Activity"
+        },
+        "Locale": {
+          "SituationActivity": "Situation",
+          "Year": "Year",
+          "Date": "Date",
+          "Teacher": "Teacher",
+          "RegionalSuperintendence": "Regional Superintendence",
+          "LocalUnit": "Local Unit",
+          "Institution": "Institution"
+        },
+        "Question": {
+          "Year": "Year",
+          "Date": "Date",
+          "Teacher": "Teacher",
+          "Institution": "Institution",
+          "RegionalSuperintendence": "Regional Superintendence",
+          "LocalUnit": "Local Unit",
+          "Activity": "Activity",
+          "Question": "Question",
+          "Alternative": "Alternative",
+          "Answer": "Answer"
+        }
       }
     }
   },

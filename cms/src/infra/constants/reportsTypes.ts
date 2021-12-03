@@ -1,14 +1,20 @@
+export enum TypeActivity {
+  ACTIVITY = '1',
+  LOCALE = '2',
+  QUESTION = '3'
+}
+
 const getTypeActivity = () => [
   {
-    value: '1',
+    value: TypeActivity.ACTIVITY,
     title: 'pages:Reports.Survey.Labels.TypeActivity.activity',
   },
   {
-    value: '2',
+    value: TypeActivity.LOCALE,
     title: 'pages:Reports.Survey.Labels.TypeActivity.locale',
   },
   {
-    value: '3',
+    value: TypeActivity.QUESTION,
     title: 'pages:Reports.Survey.Labels.TypeActivity.question',
   },
 ];

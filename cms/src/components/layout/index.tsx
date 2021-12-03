@@ -12,7 +12,6 @@ import headerMenuIcons from '@/infra/services/headerMenuIcons';
 
 import { useTranslation } from 'next-i18next';
 import { EnvsConfig } from '@/infra/config/envs.config';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Header } from '../shared/Header';
 import { Footer } from '../shared/Footer';
 import { Breadcrumbs } from '../shared/Breadcrumbs';
@@ -41,8 +40,12 @@ export const Template: React.FC<Props> = ({ children }) => {
     const user = await Session.getUser();
     const session = await Session.getSession();
     if (!session) {
-      // const sessionCookie = JSON.parse(cookieCutter.get('session_cnx'))
-      const sessionCookie = JSON.parse(mock) // TODO: Remover após homologação
+      let sessionCookie: string
+      if (EnvsConfig.getLocal()) {
+        sessionCookie = JSON.parse(mock)
+      } else {
+        sessionCookie = JSON.parse(cookieCutter.get('session_cnx'))
+      }
       Session.login(sessionCookie)
       cookieCutter.set('session_cnx', '', { expires: new Date(0) })
     }

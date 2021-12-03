@@ -21,7 +21,7 @@ import Select from '@/components/shared/Select';
 import { Datapicker } from '@/components/shared/DataPicker';
 import moment from 'moment';
 import { bodySurvey } from '@/infra/domains/entities/Survey';
-import { getPeriod, getSituationActivity, getTypeActivity } from '@/infra/constants/reportsTypes';
+import { getPeriod, getSituationActivity, getTypeActivity, TypeActivity } from '@/infra/constants/reportsTypes';
 import { SchoolYears } from '@/store/ducks/schoolYear/types';
 import { Disciplines } from '@/store/ducks/disciplines/types';
 import { Activity, TrafficContent } from '@/store/ducks/activities/types';
@@ -31,6 +31,7 @@ import { RegionalSuperintendence } from '@/store/ducks/regionalSuperintendences/
 import { DnitLocalUnit } from '@/store/ducks/dnitLocalUnits/types';
 import { Institutions } from '@/store/ducks/institutions/types';
 import { User } from '@/store/ducks/users/types';
+import { Survey } from '@/store/ducks/reports/types';
 
 interface StateProps {
   header?: string;
@@ -171,36 +172,132 @@ export const ReportSurveiesPage: React.FC<Props> = ({ propsModel, t }) => {
   function renderList() {
     if (reportsList?.surveies?.length) {
       const data = sortItens(reportsList.surveies);
-      const listFiltered = changePage(currentPage, numberItensPer, data)
-      return listFiltered.map((item, index) => (
-        <tr key={`reports_surveies_${item.activity}_${item.year}_${index}`}>
-          <td className={'px-0'} />
-          <td className="pl-4 text-truncate" data-th={t('pages:Reports.Survey.Table.SituationActivity')}>
-            {item?.situation || '-'}
-          </td>
-          <td className="w-100 text-truncate" data-th={t('pages:Reports.Survey.Table.Year')}>
-            {t('components:listStudentsPerCycle.selectYear', { year: item?.year, ordinal: nth(item?.year) })}
-          </td>
-          <td data-th={t('pages:Reports.Survey.Table.Discipline')}>
-            {item?.discipline || '-'}
-          </td>
-          <td data-th={t('pages:Reports.Survey.Table.Teacher')}>
-            {item?.teacher || '-'}
-          </td>
-          <td data-th={t('pages:Reports.Survey.Table.Activity')}>
-            {item?.activity || '-'}
-          </td>
-        </tr>
-      ));
+      const listFiltered: Survey[] = changePage(currentPage, numberItensPer, data)
+      switch (watch('type')) {
+        case TypeActivity.ACTIVITY:
+          return listFiltered.map((item, index) => (
+            <tr key={`reports_surveies_${item.activity}_${item.year}_${index}`}>
+              <td className={'px-0'} />
+              <td className="pl-4 text-truncate" data-th={t('pages:Reports.Survey.Table.Activity.SituationActivity')}>
+                {item?.situation || '-'}
+              </td>
+              <td className="w-100 text-truncate" data-th={t('pages:Reports.Survey.Table.Activity.Year')}>
+                {t('components:listStudentsPerCycle.selectYear', { year: item?.year, ordinal: nth(item?.year) })}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Activity.Discipline')}>
+                {item?.discipline || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Activity.Teacher')}>
+                {item?.teacher || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Activity.Activity')}>
+                {item?.activity || '-'}
+              </td>
+            </tr>
+          ));
+        case TypeActivity.LOCALE:
+          return listFiltered.map((item, index) => (
+            <tr key={`reports_surveies_${item.activity}_${item.year}_${index}`}>
+              <td className={'px-0'} />
+              <td className="pl-4 text-truncate" data-th={t('pages:Reports.Survey.Table.Locale.SituationActivity')}>
+                {item?.situation || '-'}
+              </td>
+              <td className="w-100 text-truncate" data-th={t('pages:Reports.Survey.Table.Locale.Year')}>
+                {t('components:listStudentsPerCycle.selectYear', { year: item?.year, ordinal: nth(item?.year) })}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Locale.Date')}>
+                {item?.date || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Locale.Teacher')}>
+                {item?.teacher || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Locale.RegionalSuperintendence')}>
+                {item?.regionalSuperintendence || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Locale.LocalUnit')}>
+                {item?.dnitLocalUnit || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Locale.Institution')}>
+                {item?.institution || '-'}
+              </td>
+            </tr>
+          ));
+        case TypeActivity.QUESTION:
+          return listFiltered.map((item, index) => (
+            <tr key={`reports_surveies_${item.activity}_${item.year}_${index}`}>
+              <td className={'px-0'} />
+              <td className="w-100 text-truncate" data-th={t('pages:Reports.Survey.Table.Question.Year')}>
+                {t('components:listStudentsPerCycle.selectYear', { year: item?.year, ordinal: nth(item?.year) })}
+              </td>
+              <td className="pl-4 text-truncate" data-th={t('pages:Reports.Survey.Table.Question.Date')}>
+                {item?.date || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Question.Teacher')}>
+                {item?.teacher || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Question.Institution')}>
+                {item?.institution || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Question.RegionalSuperintendence')}>
+                {item?.regionalSuperintendence || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Question.LocalUnit')}>
+                {item?.dnitLocalUnit || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Question.Activity')}>
+                {item?.activity || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Question.Question')}>
+                {item?.question || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Question.Alternative')}>
+                {item?.alternative || '-'}
+              </td>
+              <td data-th={t('pages:Reports.Survey.Table.Question.Answer')}>
+                {item?.justify || '-'}
+              </td>
+            </tr>
+          ));
+        default:
+          return <tr className="empty-data">
+            <td colSpan={7} className="py-5">
+              <div>
+                <i className="fas fa-inbox fa-5x" />
+              </div>
+              {t('pages:Reports.Survey.Table.EmptyList')}
+            </td>
+          </tr>
+      }
     } else {
-      return <tr className="empty-data">
-        <td colSpan={7} className="py-5">
-          <div>
-            <i className="fas fa-inbox fa-5x" />
-          </div>
-          {t('pages:Reports.Survey.Table.EmptyList')}
-        </td>
-      </tr>
+      switch (watch('type')) {
+        case TypeActivity.ACTIVITY:
+          return <tr className="empty-data">
+            <td colSpan={6} className="py-5">
+              <div>
+                <i className="fas fa-inbox fa-5x" />
+              </div>
+              {t('pages:Reports.Survey.Table.EmptyList')}
+            </td>
+          </tr>
+        case TypeActivity.LOCALE:
+          return <tr className="empty-data">
+            <td colSpan={8} className="py-5">
+              <div>
+                <i className="fas fa-inbox fa-5x" />
+              </div>
+              {t('pages:Reports.Survey.Table.EmptyList')}
+            </td>
+          </tr>
+        case TypeActivity.QUESTION:
+          return <tr className="empty-data">
+            <td colSpan={11} className="py-5">
+              <div>
+                <i className="fas fa-inbox fa-5x" />
+              </div>
+              {t('pages:Reports.Survey.Table.EmptyList')}
+            </td>
+          </tr>
+      }
     }
   }
 
@@ -324,24 +421,26 @@ export const ReportSurveiesPage: React.FC<Props> = ({ propsModel, t }) => {
   }
 
   function renderActivity() {
-    return activities?.data?.sort((a, b) => {
-      if (a.title > b.title) return 1;
-      if (a.title < b.title) return -1;
-      return 0;
-    }).map((item: Activity) => (
-      <div key={`activity-select-${item.id}`} className="br-item w-100" tabIndex={-1}>
-        <div className="br-radio">
-          <input
-            id={`activity-type-${item.id}`}
-            {...register('activity.activity')}
-            value={item.id}
-            type="radio" />
-          <label htmlFor={`activity-type-${item.id}`}>
-            {item.title}
-          </label>
+    if (Array.isArray(activities?.data)) {
+      return activities?.data?.sort((a, b) => {
+        if (a.title > b.title) return 1;
+        if (a.title < b.title) return -1;
+        return 0;
+      }).map((item: Activity) => (
+        <div key={`activity-select-${item.id}`} className="br-item w-100" tabIndex={-1}>
+          <div className="br-radio">
+            <input
+              id={`activity-type-${item.id}`}
+              {...register('activity.activity')}
+              value={item.id}
+              type="radio" />
+            <label htmlFor={`activity-type-${item.id}`}>
+              {item.title}
+            </label>
+          </div>
         </div>
-      </div>
-    ));
+      ));
+    }
   }
 
   function renderRegionalSuperintendence() {
@@ -422,6 +521,62 @@ export const ReportSurveiesPage: React.FC<Props> = ({ propsModel, t }) => {
     ));
   }
 
+  function renderListByType() {
+    switch (watch('type')) {
+      case TypeActivity.ACTIVITY:
+        return (<THead nameKey='t-head'>
+          <tr>
+            <th scope="col" className={'px-0'} />
+            <th scope="col" className={'text-nowrap pl-4'}><span>{t('pages:Reports.Survey.Table.Activity.SituationActivity')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Activity.Year')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Activity.Discipline')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Activity.Teacher')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Activity.Activity')}</span></th>
+          </tr>
+        </THead>)
+      case TypeActivity.LOCALE:
+        return (<THead nameKey='t-head'>
+          <tr>
+            <th scope="col" className={'px-0'} />
+            <th scope="col" className={'text-nowrap pl-4'}><span>{t('pages:Reports.Survey.Table.Locale.SituationActivity')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Locale.Year')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Locale.Date')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Locale.Teacher')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Locale.RegionalSuperintendence')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Locale.LocalUnit')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Locale.Institution')}</span></th>
+          </tr>
+        </THead>)
+      case TypeActivity.QUESTION:
+        return (<THead nameKey='t-head'>
+          <tr>
+            <th scope="col" className={'px-0'} />
+            <th scope="col" className={'text-nowrap pl-4'}><span>{t('pages:Reports.Survey.Table.Question.Year')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Question.Date')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Question.Teacher')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Question.Institution')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Question.RegionalSuperintendence')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Question.LocalUnit')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Question.Activity')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Question.Question')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Question.Alternative')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Question.Answer')}</span></th>
+          </tr>
+        </THead>)
+      default:
+        return (<THead nameKey='t-head'>
+          <tr>
+            <th scope="col" className={'px-0'} />
+            <th scope="col" className={'text-nowrap pl-4'}><span>{t('pages:Reports.Survey.Table.Activity.SituationActivity')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Activity.Year')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Activity.Discipline')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Activity.Teacher')}</span></th>
+            <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Activity.Activity')}</span></th>
+          </tr>
+        </THead>)
+    }
+  }
+
   return (
     <div className="main-content mt-3 px-md-3" id="main-content">
       <div className="row">
@@ -437,12 +592,13 @@ export const ReportSurveiesPage: React.FC<Props> = ({ propsModel, t }) => {
                     <div className={`br-input medium`}>
                       <label htmlFor="situation">{t('pages:Reports.Survey.Labels.Type')}:</label><br />
                       {getTypeActivity().map(item => (
-                        <div className="d-inline-block mr-3 my-1">
+                        <div className="d-inline-block mr-3 mb-1">
                           <div className="br-radio">
                             <input
-                              {...register('type', { value: '1' })}
+                              {...register('type')}
                               id={`open_${item.value}`}
                               type="radio"
+                              defaultChecked={item.value === TypeActivity.ACTIVITY}
                               value={item.value} />
                             <label htmlFor={`open_${item.value}`}>{t(item.title)}</label>
                           </div>
@@ -805,9 +961,8 @@ export const ReportSurveiesPage: React.FC<Props> = ({ propsModel, t }) => {
                     typeList: 'survey',
                     params: {
                       ...watch(),
-                      dateEnd: watch('dateEnd') ? moment(watch('dateEnd'), 'DD/MM/YYYY').utc().format('YYYY-MM-DD') : null,
-                      dateInit: watch('dateInit') ? moment(watch('dateInit'), 'DD/MM/YYYY').utc().format('YYYY-MM-DD') : null,
-                      limit: 'all'
+                      dateEnd: watch('dateEnd') ? moment(watch('dateEnd'), 'DD/MM/YYYY').utc().format('YYYY-MM-DD') : moment().utc().format('YYYY-MM-DD'),
+                      dateInit: watch('dateInit') ? moment(watch('dateInit'), 'DD/MM/YYYY').utc().format('YYYY-MM-DD') : moment('2000-01-01').utc().format('YYYY-MM-DD'),
                     }
                   }))
                 }
@@ -816,19 +971,10 @@ export const ReportSurveiesPage: React.FC<Props> = ({ propsModel, t }) => {
                 {t('general:commom.DownloadList')}
               </button>
             </ActionTrigger>
-            <THead nameKey='t-head'>
-              <tr>
-                <th scope="col" className={'px-0'} />
-                <th scope="col" className={'text-nowrap pl-4'}><span>{t('pages:Reports.Survey.Table.SituationActivity')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Year')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Discipline')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Teacher')}</span></th>
-                <th scope="col" className={'text-nowrap'}><span>{t('pages:Reports.Survey.Table.Activity')}</span></th>
-              </tr>
-            </THead>
-            <TBody nameKey='t-body' style={{ whiteSpace: 'nowrap' }}>
+            {renderListByType()}
+            {<TBody nameKey='t-body' style={{ whiteSpace: 'nowrap' }}>
               {renderList()}
-            </TBody>
+            </TBody>}
           </Table>
         </div>
       </div>

@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as actionsStates from '@/store/ducks/states/actions';
 import { ApplicationState } from '@/store';
 import { phonesParser } from '@/utils/parsers';
+import { AddressForm } from '../../Address';
 
 interface StateProps {
   header?: string;
@@ -191,151 +192,10 @@ export const FormRegionalSuperintendencesPage: React.FC<Props> = ({
             </div>
           </div>
         </div>
-        <div className="h3 mb-2">{t('pages:regionalSuperintendence.details.labels.address.title')}</div>
-        <div className="row">
-          <div className='col-12 col-md-6'>
-            <div className={`br-input medium ${errors?.address?.cep?.type ? 'danger' : ''}`}>
-              <label htmlFor="zipCode">{t('pages:regionalSuperintendence.details.labels.address.zipCode')}*:</label>
-              <InputMask
-                mask='99999-999'
-                {...register('address.cep', { required: true, pattern: /^(\d{5}(\-\d{3})?)?$/gm })}
-                className={`medium ${errors?.zipCode?.type ? 'danger' : ''}`}
-                id="zipCode"
-                type="text"
-                placeholder={t('pages:regionalSuperintendence.details.placeholders.address.zipCode')} />
-              {errors?.address?.cep?.type ?
-                <div className="mt-1">
-                  <span className="feedback danger" role="alert">
-                    <i className="fas fa-times-circle" aria-hidden="true"></i>
-                    {t('pages:regionalSuperintendence.details.required.address.zipCode')}
-                  </span>
-                </div>
-                : ''}
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className='col-12 col-md-6'>
-            <div className={`br-input medium ${errors?.address?.street?.type ? 'danger' : ''}`}>
-              <label htmlFor="street">{t('pages:regionalSuperintendence.details.labels.address.street')}*:</label>
-              <input
-                readOnly
-                {...register('address.street', { required: true })}
-                maxLength={100}
-                className={`medium ${errors?.street?.type ? 'danger' : ''}`}
-                id="street"
-                type="text"
-                placeholder={t('pages:regionalSuperintendence.details.placeholders.address.street')} />
-              {errors?.address?.street?.type ?
-                <div className="mt-1">
-                  <span className="feedback danger" role="alert">
-                    <i className="fas fa-times-circle" aria-hidden="true"></i>
-                    {t('pages:regionalSuperintendence.details.required.address.street')}
-                  </span>
-                </div>
-                : ''}
-            </div>
-          </div>
-          <div className='col-12 col-md-6'>
-            <div className={`br-input medium ${errors?.address?.number?.type ? 'danger' : ''}`}>
-              <label htmlFor="number">{t('pages:regionalSuperintendence.details.labels.address.number')}:</label>
-              <input
-                {...register('address.number')}
-                maxLength={100}
-                className={`medium ${errors?.number?.type ? 'danger' : ''}`}
-                id="number"
-                type="text"
-                placeholder={t('pages:regionalSuperintendence.details.placeholders.address.number')} />
-              {errors?.address?.number?.type ?
-                <div className="mt-1">
-                  <span className="feedback danger" role="alert">
-                    <i className="fas fa-times-circle" aria-hidden="true"></i>
-                    {t('pages:regionalSuperintendence.details.required.address.number')}
-                  </span>
-                </div>
-                : ''}
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className='col-12 col-md-6'>
-            <div className={`br-input medium ${errors?.address?.district?.type ? 'danger' : ''}`}>
-              <label htmlFor="district">{t('pages:regionalSuperintendence.details.labels.address.district')}*:</label>
-              <input
-                {...register('address.district', { required: true })}
-                maxLength={100}
-                readOnly
-                className={`medium ${errors?.district?.type ? 'danger' : ''}`}
-                id="district"
-                type="text"
-                placeholder={t('pages:regionalSuperintendence.details.placeholders.address.district')} />
-              {errors?.address?.district?.type ?
-                <div className="mt-1">
-                  <span className="feedback danger" role="alert">
-                    <i className="fas fa-times-circle" aria-hidden="true"></i>
-                    {t('pages:regionalSuperintendence.details.required.address.district')}
-                  </span>
-                </div>
-                : ''}
-            </div>
-          </div>
-          <div className='col-12 col-md-6'>
-            <div className={`br-input medium`}>
-              <label htmlFor="complement">{t('pages:regionalSuperintendence.details.labels.address.complement')}:</label>
-              <input
-                {...register('address.complement')}
-                maxLength={100}
-                className={`medium`}
-                id="complement"
-                type="text"
-                placeholder={t('pages:regionalSuperintendence.details.placeholders.address.complement')} />
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className='col-12 col-md-6'>
-            <div className={`br-input medium ${errors?.address?.state?.type ? 'danger' : ''}`}>
-              <label htmlFor="state">{t('pages:regionalSuperintendence.details.labels.address.state')}*:</label>
-              <input
-                {...register('address.state', { required: true })}
-                maxLength={100}
-                readOnly
-                className={`medium ${errors?.state?.type ? 'danger' : ''}`}
-                id="state"
-                type="text"
-                placeholder={t('pages:regionalSuperintendence.details.placeholders.address.state')} />
-              {errors?.address?.state?.type ?
-                <div className="mt-1">
-                  <span className="feedback danger" role="alert">
-                    <i className="fas fa-times-circle" aria-hidden="true"></i>
-                    {t('pages:regionalSuperintendence.details.required.address.state')}
-                  </span>
-                </div>
-                : ''}
-            </div>
-          </div>
-          <div className='col-12 col-md-6'>
-            <div className={`br-input medium ${errors?.address?.city?.type ? 'danger' : ''}`}>
-              <label htmlFor="city">{t('pages:regionalSuperintendence.details.labels.address.city')}*:</label>
-              <input
-                {...register('address.city', { required: true })}
-                maxLength={100}
-                readOnly
-                className={`medium ${errors?.city?.type ? 'danger' : ''}`}
-                id="city"
-                type="text"
-                placeholder={t('pages:regionalSuperintendence.details.placeholders.address.city')} />
-              {errors?.address?.city?.type ?
-                <div className="mt-1">
-                  <span className="feedback danger" role="alert">
-                    <i className="fas fa-times-circle" aria-hidden="true"></i>
-                    {t('pages:regionalSuperintendence.details.required.address.city')}
-                  </span>
-                </div>
-                : ''}
-            </div>
-          </div>
-        </div>
+        <AddressForm
+          useFormProps={
+            { registerForm: register, watchForm: watch, setValueForm: setValue, errorsForm: errors }
+          } t={t} />
         <div className="mt-3 d-flex">
           <Link href={router.asPath.substring(0, router.asPath.indexOf('/', 1))}>
             <button className="br-button mr-auto" type="button">

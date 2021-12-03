@@ -71,15 +71,19 @@ export interface Download {
 }
 
 export interface Survey {
-  "type": string;
-  "situation": string;
-  "year": number;
-  "discipline": string;
-  "teacher": string;
-  "activity": string;
-  "regionalSuperintendence": string;
-  "dnitLocalUnit": string;
-  "institution": string;
+  activity: string;
+  alternative?: any;
+  date?: any;
+  dnitLocalUnit: string;
+  institution: string;
+  justify?: any;
+  question: string;
+  regionalSuperintendence: string;
+  teacher: string;
+  type: string;
+  year: number;
+  situation: string;
+  discipline: string;
 }
 
 export interface Participant {

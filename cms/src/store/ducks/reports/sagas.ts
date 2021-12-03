@@ -176,12 +176,21 @@ export function* listSurveies({ payload }: any) {
 export function* getListCSV({ payload }: any) {
   try {
     const { typeList = '', params = null } = payload
-    downloadData(
-      handleResponse(yield* call(
-        service.client.get,
-        `/reports/${typeList}/download`,
-        { responseType: 'blob', params })),
-    );
+    if (typeList !== 'survey') {
+      downloadData(
+        handleResponse(yield* call(
+          service.client.get,
+          `/reports/${typeList}/download`,
+          { responseType: 'blob', params })),
+      );
+    } else {
+      downloadData(
+        handleResponse(yield* call(
+          service.client.post,
+          `/reports/${typeList}/download`, params,
+          { responseType: 'blob' })),
+      );
+    }
   } catch (err) {
     let parser = err.error?.response?.data;
     if (!err.error?.response?.data?.message || !err.error?.response?.data?.code) {

@@ -13,7 +13,7 @@ const HighlightTypes = {
   'Link Externo': 4,
   'Ação de Projeto': 5,
   'Ação de Ativação': 6,
-  Práticas: 7,
+  'Práticas': 7,
 };
 
 const findAll = () => HighlightItem.findAndCountAll({
@@ -28,7 +28,7 @@ const findAll = () => HighlightItem.findAndCountAll({
   ],
 });
 
-const search = ({order: sort, type, startDate, endDate}) => {
+const search = ({ order: sort, type, startDate, endDate }) => {
   let order = [['highlighted', 'desc'], ['position', 'asc']];
   const defaultOrder = [['creationDate', 'desc'], ['modifyDate', 'desc']];
 
@@ -63,7 +63,7 @@ const search = ({order: sort, type, startDate, endDate}) => {
   let hasFilter = false;
   const andConditions = [];
   const orConditions = [];
- 
+
   if (startDate && endDate) {
     andConditions.push({ creationDate: { $between: [startDate, endDate] } });
     hasFilter = true;
@@ -75,10 +75,10 @@ const search = ({order: sort, type, startDate, endDate}) => {
   }
 
   if (hasFilter) {
-    orConditions.push({highlighted: true});
-    orConditions.push({$and: andConditions});
-    where = {$or: orConditions};
-  } 
+    orConditions.push({ highlighted: true });
+    orConditions.push({ $and: andConditions });
+    where = { $or: orConditions };
+  }
 
 
   return HighlightItem.findAndCountAll({
@@ -186,7 +186,7 @@ const updateHighlightItems = payload => db.transaction(async (transaction) => {
                   idMensagem: mensagem.id,
                   idUsuario: mensagem.idUserFrom,
                   dataHora: new Date(),
-                  texto: `${highlight.type}: ${highlight.title}`,
+                  texto: `${highlight.type}: ${highlight.title} ${highlight.link ? `<br/><br/> ${highlight.link}` : ''}`,
                 },
                 type: QueryTypes.SELECT,
               });
@@ -197,12 +197,12 @@ const updateHighlightItems = payload => db.transaction(async (transaction) => {
 });
 
 const listHighlightTypes = () => HighlightItem.findAll({
-    attributes: [
-      'type',
-      'typeId',
-    ],
-    group: ['tipo', 'identificadorTipo'],
-  }, [['type', 'asc']],
+  attributes: [
+    'type',
+    'typeId',
+  ],
+  group: ['tipo', 'identificadorTipo'],
+}, [['type', 'asc']],
 );
 
 export default {

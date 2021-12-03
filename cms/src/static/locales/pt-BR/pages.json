@@ -1458,15 +1458,38 @@
         }
       },
       "Table": {
+        "EmptyList": "Nenhum registro encontrado.",
+        "Download": "Baixar Lista",
         "Title": "Relatórios de Avaliações",
         "TableTitle": "Avaliações",
-        "SituationActivity": "Situação Atividade",
-        "Year": "Ano",
-        "Discipline": "Disciplina",
-        "Teacher": "Professor",
-        "Activity": "Atividade",
-        "Download": "Baixar Lista",
-        "EmptyList": "Nenhum registro encontrado."
+        "Activity": {
+          "SituationActivity": "Situação Atividade",
+          "Year": "Ano",
+          "Discipline": "Disciplina",
+          "Teacher": "Professor",
+          "Activity": "Atividade"
+        },
+        "Locale": {
+          "SituationActivity": "Situação",
+          "Year": "Ano",
+          "Date": "Data",
+          "Teacher": "Professor",
+          "RegionalSuperintendence": "Superintendência Regional",
+          "LocalUnit": "Unidade Local",
+          "Institution": "Instituição de Ensino"
+        },
+        "Question": {
+          "Year": "Ano",
+          "Date": "Data",
+          "Teacher": "Professor",
+          "Institution": "Instituição de Ensino",
+          "RegionalSuperintendence": "Superintendência Regional",
+          "LocalUnit": "Unidade Local",
+          "Activity": "Atividade",
+          "Question": "Questão",
+          "Alternative": "Alternativa",
+          "Answer": "Resposta"
+        }
       }
     }
   },
