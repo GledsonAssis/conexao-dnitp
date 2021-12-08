@@ -20,7 +20,6 @@ import EducationalInstitution from '../../models/EducationalInstitution/Educatio
 import UserInstituition from '../../models/user/UserInstituition';
 
 import userPermissionsWhereClause from '../../utils/validators/userPermissionsWhereClause';
-import IdentityServer from '../../utils/http/IdentityServer';
 
 const create = ({
   idCity,
@@ -692,11 +691,16 @@ const updateGovbrData = payload => db.transaction(async (transaction) => {
 });
 
 const releaseAccess = (id) => {
-  return findById(id).then(user =>
-    IdentityServer.generateConfirmationToken(user.email).then(response =>
-      IdentityServer.releaseAccess(user.email, response.confirmationToken)
-    )
-  )
+  return User.update(
+    {
+      ativo: 1,
+    },
+    {
+      where: {
+        id,
+      },
+    },
+  );
 }
 
 export default {

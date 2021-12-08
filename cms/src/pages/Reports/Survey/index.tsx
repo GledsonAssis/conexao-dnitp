@@ -961,8 +961,12 @@ export const ReportSurveiesPage: React.FC<Props> = ({ propsModel, t }) => {
                     typeList: 'survey',
                     params: {
                       ...watch(),
-                      dateEnd: watch('dateEnd') ? moment(watch('dateEnd'), 'DD/MM/YYYY').utc().format('YYYY-MM-DD') : moment().utc().format('YYYY-MM-DD'),
-                      dateInit: watch('dateInit') ? moment(watch('dateInit'), 'DD/MM/YYYY').utc().format('YYYY-MM-DD') : moment('2000-01-01').utc().format('YYYY-MM-DD'),
+                      teacher: {
+                        ...watch()?.teacher,
+                        user: watch()?.teacher?.teacher
+                      },
+                      periodEnd: watch('dateEnd') ? moment(watch('dateEnd'), 'DD/MM/YYYY').utc().format('YYYY-MM-DD') : moment().utc().format('YYYY-MM-DD'),
+                      periodStart: watch('dateInit') ? moment(watch('dateInit'), 'DD/MM/YYYY').utc().format('YYYY-MM-DD') : moment('2000-01-01').utc().format('YYYY-MM-DD'),
                     }
                   }))
                 }

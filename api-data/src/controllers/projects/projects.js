@@ -3,7 +3,7 @@ import {
   genericErrorHandler,
 } from '../../middlewares';
 
-
+import moment from 'moment';
 import Project from '../../services/project/Project';
 
 import coverListParser from '../../utils/parsers/coverList';

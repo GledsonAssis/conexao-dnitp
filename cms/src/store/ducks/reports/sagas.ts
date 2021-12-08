@@ -184,6 +184,7 @@ export function* getListCSV({ payload }: any) {
           { responseType: 'blob', params })),
       );
     } else {
+      delete payload?.teacher?.teacher
       downloadData(
         handleResponse(yield* call(
           service.client.post,

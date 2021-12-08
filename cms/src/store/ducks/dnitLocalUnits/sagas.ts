@@ -95,7 +95,8 @@ export function* getListCSV({ payload }: any) {
       handleResponse(yield* call(
         service.client.post,
         `/cms/dnit/units/download`,
-        { local: true, responseType: 'blob', params: { keyword, order: sorter, local: 1 } })),
+        { keyword, order: sorter },
+        { responseType: 'blob', params: { local: 1 } })),
     );
   } catch (err) {
     let parser = err.error?.response?.data;

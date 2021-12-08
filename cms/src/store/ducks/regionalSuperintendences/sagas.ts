@@ -36,6 +36,7 @@ export function* getListCSV({ payload }: any) {
       handleResponse(yield* call(
         service.client.post,
         `/cms/dnit/units/download`,
+        null,
         { responseType: 'blob', params: { keyword, order: sorter } })),
     );
   } catch (err) {

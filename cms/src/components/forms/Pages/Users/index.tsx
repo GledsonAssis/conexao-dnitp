@@ -9,7 +9,6 @@ import InputMask from "react-input-mask";
 import { useDispatch, useSelector } from 'react-redux';
 
 import * as actionsStates from '@/store/ducks/states/actions';
-import * as actionsUsers from '@/store/ducks/users/actions';
 import * as actionsDnitLocalUnits from '@/store/ducks/dnitLocalUnits/actions';
 import { ApplicationState } from '@/store';
 import { phonesParser } from '@/utils/parsers';
@@ -19,7 +18,6 @@ import { Datapicker } from '@/components/shared/DataPicker';
 import { DnitLocalUnits, Superintendence } from '@/store/ducks/dnitLocalUnits/types';
 import moment from 'moment';
 import normalizePhone from '@/utils/normalize/normalizePhone';
-import Modal from '@/components/shared/Modal';
 
 interface StateProps {
   header?: string;
@@ -47,8 +45,6 @@ export const FormUsersPage: React.FC<Props> = ({
   const users = useSelector((state: ApplicationState) => state.users);
   const dnitLocalUnits = useSelector((state: ApplicationState) => state.dnitLocalUnits);
   const [cities, setCities] = useState<any[]>([]);
-  const [stModalReleaseAccess, setStModalReleaseAccess] = useState(false);
-  const [idToReleaseAccess, setIdToReleaseAccess] = useState<string | number>(null);
 
   const {
     register,
@@ -86,7 +82,7 @@ export const FormUsersPage: React.FC<Props> = ({
       idCity: +dataForm.city,
       regionalSuperintendence: +dataForm.regionalSuperintendence,
       idState: +dataForm.state,
-      birthDate: new Date(dataForm.birthDate).toISOString(),
+      birthDate: moment(data.birthDate, 'DD/MM/YYYY').toISOString(),
       phones: [],
       instituitions: dataForm.schools.filter(item => item?.id).map(item => item.id)
     }
@@ -111,7 +107,7 @@ export const FormUsersPage: React.FC<Props> = ({
   }, [watch('state')]);
 
   useEffect(() => {
-    if (watch('city')) {
+    if (+watch('city')) {
       dispatch(actionsStates.loadInstitutionsRequest({ id: watch('city') }))
     }
   }, [watch('city')]);
@@ -218,16 +214,6 @@ export const FormUsersPage: React.FC<Props> = ({
     ));
   }
 
-  function releaseAccessHandle(id: number) {
-    setStModalReleaseAccess(!stModalReleaseAccess)
-    setIdToReleaseAccess(id)
-  }
-
-  function confirmReleaseAccess(id: string | number) {
-    setIdToReleaseAccess(null)
-    dispatch(actionsUsers.loadReleaseAccessRequest({ id }))
-  }
-
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit, (e) => console.log(e))}>
@@ -236,23 +222,6 @@ export const FormUsersPage: React.FC<Props> = ({
             <div className='col'>
               <p className="h1">{titlePage}</p>
             </div>
-            {data?.id ?
-              <div className='col-auto'>
-                <button
-                  className={`br-button ${users.releaseAccess === 1 ? 'secondary' : (
-                    users.releaseAccess === 2 ? 'success' : (
-                      users.releaseAccess === 3 ? 'danger' : 'secondary'))
-                    } mr-sm-auto`}
-                  type="button"
-                  onClick={() => releaseAccessHandle(data.id)}>
-                  {
-                    users.releaseAccess === 2 ? <i className="fas fa-check mr-2"></i> :
-                      users.releaseAccess === 3 ? <i className="fas fa-times mr-2"></i> : ''
-                  }
-                  {t('pages:users.details.labels.releaseaccess')}
-                </button>
-              </div>
-              : ''}
           </div>
           <div className="row">
             <div className='col-12'>
@@ -424,25 +393,6 @@ export const FormUsersPage: React.FC<Props> = ({
           </div>
         </div>
       </form>
-
-      <Modal handleClose={() => { setIdToReleaseAccess(null); setStModalReleaseAccess(!stModalReleaseAccess) }} statusModal={stModalReleaseAccess} customClass="p-0">
-        <div className="br-modal-header">
-          <div className="br-modal-title text-bold" title={t('components:Modal.Title.Confirm')}>
-            {t('components:Modal.Title.Confirm')}
-          </div>
-        </div>
-        <div className="br-modal-body">
-          {t('components:Modal.TextBody.ReleaseAccessAsk')}
-        </div>
-        <div className="br-modal-footer justify-content-end">
-          <button className="br-button secondary small m-2" onClick={() => { setIdToReleaseAccess(null); setStModalReleaseAccess(!stModalReleaseAccess) }} type="button">
-            {t('components:Modal.Cancel')}
-          </button>
-          <button className="br-button primary small m-2" onClick={() => confirmReleaseAccess(idToReleaseAccess)} type="button">
-            {t('components:Modal.Yes')}
-          </button>
-        </div>
-      </Modal>
     </>
   );
 };
