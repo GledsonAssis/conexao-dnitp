@@ -467,7 +467,7 @@ export const ReportInitiativesPage: React.FC<Props> = ({ propsModel, t }) => {
                 </div>
               </div>
               <div className="d-flex">
-                <button className="br-button ml-sm-auto" type="button">
+                <button className="br-button ml-sm-auto" onClick={() => reset()} type="button">
                   {t('pages:Reports.Initiatives.Labels.Clear')}
                 </button>
                 <button className="br-button primary ml-sm-2" type="submit">
