@@ -158,7 +158,10 @@
     }
   },
   "Upload": {
-    "Submited": "(Enviado)"
+    "Submited": "(Enviado)",
+    "radio": {
+      "default": "Padrão"
+    }
   },
   "Select": {
     "selectAll": "Selecionar Todos",

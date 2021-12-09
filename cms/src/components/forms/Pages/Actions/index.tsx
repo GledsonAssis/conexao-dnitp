@@ -98,6 +98,14 @@ export const FormActionPage: React.FC<Props> = ({
     )
   }
 
+  function funcRadioSelect(data: string | number) {
+    const { itemObj, indexObj } = listImages.find(item => +item.id === +data)
+    if (itemObj) {
+      listImages[indexObj].default = true
+    }
+    setListImages(listImages)
+  }
+
   return (
     <form onSubmit={handleSubmit(onSubmit, (e) => console.log(e))}>
       <div className="main-content mt-3 px-md-3" id="main-content">
@@ -191,7 +199,10 @@ export const FormActionPage: React.FC<Props> = ({
               title={`${t('pages:actions.details.labels.attachImages')}:`}
               multiple
               translation={t}
-              id="uploadFiles"
+              defaultRadioSelected={data?.images?.find(item => item.default)?.id}
+              funcRadioSelect={funcRadioSelect}
+              radioSelect
+              id="uploadImages"
               listFiles={setListImages}
               listDeleteFiles={setListImagesToDelete}
               defaultFileList={convertListFile('actions', data?.images)}

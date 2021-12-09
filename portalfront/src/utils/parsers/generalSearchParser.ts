@@ -10,9 +10,9 @@ const generalSearchParser = ({
   keyword,
 }) => ({
   categories: getCategoriesList(categories),
-  endDate: type === 'customDate' ? arrDate[1] : moment().toDate(),
+  endDate: type === 'customDate' ? moment(arrDate[1], 'DD/MM/YYYY').toISOString() : moment().toDate(),
   keyword,
-  startDate: type === 'customDate' ? arrDate[0] : getDateInterval(type),
+  startDate: type === 'customDate' ? moment(arrDate[0], 'DD/MM/YYYY').toISOString() : getDateInterval(type),
 });
 
 export default generalSearchParser;

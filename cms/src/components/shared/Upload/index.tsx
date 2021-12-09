@@ -4,6 +4,7 @@ import BRUpload from './upload';
 import Modal from '../Modal';
 import Zoom from '../Galery/Zoom';
 import { TFunction } from 'next-i18next';
+import { useForm } from 'react-hook-form';
 
 interface suportedList {
   title: string;
@@ -36,7 +37,10 @@ interface OwnProps {
   listDeleteFiles?: Function;
   uploadFile?: Function;
   defaultFileList?: FilesObj[];
-  translation: TFunction
+  translation: TFunction,
+  radioSelect?: boolean,
+  funcRadioSelect?: Function,
+  defaultRadioSelected?: string | number
 }
 
 type Props = StateProps & DispatchProps & OwnProps;
@@ -54,13 +58,18 @@ export const Upload: React.FC<Props> = ({
   listFiles = null,
   listDeleteFiles = null,
   uploadFile = null,
-  translation
+  translation,
+  radioSelect,
+  funcRadioSelect,
+  defaultRadioSelected
 }) => {
   const child1 = useRef<HTMLDivElement>();
   const [stModalFiles, setStModalFiles] = useState(false);
   const [defaultListDeleted, setDefaultListDeleted] = useState<number[]>([]);
   const [selectedImage, setSelectedImage] = useState<string>();
   const [StGallery, setStGallery] = useState(false);
+
+  const { register, watch, setValue } = useForm<any>();
 
   function uploadTimeout() {
     return new Promise((resolve) =>
@@ -81,9 +90,15 @@ export const Upload: React.FC<Props> = ({
         uploadFile || uploadTimeout,
         listUpdateFiles
       );
-
     }
+    setValue('radioSelect', `${defaultRadioSelected}`)
   }, []);
+
+  useEffect(() => {
+    if (watch('radioSelect') && funcRadioSelect) {
+      funcRadioSelect(watch('radioSelect'))
+    }
+  }, [watch('radioSelect')]);
 
   function addToDelete(id: number) {
     if (!defaultListDeleted.includes(id)) {
@@ -150,6 +165,22 @@ export const Upload: React.FC<Props> = ({
               ${defaultListDeleted.includes(item.id) ? 'to-delete-item' : ''}`}>
                 {item.name}
               </div>
+              {radioSelect ?
+                <div className="support">
+                  <div key={`select_radio_${item.name}_${item.id}`} className="br-item w-100 mt-0" tabIndex={-1}>
+                    <div className="br-radio">
+                      <input
+                        {...register('radioSelect', { required: true })}
+                        value={item.id}
+                        id={`radio_${item.name}_${item.id}`}
+                        type="radio" />
+                      <label className={'mt-0 mb-0 mr-3'} htmlFor={`radio_${item.name}_${item.id}`}>
+                        {translation('components:Upload.radio.default')}
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                : ''}
               <div className="support">
                 <button
                   className="br-button"

@@ -82,7 +82,9 @@ export const DatapickerElement: ForwardRefRenderFunction<Handle, Props> = (
   return (
     <div ref={child1} className="br-datetimepicker" data-mode={`${dataMode}`} data-type={`${dataType}`} data-min-date={`${minDate}`}>
       <div className="br-input has-icon">
-        <label htmlFor="simples-input">{props?.title}</label>
+        {props?.title ?
+          <label htmlFor="simples-input">{props?.title}</label>
+          : ''}
         <input
           className="has-icon"
           id={id}
@@ -97,6 +99,7 @@ export const DatapickerElement: ForwardRefRenderFunction<Handle, Props> = (
         <button
           className="br-button circle small"
           type="button"
+          style={props?.title ? {} : { top: 4 }}
           aria-label="Abrir Timepicker"
           data-toggle="data-toggle"
           id={`range-input-btn-${id}`}

@@ -214,13 +214,15 @@ export const GeneralSearchPage: React.FC<Props> = ({ children, ...propos }) => {
                 type="radio"
               />
               <label htmlFor="interval.customDate">{propos.t('pages:GeneralSearch.interval')}</label>
-              <Datapicker
-                id="interval-data"
-                ref={(c) => (BRDatapicker = c)}
-                inputProps={{ ...register('interval-data-input') }}
-                disabled={intervalChange !== 'customDate'}
-                dataMode="range"
-              />
+              <div className={'mt-1'}>
+                <Datapicker
+                  id="interval-data"
+                  ref={(c) => (BRDatapicker = c)}
+                  inputProps={{ ...register('interval-data-input') }}
+                  disabled={intervalChange !== 'customDate'}
+                  dataMode="range"
+                />
+              </div>
             </div>
           </div>
         </div>
